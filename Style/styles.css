@@ -4,15 +4,33 @@ body {
     color: #6F4152;
 
 }
+.name {
+    position: absolute;
+    list-style-type: none;
+    text-align: center;
+    width: 131px;
+    height: 32px;
+    
+    background: #DAD6D7;
+    border: 1px solid #000000;
+    box-shadow: 3px 4px 4px #000000; 
+}
+.navigation {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+}
 .navigation li {
     list-style-type: none;
-    position: relative;
     text-align: center;
-    
+    margin-right:7px;
     width: 94px;
     height: 32px;
-
     background: #DAD6D7;
     border: 1px solid #000000;
     box-shadow: 3px 3px 4px #000000;
+}
+header li span {
+    vertical-align: -7px;
 }
