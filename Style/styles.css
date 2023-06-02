@@ -4,6 +4,17 @@ body {
     color: #6F4152;
 
 }
+
+.separator {
+    height: 2px;
+    margin-bottom: 5%;
+    border-width: 0;
+    color: rgb(92, 91, 91);
+    background-color: rgb(92, 91, 91);
+}
+
+/* Header */
+
 .name {
     position: absolute;
     list-style-type: none;
@@ -34,3 +45,55 @@ body {
 header li span {
     vertical-align: -7px;
 }
+
+/* Main */
+
+.homeBox {
+    display: flex;
+    justify-content: center;
+    margin: auto auto 6% auto;
+    width: 568px;
+    height: 469px;
+
+    background: #DAD6D7;
+    border: 1px solid #000000;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.94);
+}
+
+.projectsBox {
+    display: flex;
+    justify-content: center;
+    margin: auto auto 6% auto;
+    width: 568px;
+    height: 469px;
+
+    background: #DAD6D7;
+    border: 1px solid #000000;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.94);
+}
+
+.resumeBox {
+    display: flex;
+    justify-content: center;
+    margin: auto auto 6% auto;
+    width: 568px;
+    height: 469px;
+
+    background: #DAD6D7;
+    border: 1px solid #000000;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.94);
+}
+
+.contactBox {
+    display: flex;
+    justify-content: center;
+    margin: auto auto 6% auto;
+    width: 568px;
+    height: 469px;
+
+    background: #DAD6D7;
+    border: 1px solid #000000;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.94);
+}
+
+/* Footer */
