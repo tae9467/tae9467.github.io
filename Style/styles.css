@@ -1,4 +1,18 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+body {
+    background-color: #ECD1D1;
+    font-family: 'Metal';
+    color: #6F4152;
 
+}
+.navigation li {
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+    
+    width: 94px;
+    height: 32px;
+
+    background: #DAD6D7;
+    border: 1px solid #000000;
+    box-shadow: 3px 3px 4px #000000;
+}
