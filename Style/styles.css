@@ -8,8 +8,8 @@ body {
     margin-top: 0;
     margin-bottom: 5%;
     border-width: 0;
-    color: #96616B;
-    background-color: #96616B;
+    color: #5F0B19;
+    background-color: #5F0B19;
 }
 
 .separator.footer {
@@ -34,8 +34,8 @@ body {
     left: 10.5%;
     
     background: #E9ECF5;
-    border: 1px solid #96616B;
-    box-shadow: 3px 4px 4px #96616B; 
+    border: 1px solid #5F0B19;
+    box-shadow: 3px 4px 4px #5F0B19; 
 }
 .navigation {
     list-style-type: none;
@@ -49,8 +49,8 @@ body {
     height: 32px;
     
     background: #E9ECF5;
-    border: 1px solid #96616B;
-    box-shadow: 3px 4px 4px #96616B; 
+    border: 1px solid #5F0B19;
+    box-shadow: 3px 4px 4px #5F0B19; 
 }
 
 header li span {
@@ -63,7 +63,7 @@ header ul li :hover {
 }
 
 header {
-    background: #5F0B19;
+    background-color: #96616B;
     padding: 5px;
 }
 
@@ -77,13 +77,13 @@ header {
     height: 469px;
 
     background: #E9ECF5;
-    border: 1px solid #96616B;
+    border: 3px solid #5F0B19;
     box-shadow: 4px 5px 4px #96616B;
 }
 
 /* Footer */
 
 footer {
-    background: #5F0B19;
+    background: #96616B;
     padding: 3%;
 }
