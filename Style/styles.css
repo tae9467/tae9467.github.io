@@ -1,6 +1,6 @@
 body {
     background-color: #000009;
-    color: #6F4152;
+    color: #5d3745;
 }
 
 .separator {
@@ -36,7 +36,8 @@ body {
     
     background: #E9ECF5;
     border: 3px solid #5F0B19;
-    box-shadow: 3px 4px 4px #5F0B19; 
+    box-shadow: 3px 4px 4px #5F0B19;
+    color: #5d3745; 
 }
 .navigation {
     list-style-type: none;
@@ -54,7 +55,8 @@ body {
     
     background: #E9ECF5;
     border: 3px solid #5F0B19;
-    box-shadow: 3px 4px 4px #5F0B19; 
+    box-shadow: 3px 4px 4px #5F0B19;
+    color: #5d3745; 
 }
 
 .navigation.home {
