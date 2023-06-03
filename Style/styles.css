@@ -21,8 +21,9 @@ body {
 .headerImg {
     list-style-type: none;
     position: absolute;
+    border: 3px solid #5F0B19;
     left: 13px;
-    top: 2px;
+    top: 11px;
 }
 
 .name button {
@@ -31,14 +32,17 @@ body {
     text-align: center;
     width: 131px;
     height: 32px;
-    left: 10.5%;
+    left: 78px;
     
     background: #E9ECF5;
-    border: 1px solid #5F0B19;
+    border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19; 
 }
 .navigation {
     list-style-type: none;
+    position: relative;
+    text-align: right;
+    top: -25px;
 }
 
 .navigation button {
@@ -49,8 +53,24 @@ body {
     height: 32px;
     
     background: #E9ECF5;
-    border: 1px solid #5F0B19;
+    border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19; 
+}
+
+.navigation.home {
+    right: 388px;
+}
+
+.navigation.projects {
+    right: 288px;
+}
+
+.navigation.resume {
+    right: 188px;
+}
+
+.navigation.contact {
+    right: 88px;
 }
 
 header li span {
@@ -64,7 +84,7 @@ header ul li :hover {
 
 header {
     background-color: #96616B;
-    padding: 5px;
+    padding: 12px;
 }
 
 /* Main */
@@ -85,5 +105,5 @@ header {
 
 footer {
     background: #96616B;
-    padding: 3%;
+    padding: 5%;
 }
