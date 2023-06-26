@@ -1,0 +1,114 @@
+body {
+    background-color: #000009;
+    color: #5d3745;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.separator {
+    height: 4px;
+    margin-top: 0;
+    margin-bottom: 5%;
+    border-width: 0;
+    color: #5F0B19;
+    background-color: #5F0B19;
+}
+
+.separator.footer {
+    margin-bottom: 0;
+}
+
+/* Header */
+
+.headerImg {
+    list-style-type: none;
+    position: absolute;
+    border: 3px solid #5F0B19;
+    left: 13px;
+    top: 11px;
+}
+
+.name button {
+    position: absolute;
+    list-style-type: none;
+    text-align: center;
+    width: 131px;
+    height: 32px;
+    left: 85px;
+    
+    background: #E9ECF5;
+    border: 3px solid #5F0B19;
+    box-shadow: 3px 4px 4px #5F0B19;
+    color: #5d3745; 
+}
+.navigation {
+    list-style-type: none;
+    position: relative;
+    text-align: right;
+    top: -25px;
+}
+
+.navigation button {
+    position: absolute;
+    text-align: center;
+    margin-right:7px;
+    width: 94px;
+    height: 32px;
+    
+    background: #E9ECF5;
+    border: 3px solid #5F0B19;
+    box-shadow: 3px 4px 4px #5F0B19;
+    color: #5d3745; 
+}
+
+.navigation.home {
+    right: 388px;
+}
+
+.navigation.projects {
+    right: 288px;
+}
+
+.navigation.resume {
+    right: 188px;
+}
+
+.navigation.contact {
+    right: 88px;
+}
+
+header li a {
+    vertical-align: -7px;
+}
+
+header ul li :hover {
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+}
+
+header {
+    background-color: #96616B;
+    padding: 12px;
+}
+
+/* Main */
+
+main section {
+    display: flex;
+    justify-content: center;
+    margin: auto auto 6% auto;
+    width: 568px;
+    height: 469px;
+
+    background: #E9ECF5;
+    border: 3px solid #5F0B19;
+    box-shadow: 4px 5px 4px #96616B;
+}
+
+/* Footer */
+
+footer {
+    background: #96616B;
+    padding: 5%;
+}
