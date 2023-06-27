@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-.separator {
+body hr {
     height: 4px;
     margin-top: 0;
     margin-bottom: 5%;
@@ -15,14 +15,8 @@ body {
     background-color: #5F0B19;
 }
 
-.separator.footer {
+.footer {
     margin-bottom: 0;
-}
-
-.separator.header {
-    position: fixed;
-    width: 100%;
-    top: 70px;
 }
 
 /* Header */
@@ -65,6 +59,7 @@ body {
 .navigation button {
     position: absolute;
     text-align: center;
+    margin-right:7px;
     width: 94px;
     height: 32px;
     
@@ -72,6 +67,26 @@ body {
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745; 
+}
+
+.navigation.home {
+    right: 388px;
+}
+
+.navigation.projects {
+    right: 288px;
+}
+
+.navigation.resume {
+    right: 188px;
+}
+
+.navigation.contact {
+    right: 88px;
+}
+
+header li a {
+    vertical-align: -7px;
 }
 
 header ul li :hover {
@@ -82,9 +97,6 @@ header ul li :hover {
 header {
     background-color: #96616B;
     padding: 12px;
-    display: inline-block;
-    width: 100%;
-    position: fixed;
 }
 
 /* Main */
