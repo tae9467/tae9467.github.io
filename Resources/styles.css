@@ -103,6 +103,7 @@ header {
 
 /* Header for mobile screens */
 
+/* hamburger-icon */
 header section {
     margin: auto 0;
     display: none;
@@ -110,54 +111,76 @@ header section {
     float: right;
     clear: none;
     bottom: 50px;
+    right: 7px;
     cursor: pointer;
 }
 
 header section div {
     width: 35px;
     height: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: #E9ECF5;
     border: 3px solid #5F0B19;
     margin: 6px 0;
     transition: 0.4s;
 }
 
+header section div :hover {
+    background-color: rgb(255, 255, 255);
+    /* background-size: 100%; */
+}
+
 .open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-6px, 11px);
+    transform: rotate(-45deg) translate(-6px, 11px);
 }
 
 .open .bar2 {
     opacity: 0;
 }
 
-.open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 8px);
-    transform: rotate(-45deg) translate(-6px, -8px);
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -15px);
+    transform: rotate(45deg) translate(-6px, -15px);
 }
 
-.open header section ul {
+/* mobile-menu after clicking hamburger-icon */
+.open ul {
     display: flex;
+    z-index: 1;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 
+.open ul .projects {
+    left: -388px;
+}
+
+.open ul .resume {
+    left: -388px;
+}
+
+.open ul .contact {
+    left: -388px;
+}
+
+/* mobile menu hidden until hamburger-icon clicked */
 header section ul {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 62px;
+    left: 280px;
     height: calc(100vh - 50px);
     width: 100%;
 }
 
+/* the space between each button when the hamburger menu is open */
 header section ul li {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
-/* hides desktop navigation buttons when screen width is less than 600px */
-@media only screen and (max-width: 710px) {
+/* hides desktop navigation buttons when screen width is less than 700px */
+@media only screen and (max-width: 700px) {
     header nav {
         display: none;
     }
@@ -188,7 +211,7 @@ main section {
     margin-right: 25px;
 
 
-    background: #E9ECF5;
+    background-color: #E9ECF5;
     border: 3px solid #5F0B19;
     box-shadow: 4px 5px 4px #96616B;
 }

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Toula Elwells Portfolio || Home</title>
         <link rel="stylesheet" href="Resources/styles.css">
+        <script type="text/javascript" src="Functionality/index.js"></script>
     </head>
     <body>
         <header>
@@ -31,23 +32,23 @@
                 </nav>
             </ul>
             <!-- For mobile screens -->
-            <section>
+            <section onclick="toggleMobileMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
                 <ul>
                     <li class="navigation home">
-                        <a href="../index.html"><button>Home</button></a>
+                        <a href="index.html"><button>Home</button></a>
                     </li>
                     <li class="navigation projects">
-                        <a href="projects.html"><button>Projects</button></a>
+                        <a href="Pages/projects.html"><button>Projects</button></a>
                     </li>
                     <li class="navigation resume">
-                        <a href="resume.html"><button>Resume</button></a>
+                        <a href="Pages/resume.html"><button>Resume</button></a>
                     </li>
                     <li class="navigation contact">
-                        <a href="contact.html"><button>Contact</button></a>
-                    </li> 
+                        <a href="Pages/contact.html"><button>Contact</button></a>
+                    </li>
                 </ul>
             </section>
         </header>
