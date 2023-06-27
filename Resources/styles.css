@@ -39,6 +39,7 @@ body hr {
 .name button {
     position: absolute;
     list-style-type: none;
+    cursor: pointer;
     text-align: center;
     width: 131px;
     height: 32px;
@@ -59,6 +60,7 @@ body hr {
 .navigation button {
     position: absolute;
     text-align: center;
+    cursor: pointer;
     margin-right:7px;
     width: 94px;
     height: 32px;
