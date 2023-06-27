@@ -1,22 +1,9 @@
 body {
-    background-color: #000009;
+    background-color: #6C503C;
     color: #5d3745;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body hr {
-    height: 4px;
-    margin-top: 0;
-    margin-bottom: 5%;
-    border-width: 0;
-    color: #5F0B19;
-    background-color: #5F0B19;
-}
-
-body .footer {
-    margin-bottom: 0;
 }
 
 /* Header */
@@ -45,7 +32,7 @@ body .footer {
     height: 32px;
     left: 85px;
     
-    background: #E9ECF5;
+    background-color: #F8EFDE;
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745; 
@@ -65,7 +52,7 @@ body .footer {
     width: 94px;
     height: 32px;
     
-    background: #E9ECF5;
+    background-color: #F8EFDE;
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745; 
@@ -92,13 +79,15 @@ header li a {
 }
 
 header ul li :hover {
-    background-color: rgb(255, 255, 255);
+    background-color: #F8EFDE;
     background-size: 100%;
 }
 
 header {
-    background-color: #96616B;
+    background-color: #A6836F;
     padding: 12px;
+    border-bottom: 3px solid #5F0B19;
+    margin-bottom: 35px;
 }
 
 /* Header for mobile screens */
@@ -190,13 +179,6 @@ header section ul li {
     header section {
         display: block;
     }
-
-    body .header {
-        width: 100%;
-        position: relative;
-        bottom: 36px;
-        margin: 0;
-    }
 }
 
 /* Main */
@@ -204,7 +186,7 @@ header section ul li {
 main section {
     display: flex;
     justify-content: center;
-    margin: auto auto 6% auto;
+    margin: auto;
     width: auto;
     min-width: fit-content;
     max-width: 100%;
@@ -215,12 +197,14 @@ main section {
 
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
-    box-shadow: 4px 5px 4px #96616B;
+    box-shadow: 4px 5px 4px #5F0B19;
 }
 
 /* Footer */
 
 footer {
-    background: #96616B;
+    background-color: #6C503C;
     padding: 5%;
+    border-top: 3px solid #5F0B19;
+    margin-top: 37px;
 }
