@@ -15,7 +15,7 @@ body hr {
     background-color: #5F0B19;
 }
 
-.footer {
+body .footer {
     margin-bottom: 0;
 }
 
@@ -61,7 +61,7 @@ body hr {
     position: absolute;
     text-align: center;
     cursor: pointer;
-    margin-right:7px;
+    margin-right: 7px;
     width: 94px;
     height: 32px;
     
@@ -101,14 +101,92 @@ header {
     padding: 12px;
 }
 
+/* Header for mobile screens */
+
+header section {
+    margin: auto 0;
+    display: none;
+    position: relative;
+    float: right;
+    clear: none;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+header section div {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #5F0B19;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 8px);
+    transform: rotate(-45deg) translate(-6px, -8px);
+}
+
+.open header section ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header section ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+header section ul li {
+    margin-bottom: 10px;
+}
+
+/* hides desktop navigation buttons when screen width is less than 600px */
+@media only screen and (max-width: 710px) {
+    header nav {
+        display: none;
+    }
+
+    header section {
+        display: block;
+    }
+
+    body .header {
+        width: 100%;
+        position: relative;
+        bottom: 36px;
+        margin: 0;
+    }
+}
+
 /* Main */
 
 main section {
     display: flex;
     justify-content: center;
     margin: auto auto 6% auto;
-    width: 568px;
-    height: 469px;
+    width: auto;
+    min-width: fit-content;
+    max-width: 100%;
+    min-height: 100vh;
+    margin-left: 25px;
+    margin-right: 25px;
+
 
     background: #E9ECF5;
     border: 3px solid #5F0B19;
