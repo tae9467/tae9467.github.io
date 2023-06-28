@@ -88,6 +88,8 @@ header {
     padding: 12px;
     border-bottom: 5px solid #5F0B19;
     margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Header for mobile screens */
@@ -130,7 +132,7 @@ header section div {
 /* mobile-menu after clicking hamburger-icon */
 .open ul {
     display: flex;
-    z-index: 1;
+    z-index: 2;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -207,4 +209,6 @@ footer {
     padding: 5%;
     border-top: 5px solid #5F0B19;
     margin-top: 37px;
+    position: relative;
+    z-index: 1;
 }
