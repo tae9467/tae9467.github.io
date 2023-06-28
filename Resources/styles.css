@@ -209,8 +209,9 @@ main section {
     margin-right: 25px;
     font-family: 'Metal';
     font-weight: 500;
-    line-height: 25px;
+    line-height: 150%;
     font-size: 18px;
+    font-size: 4vmin;
     padding: 20px;
 
     background-color: #E9ECF5;
