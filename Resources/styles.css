@@ -125,8 +125,8 @@ header section div {
 }
 
 .open .bar3 {
-    -webkit-transform: rotate(45deg) translate(-6.2px, -15px);
-    transform: rotate(45deg) translate(-6.2px, -15px);
+    -webkit-transform: rotate(45deg) translate(-6px, -15px);
+    transform: rotate(45deg) translate(-6px, -15px);
 }
 
 /* mobile-menu after clicking hamburger-icon */
