@@ -1,5 +1,5 @@
 body {
-    background-color: #6C503C;
+    background-color: #000009;
     color: #5d3745;
     box-sizing: border-box;
     margin: 0;
@@ -32,7 +32,7 @@ body {
     height: 32px;
     left: 85px;
     
-    background-color: #F8EFDE;
+    background-color: #E9ECF5;
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745; 
@@ -52,7 +52,7 @@ body {
     width: 94px;
     height: 32px;
     
-    background-color: #F8EFDE;
+    background-color: #E9ECF5;
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745; 
@@ -79,14 +79,14 @@ header li a {
 }
 
 header ul li :hover {
-    background-color: #F8EFDE;
+    background-color: rgb(255, 255, 255);
     background-size: 100%;
 }
 
 header {
-    background-color: #A6836F;
+    background-color: #96616B;
     padding: 12px;
-    border-bottom: 3px solid #5F0B19;
+    border-bottom: 5px solid #5F0B19;
     margin-bottom: 35px;
 }
 
@@ -197,14 +197,14 @@ main section {
 
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
-    box-shadow: 4px 5px 4px #5F0B19;
+    box-shadow: 4px 5px 4px #96616B;
 }
 
 /* Footer */
 
 footer {
-    background-color: #6C503C;
+    background-color: #96616B;
     padding: 5%;
-    border-top: 3px solid #5F0B19;
+    border-top: 5px solid #5F0B19;
     margin-top: 37px;
 }
