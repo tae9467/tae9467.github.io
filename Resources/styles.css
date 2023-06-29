@@ -120,7 +120,7 @@ body {
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745;
-    /* font-family: 'Metal'; */
+    font-family: 'Metal';
     font-weight: 600;
     line-height: 30px;
     font-size: 18px; 
@@ -258,7 +258,8 @@ main section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0px 30px;
+    flex-direction: column;
+    margin: 0px 25px;
     width: auto;
     min-width: fit-content;
     max-width: 100%;
@@ -275,6 +276,10 @@ main section {
     background-color: #E9ECF5;
     border: 4px solid #5F0B19;
     box-shadow: 4px 5px 4px #96616B;
+}
+
+main section h1 {
+    margin: 15px auto 0px;
 }
 
 /* Footer */
