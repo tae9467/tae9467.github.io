@@ -8,6 +8,41 @@ body {
     padding: 0;
 }
 
+/* shrinks main section when height is greater than 1100px */
+@media only screen and (min-height: 1100px) {
+    /* Main */
+    main section {
+        min-height: fit-content !important;
+    }
+    /* if width is greater than 900px and height is greater than 1100px then the heading and footer increase */
+    @media only screen and (min-width: 900px) {
+        /* Header */
+        header {
+            height: 100px;
+            margin-bottom: 55px !important;
+        }
+        header ul {
+            position: relative;
+            top: 20px;
+        }
+        .headerImg {
+            top: -20px !important;
+        }
+
+        /* Main */
+        main section {
+            margin: 0px 55px !important;
+            padding: 40px 44px !important;
+        }
+
+        /* Footer */
+        footer {
+            height: 100px !important;
+            margin-top: 55px !important;
+        }
+    }
+}
+
 /* Header */
 
 .headerImg {
@@ -91,7 +126,7 @@ header li a {
 }
 
 header ul li :hover {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF;
     background-size: 100%;
 }
 
@@ -114,7 +149,7 @@ header section {
     float: right;
     clear: none;
     bottom: 50px;
-    right: 7px;
+    right: 3px;
     cursor: pointer;
 }
 
@@ -199,6 +234,7 @@ header section ul li {
 
 main section {
     display: flex;
+    align-items: center;
     justify-content: center;
     text-align: center;
     margin: auto;
@@ -213,6 +249,8 @@ main section {
     line-height: 150%;
     font-size: 18px;
     font-size: 4vmin;
+    /* max font size is 24.3px min is 4vmin */
+    font-size: min(4vmin, 24.5px);
     padding: 20px;
 
     background-color: #E9ECF5;
@@ -224,7 +262,8 @@ main section {
 
 footer {
     background-color: #96616B;
-    padding: 5%;
+    padding: 12px;
+    height: 57.4px;
     border-top: 5px solid #5F0B19;
     margin-top: 37px;
     position: relative;
