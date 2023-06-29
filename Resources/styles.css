@@ -8,6 +8,24 @@ body {
     padding: 0;
 }
 
+/* Adjusts main section when width is greater than 1100px */
+@media only screen and (min-width: 1200px) {
+    /* Main */
+    main section {
+        margin: 0px 55px !important;
+        padding: 0px 44px !important;
+    }
+}
+
+/* Adjusts main section when width is greater than 1100px */
+@media only screen and (min-height: 800px) {
+    /* Main */
+    main section {
+        margin: 0px 35px !important;
+        padding: 10px 25px !important;
+    }
+}
+
 /* shrinks main section when height is greater than 1100px */
 @media only screen and (min-height: 1100px) {
     /* Main */
@@ -237,13 +255,11 @@ main section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: auto;
+    margin: 0px 30px;
     width: auto;
     min-width: fit-content;
     max-width: 100%;
     min-height: 100vh;
-    margin-left: 25px;
-    margin-right: 25px;
     font-family: 'Metal';
     font-weight: 500;
     line-height: 150%;
