@@ -85,6 +85,9 @@ body {
     cursor: pointer;
     text-align: center;
     width: 131px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 32px;
     left: 85px;
     
@@ -117,7 +120,7 @@ body {
     border: 3px solid #5F0B19;
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745;
-    font-family: 'Metal';
+    /* font-family: 'Metal'; */
     font-weight: 600;
     line-height: 30px;
     font-size: 18px; 
