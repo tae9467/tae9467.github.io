@@ -4,6 +4,7 @@ body {
     background-color: #000009;
     background-image: url("Images/rubyWallpaper.jpeg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color: #5d3745;
     box-sizing: border-box;
@@ -70,6 +71,7 @@ body {
     list-style-type: none;
     position: absolute;
     border: 3px solid #5F0B19;
+    border-radius: 10%; 
     left: 13px;
     top: 4px;
     background-color: #000009;
@@ -97,6 +99,7 @@ body {
     
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
+    border-radius: 5px; 
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745;
     font-family: 'Metal';
@@ -122,6 +125,7 @@ body {
     
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
+    border-radius: 5px; 
     box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745;
     font-family: 'Metal';
@@ -183,6 +187,7 @@ header section div {
     height: 3px;
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
+    border-radius: 5px; 
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -264,6 +269,7 @@ main section {
     text-align: center;
     flex-direction: column;
     position: relative;
+    isolation: isolate;
 
     margin: 0px 25px;
     padding: 20px;
@@ -282,11 +288,23 @@ main section {
 
     background-color: #E9ECF5;
     border: 4px solid #5F0B19;
+    border-radius: 5px; 
     box-shadow: 4px 5px 4px #96616B;
 }
 
 main section h1 {
     margin: 15px auto 0px;
+}
+
+.lowOpacityBgImage::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.15;
+    background-image: url("Images/paper.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
 /* Footer */
@@ -299,4 +317,23 @@ footer {
     margin-top: 37px;
     position: relative;
     z-index: 1;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    
+    list-style: none;
+}
+
+footer img {
+    width: 57px;
+    height: 57px;
+    margin: 0px 7px;
 }
