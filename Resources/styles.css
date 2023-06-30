@@ -62,6 +62,10 @@ body {
             height: 100px !important;
             margin-top: 55px !important;
         }
+
+        footer ul {
+            top: 20px;
+        }
     }
 }
 
