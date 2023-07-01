@@ -104,7 +104,6 @@ body {
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
     border-radius: 5px; 
-    box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745;
     font-family: 'Metal';
     font-weight: 600;
@@ -130,7 +129,6 @@ body {
     background-color: #E9ECF5;
     border: 3px solid #5F0B19;
     border-radius: 5px; 
-    box-shadow: 3px 4px 4px #5F0B19;
     color: #5d3745;
     font-family: 'Metal';
     font-weight: 600;
@@ -160,7 +158,8 @@ header li a {
 
 header ul li :hover {
     background-color: #FFFFFF;
-    background-size: 100%;
+    box-shadow: 3px 4px 4px #5F0B19;
+    background-size: cover;
 }
 
 header {
@@ -197,8 +196,8 @@ header section div {
 }
 
 .open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 13px);
-    transform: rotate(-45deg) translate(-5px, 13px);
+    -webkit-transform: rotate(-45deg) translate(-6px, 14px);
+    transform: rotate(-45deg) translate(-6px, 14px);
 }
 
 .open .bar2 {
@@ -340,4 +339,8 @@ footer img {
     width: 57px;
     height: 57px;
     margin: 0px 7px;
+}
+
+footer ul :hover {
+    opacity: 0.8;
 }
