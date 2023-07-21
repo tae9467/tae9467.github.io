@@ -10,52 +10,54 @@
     </head>
     <body>
         <header>
-            <ul>
-                <li class="headerImg">
-                    <img src="Resources/Images/face.jpg" alt="Picture of Toula infront of green bush" height="60" width="56">
-                </li>
-                <li class="name">
-                    <a href="index.html"><button>Toula Elwell</button></a>
-                </li>
-                <nav>
+            <nav>
+                <ul>
+                    <li class="headerImg">
+                        <img src="Resources/Images/face.jpg" alt="Picture of Toula infront of green bush" height="60" width="56">
+                    </li>
+                    <li class="name">
+                        <a href="index.html">Toula Elwell</a>
+                    </li>
+                </ul>
+                <ul class="sectionLinks">
                     <li class="navigation home">
-                        <a href="index.html"><button>Home</button></a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li class="navigation projects">
-                        <a href="Pages/projects.html"><button>Projects</button></a>
+                        <a href="#projets">Projects</a>
                     </li>
                     <li class="navigation resume">
-                        <a href="Pages/resume.html"><button>Resume</button></a>
+                        <a href="#resume">Resume</a>
                     </li>
                     <li class="navigation contact">
-                        <a href="Pages/contact.html"><button>Contact</button></a>
+                        <a href="#contact">Contact</a>
                     </li>
-                </nav>
-            </ul>
+                </ul>
+            </nav>
             <!-- For mobile screens -->
-            <section onclick="toggleMobileMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+            <section onclick="toggleMobileMenu(this)" onmouseover="turnPink()" onmouseleave="resetColor()">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
                 <ul>
                     <li class="navigation home">
-                        <a href="index.html"><button>Home</button></a>
+                        <a href="#home">Home</a>
                     </li>
                     <li class="navigation projects">
-                        <a href="Pages/projects.html"><button>Projects</button></a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li class="navigation resume">
-                        <a href="Pages/resume.html"><button>Resume</button></a>
+                        <a href="#resume">Resume</a>
                     </li>
                     <li class="navigation contact">
-                        <a href="Pages/contact.html"><button>Contact</button></a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </section>
         </header>
 
         <main>
-            <section class="lowOpacityBgImage">
+            <section id="home" class="lowOpacityBgImage">
                 <h1>About Me</h1>
                 <p>
                     Hey, I'm Toula Elwell! A passionate Software Engineering student at RIT, 
@@ -82,6 +84,15 @@
                     Welcome to my portfolio website, where creativity meets technical expertise. 
                     Let's collaborate and build something remarkable together!
                 </p>
+            </section>
+
+            <section id="projects" class="lowOpacityBgImage">
+            </section>
+
+            <section id="resume" class="lowOpacityBgImage">
+            </section>
+
+            <section id="contact" class="lowOpacityBgImage">
             </section>
         </main>
         
