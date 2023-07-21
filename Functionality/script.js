@@ -28,6 +28,6 @@ function turnPink() {
 function resetColor() {
     const bars = document.querySelectorAll('.bar');
     bars.forEach(bar => {
-      bar.style.borderColor = 'hsl(240, 3%, 88%)';
+      bar.style.borderColor = 'hsl(240, 3%, 86.5%)';
     });
 }

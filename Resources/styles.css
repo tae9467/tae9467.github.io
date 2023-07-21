@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal&display=swap');
 
 body {
-    background-color: hsl(240, 3%, 88%);
+    background-color: hsl(240, 3%, 86.5%);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
 .headerImg {
     list-style: none;
     position: absolute;
-    border: 3px solid hsl(240, 3%, 88%);
+    border: 3px solid hsl(240, 3%, 86.5%);
     background-color: hsl(0, 0%, 0%);
     border-radius: 10%; 
     left: 13px;
@@ -21,7 +21,7 @@ body {
 
 .headerImg img {
     border-radius: 50%; 
-    border: 3px solid hsl(240, 3%, 88%); 
+    border: 3px solid hsl(240, 3%, 86.5%); 
     position: relative;
     top: 2px;
 }
@@ -34,7 +34,7 @@ body {
     text-align: center;
     left: 85px;
     
-    color: hsl(240, 3%, 88%); 
+    color: hsl(240, 3%, 86.5%); 
     font-family: 'Metal';
     font-weight: 600;
     line-height: 30px;
@@ -50,7 +50,7 @@ body {
     list-style: none;
     position: relative;
     text-align: right;
-    top: -25px;
+    top: -35px;
 }
 
 .navigation a {
@@ -58,15 +58,18 @@ body {
     text-align: center;
     cursor: pointer;
     margin-right: 7px;
-    width: 94px;
-    height: 32px;
     text-decoration: none;
     
+    color: hsl(240, 3%, 86.5%);
     font-family: 'Metal';
     font-weight: 600;
     line-height: 30px;
     font-size: 18px; 
     transition: 0.4s;
+}
+
+.navigation a:hover {
+    color: hsl(330, 45%, 65%);
 }
 
 .navigation.home {
@@ -92,8 +95,7 @@ header li a {
 header {
     background-color: hsl(0, 0%, 0%);
     padding: 12px;
-    height: 57.4px;
-    border-bottom: 5px solid hsl(240, 3%, 88%);
+    height: 58.4px;
     margin-bottom: 35px;
     position: relative;
     z-index: 1;
@@ -117,7 +119,7 @@ header section div {
     width: 35px;
     height: 3.5px;
     background-color: hsl(0, 0%, 0%);
-    border: 3px solid hsl(240, 3%, 88%); 
+    border: 3px solid hsl(240, 3%, 86.5%); 
     border-radius: 5px; 
     margin: 6px 0;
     transition: 0.4s;
@@ -144,25 +146,31 @@ header section div {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    left: -40px;
-    height: 0;
-    width: 0;
+    left: -35px;
+    top: 52px;
+    height: fit-content;
+    width: 50px;
+    background-color: hsl(0, 0%, 0%);
 }
 
 .open ul .home {
-    left: -50px;
+    left: -46px;
+    top: 7px;
 }
 
 .open ul .projects {
-    left: -50px;
+    left: -46px;
+    top: 7px;
 }
 
 .open ul .resume {
-    left: -50px;
+    left: -46px;
+    top: 7px;
 }
 
 .open ul .contact {
-    left: -50px;
+    left: -46px;
+    top: 7px;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
@@ -175,12 +183,12 @@ header section ul {
     width: 100%;
 }
 
-/* the space between each button when the hamburger menu is open */
+/* the space between each link when the hamburger menu is open */
 header section ul li {
     margin-bottom: 40px;
 }
 
-/* hides desktop navigation buttons when screen width is less than 700px */
+/* hides desktop navigation links when screen width is less than 700px */
 @media only screen and (max-width: 700px) {
     header .sectionLinks {
         display: none;
@@ -200,7 +208,6 @@ main section {
     text-align: center;
     flex-direction: column;
     position: relative;
-    isolation: isolate;
 
     margin: 0px 25px;
     padding: 20px;
@@ -227,24 +234,12 @@ main section h1 {
     margin: 15px auto 0px;
 }
 
-.lowOpacityBgImage::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    opacity: 0.15;
-    /* background-image: url("Images/paper.jpeg");
-    background-size: cover;
-    background-position: center; */
-}
-
 /* Footer */
 
 footer {
-    /* background-color: #96616B; */
+    background-color: hsl(0, 0%, 0%);
     padding: 12px;
-    height: 57.4px;
-    border-top: 5px solid #5F0B19;
+    height: 58.4px;
     margin-top: 37px;
     position: relative;
     z-index: 1;
@@ -260,14 +255,22 @@ footer ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
+    isolation: isolate;
 }
 
 footer img {
     width: 57px;
     height: 57px;
     margin: 0px 7px;
+    border: 3px solid hsl(240, 3%, 86.5%);
+    border-radius: 10%;
 }
 
 footer ul :hover {
     opacity: 0.8;
+    transition: 0.4s;
+}
+
+footer ul img :hover {
+    border: 3px solid hsl(330, 45%, 65%);
 }
