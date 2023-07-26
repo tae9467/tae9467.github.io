@@ -253,15 +253,15 @@ main section button {
 }
 
 main section button:hover {
-    background-color: hsl(330, 45%, 65%);
-    border: 3px solid hsl(240, 7%, 84%);
-    color: hsl(222, 10%, 12%);
+    background-color: hsl(222, 10%, 12%); 
+    border: 4px double hsl(240, 7%, 84%);
+    color: hsl(330, 45%, 65%);
     font-weight: bold;
 }
 
 main section button:active {
     background-color: hsl(330, 45%, 65%);
-    border: 3px solid hsl(240, 7%, 84%);
+    border: 3px dashed hsl(240, 7%, 84%);
     color: hsl(222, 10%, 12%);
     font-weight: bold;
 }
