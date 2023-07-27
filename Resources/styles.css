@@ -277,6 +277,7 @@ main section button:active {
 .highlight {
     color: hsl(216, 47%, 75%);
     font-style: italic;
+    font-weight: bold;
 }
 
 /* Footer */
