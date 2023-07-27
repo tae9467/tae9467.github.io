@@ -270,6 +270,10 @@ main section button:active {
     margin: 15px 25px;
 }
 
+.content {
+    display: none;
+}
+
 /* Footer */
 
 footer {
