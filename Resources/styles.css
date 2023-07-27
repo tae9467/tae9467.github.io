@@ -266,11 +266,15 @@ main section button:active {
     font-weight: bold;
 }
 
+#projects, #resume {
+    margin: 15px 25px;
+}
+
 /* Footer */
 
 footer {
     background-color: hsl(222, 10%, 12%);
-    padding: 12px;
+    padding: 12px 12px 0px;
     margin-top: 37px;
     position: relative;
     z-index: 1;
@@ -288,7 +292,7 @@ footer ul {
     flex-direction: row;
     position: relative;
     margin: 0px;
-    padding: 0px;
+    padding: 5px;
     list-style: none;
     isolation: isolate;
 }
