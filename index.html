@@ -10,94 +10,111 @@
     </head>
     <body>
         <header>
-            <ul>
-                <li class="headerImg">
-                    <img src="Resources/Images/face.jpg" alt="Picture of Toula infront of green bush" height="60" width="56">
-                </li>
-                <li class="name">
-                    <a href="index.html"><button>Toula Elwell</button></a>
-                </li>
-                <nav>
+            <nav>
+                <ul>
+                    <li class="headerImg">
+                        <img src="Resources/Images/face.jpg" alt="Picture of Toula infront of green bush" height="60" width="56">
+                    </li>
+                    <li class="name">
+                        <a href="index.html">Toula Elwell</a>
+                    </li>
+                </ul>
+                <ul class="sectionLinks">
                     <li class="navigation home">
-                        <a href="index.html"><button>Home</button></a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li class="navigation projects">
-                        <a href="Pages/projects.html"><button>Projects</button></a>
+                        <a href="#projets">Projects</a>
                     </li>
                     <li class="navigation resume">
-                        <a href="Pages/resume.html"><button>Resume</button></a>
+                        <a href="#resume">Resume</a>
                     </li>
                     <li class="navigation contact">
-                        <a href="Pages/contact.html"><button>Contact</button></a>
+                        <a href="#contact">Contact</a>
                     </li>
-                </nav>
-            </ul>
+                </ul>
+            </nav>
             <!-- For mobile screens -->
-            <section onclick="toggleMobileMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+            <section onclick="toggleMobileMenu(this)" onmouseover="turnPink()" onmouseleave="resetColor()">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
                 <ul>
                     <li class="navigation home">
-                        <a href="index.html"><button>Home</button></a>
+                        <a href="#home">Home</a>
                     </li>
                     <li class="navigation projects">
-                        <a href="Pages/projects.html"><button>Projects</button></a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li class="navigation resume">
-                        <a href="Pages/resume.html"><button>Resume</button></a>
+                        <a href="#resume">Resume</a>
                     </li>
                     <li class="navigation contact">
-                        <a href="Pages/contact.html"><button>Contact</button></a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </section>
         </header>
 
         <main>
-            <section class="lowOpacityBgImage">
-                <h1>About Me</h1>
+            <section id="home">
+                <h2>About Me</h2>
                 <p>
-                    Hey, I'm Toula Elwell! A passionate Software Engineering student at RIT, 
-                    with a flair for creativity and a hunger for web development. Currently immersing 
+                    Hey, I am Toula Elwell! A passionate Software Engineering student at RIT, 
+                    with a flair for creativity and a love for web development. Currently immersing 
                     myself in the fascinating world of Mathematics and pursuing a minor 
                     in Web Development, I strive to combine logic and aesthetics in my work.
-                    <br><br>
-                    Throughout my journey, I've embraced exciting challenges, including 
+                </p>
+                <button type="button">Read More</button>
+                <!-- <p>
+                    Throughout my journey, I have embraced exciting challenges, including 
                     participating in hackathons where I had the opportunity to develop some truly 
                     cool projects. One of my highlights was creating an interactive card game using 
                     Python. It was a thrilling experience that showcased my problem-solving skills 
                     and ignited my passion for coding.
-                    <br><br>                
-                    But my fascination with technology doesn't stop there! Even back in 8th grade, I 
+                </p>
+                <p>
+                    But my fascination with technology does not stop there! Even back in 8th grade, I 
                     indulged in creating my own secret written languages. I quickly discovered that 
                     coding shared the same sense of mystery and excitement, making it an 
                     incredibly fun endeavor.
-                    <br><br>                    
-                    What am I seeking now? A frontend web development co-op position! I'm fueled 
-                    by the joy of bringing websites to life and crafting exceptional user experiences. 
-                    If you're searching for someone who thrives in turning ideas into visually 
-                    stunning and functional websites, then we're a perfect match.
-                    <br><br>                    
+                </p>                
+                <p>
+                    What am I seeking now? A frontend web development co-op position! I am fueled 
+                    by the joy of bringing websites to life. 
+                    If you are searching for someone who thrives in turning ideas into visually 
+                    stunning and functional websites, then we are a perfect match.
+                </p>                 
+                <p>
                     Welcome to my portfolio website, where creativity meets technical expertise. 
-                    Let's collaborate and build something remarkable together!
+                    Let's collaborate and build something remarkable together! 
                 </p>
+                <button type="button">Read Less</button>                    -->
+            </section>
+
+            <section id="projects">
+            </section>
+
+            <section id="resume">
+            </section>
+
+            <section id="contact">
             </section>
         </main>
         
         <footer>
             <ul>
                 <li>
-                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img src="Resources/Images/githubIcon.jpeg" alt="Github Icon"></a>
+                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon" style="border-radius: 10%;"></a>
+                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
                 </li>
                 <li>
-                    <a href="mailto:tae9467@g.rit.edu" title="Click to Email Toula!" target="_blank"><img src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon" style="border-radius: 10%;"></a>
+                    <a href="mailto:tae9467@g.rit.edu" title="Click to Email Toula!" target="_blank"><img src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
                 </li>
                 <li>
-                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img src="Resources/Images/resumeIcon.jpeg" alt="Gmail Icon" style="border-radius: 10%;"></a>
+                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
                 </li>
             </ul>
         </footer>
