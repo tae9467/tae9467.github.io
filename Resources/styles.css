@@ -274,6 +274,11 @@ main section button:active {
     display: none;
 }
 
+.highlight {
+    color: hsl(216, 47%, 75%);
+    font-style: italic;
+}
+
 /* Footer */
 
 footer {
