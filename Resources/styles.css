@@ -280,6 +280,27 @@ main section button:active {
     font-weight: bold;
 }
 
+/* Projects section */
+
+.portfolioWebsite {
+    text-align: left;
+    color: hsl(222, 10%, 12%);
+    background-color: hsl(240, 7%, 84%);
+    border: 3px solid hsl(240, 7%, 84%);
+    border-radius: 10px;
+}
+
+.socialMediaMusicWebsite {
+    text-align: left;
+    border: 3px solid hsl(240, 7%, 84%);
+    border-radius: 10px;
+    margin: 15px 0px;
+}
+
+.socialMediaMusicWebsite h4 {
+    color: hsl(216, 47%, 75%);
+}
+
 /* Footer */
 
 footer {
