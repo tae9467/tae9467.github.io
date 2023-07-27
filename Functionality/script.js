@@ -31,3 +31,29 @@ function resetColor() {
       bar.style.borderColor = 'hsl(240, 3%, 86.5%)';
     });
 }
+
+/**
+    * Shows the rest of the content in the home section after clicking the read more button
+    * @function showContent
+    * @returns {void}
+*/
+function showContent() {
+    const content = document.querySelector('.content');
+    const readMoreButton = document.querySelector('.readMoreButton');
+
+    content.style.display = 'block';
+    readMoreButton.style.display = 'none';
+}
+
+/**
+    * Hides the rest of the content in the home section after clicking the read more button
+    * @function showContent
+    * @returns {void}
+*/
+function hideContent() {
+    const content = document.querySelector('.content');
+    const readMoreButton = document.querySelector('.readMoreButton');
+
+    content.style.display = 'none';
+    readMoreButton.style.display = 'block';
+}

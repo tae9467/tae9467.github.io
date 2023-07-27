@@ -270,6 +270,16 @@ main section button:active {
     margin: 15px 25px;
 }
 
+.content {
+    display: none;
+}
+
+.highlight {
+    color: hsl(216, 47%, 75%);
+    font-style: italic;
+    font-weight: bold;
+}
+
 /* Footer */
 
 footer {
