@@ -230,12 +230,17 @@ main section {
     border-radius: 12px; 
 }
 
+h3, h4 {
+    margin: 15px 0px 0px;
+}
+
 main section h2 {
     margin: 15px auto 0px;
     color: hsl(330, 45%, 65%);
 }
 
-main section p {
+main section p, main section ul {
+    margin-top: 10px;
     margin-bottom: 0px;
 }
 
@@ -282,23 +287,33 @@ main section button:active {
 
 /* Projects section */
 
-.portfolioWebsite {
+.portfolioWebsite, .socialMediaMusicWebsite {
     text-align: left;
-    color: hsl(222, 10%, 12%);
-    background-color: hsl(240, 7%, 84%);
     border: 3px solid hsl(240, 7%, 84%);
     border-radius: 10px;
+    padding: 10px;
+}
+
+.portfolioWebsite {
+    color: hsl(222, 10%, 12%);
+    background-color: hsl(240, 7%, 84%);
+    margin-top: 20px;
 }
 
 .socialMediaMusicWebsite {
-    text-align: left;
-    border: 3px solid hsl(240, 7%, 84%);
-    border-radius: 10px;
-    margin: 15px 0px;
+    margin: 25px 0px;
 }
 
 .socialMediaMusicWebsite h4 {
     color: hsl(216, 47%, 75%);
+}
+
+.portfolioWebsite p, .socialMediaMusicWebsite p {
+    margin-top: 5px;
+}
+
+.portfolioWebsite h3, .socialMediaMusicWebsite h3 {
+    text-align: center;
 }
 
 /* Footer */
