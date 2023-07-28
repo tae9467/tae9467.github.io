@@ -33,7 +33,7 @@ function resetColor() {
 }
 
 /**
-    * Shows the rest of the content in the home section after clicking the read more button
+    * Shows the rest of the content after clicking the read more button in the section you button you clicked on is in
     * @function showContent
     * @returns {void}
 */
@@ -54,8 +54,8 @@ function showContent(clickedButton) {
 }
 
 /**
-    * Hides the rest of the content in the home section after clicking the read more button
-    * @function showContent
+    * Hides the rest of the content after clicking the read more button in the section you button you clicked on is in
+    * @function hideContent
     * @returns {void}
 */
 function hideContent(clickedButton) {
