@@ -277,7 +277,7 @@ main section button:active {
 }
 
 #projects, #resume {
-    margin: 15px 25px;
+    margin: 35px 25px;
 }
 
 .content {
@@ -310,7 +310,7 @@ main section button:active {
 }
 
 .socialMediaMusicWebsite {
-    margin: 25px 0px;
+    margin: 35px 0px 25px;
 }
 
 .socialMediaMusicWebsite h4 {
@@ -429,6 +429,6 @@ footer ul a:hover {
     }
 
     #projects, #resume {
-        margin: 25px 5%;
+        margin: 35px 5%;
     }
 }
