@@ -230,6 +230,10 @@ main section {
     border-radius: 12px; 
 }
 
+main section p {
+    text-indent: 4ch;
+}
+
 h3, h4 {
     margin: 15px 0px 0px;
 }
