@@ -72,20 +72,20 @@ body {
     color: hsl(330, 45%, 65%);
 }
 
-.navigation.home {
-    right: 364px;
+.navigation.about {
+    right: 354px;
 }
 
 .navigation.projects {
-    right: 274px;
+    right: 264px;
 }
 
-.navigation.resume {
-    right: 174px;
+.navigation.skills {
+    right: 164px;
 }
 
 .navigation.contact {
-    right: 74px;
+    right: 78px;
 }
 
 header li a {
@@ -153,7 +153,7 @@ header section div {
     background-color: hsl(222, 10%, 12%);
 }
 
-.open ul .home {
+.open ul .about {
     left: -50px;
     top: 7px;
 }
@@ -163,7 +163,7 @@ header section div {
     top: 7px;
 }
 
-.open ul .resume {
+.open ul .skills {
     left: -50px;
     top: 7px;
 }
@@ -276,7 +276,7 @@ main section button:active {
     color: hsl(222, 10%, 12%);
 }
 
-#projects, #resume {
+#projects, #skills {
     margin: 35px 25px;
 }
 
@@ -428,7 +428,7 @@ footer ul a:hover {
         margin: 0px 5%;
     }
 
-    #projects, #resume {
+    #projects, #skills {
         margin: 35px 5%;
     }
 }
