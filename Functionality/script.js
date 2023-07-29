@@ -33,27 +33,44 @@ function resetColor() {
 }
 
 /**
-    * Shows the rest of the content in the home section after clicking the read more button
+    * Shows the rest of the content after clicking the read more button in the section you button you clicked on is in
     * @function showContent
     * @returns {void}
 */
-function showContent() {
-    const content = document.querySelector('.content');
-    const readMoreButton = document.querySelector('.readMoreButton');
+function showContent(clickedButton) {
+    const contentSections = document.querySelectorAll('.content');
+    const readMoreButtons = document.querySelectorAll('.readMoreButton');
 
-    content.style.display = 'block';
-    readMoreButton.style.display = 'none';
+    if(clickedButton == readMoreButtons[0]) {
+        contentSections[0].style.display = 'block';
+        clickedButton.style.display = 'none';
+    } else if(clickedButton == readMoreButtons[1]) {
+        contentSections[1].style.display = 'block';
+        clickedButton.style.display = 'none';
+    } else {
+        contentSections[2].style.display = 'block';
+        clickedButton.style.display = 'none';
+    }
 }
 
 /**
-    * Hides the rest of the content in the home section after clicking the read more button
-    * @function showContent
+    * Hides the rest of the content after clicking the read more button in the section you button you clicked on is in
+    * @function hideContent
     * @returns {void}
 */
-function hideContent() {
-    const content = document.querySelector('.content');
-    const readMoreButton = document.querySelector('.readMoreButton');
+function hideContent(clickedButton) {
+    const contentSections = document.querySelectorAll('.content');
+    const readMoreButtons = document.querySelectorAll('.readMoreButton');
+    const readLessButtons = document.querySelectorAll('.readLessButton');
 
-    content.style.display = 'none';
-    readMoreButton.style.display = 'block';
+    if(clickedButton == readLessButtons[0]) {
+        contentSections[0].style.display = 'none';
+        readMoreButtons[0].style.display = 'block';
+    } else if(clickedButton == readLessButtons[1]) {
+        contentSections[1].style.display = 'none';
+        readMoreButtons[1].style.display = 'block';
+    } else {
+        contentSections[2].style.display = 'none';
+        readMoreButtons[2].style.display = 'block';
+    }
 }

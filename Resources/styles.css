@@ -72,20 +72,20 @@ body {
     color: hsl(330, 45%, 65%);
 }
 
-.navigation.home {
-    right: 388px;
+.navigation.about {
+    right: 354px;
 }
 
 .navigation.projects {
-    right: 288px;
+    right: 264px;
 }
 
-.navigation.resume {
-    right: 188px;
+.navigation.skills {
+    right: 164px;
 }
 
 .navigation.contact {
-    right: 88px;
+    right: 78px;
 }
 
 header li a {
@@ -153,7 +153,7 @@ header section div {
     background-color: hsl(222, 10%, 12%);
 }
 
-.open ul .home {
+.open ul .about {
     left: -50px;
     top: 7px;
 }
@@ -163,7 +163,7 @@ header section div {
     top: 7px;
 }
 
-.open ul .resume {
+.open ul .skills {
     left: -50px;
     top: 7px;
 }
@@ -230,12 +230,22 @@ main section {
     border-radius: 12px; 
 }
 
+main section p {
+    text-indent: 4ch;
+    text-align: left;
+}
+
+h3, h4 {
+    margin: 15px 0px 0px;
+}
+
 main section h2 {
     margin: 15px auto 0px;
     color: hsl(330, 45%, 65%);
 }
 
-main section p {
+main section p, main section ul {
+    margin-top: 10px;
     margin-bottom: 0px;
 }
 
@@ -250,6 +260,7 @@ main section button {
     font-weight: 600;
     line-height: 150%;
     font-size: 18px;
+    cursor: pointer;
 }
 
 main section button:hover {
@@ -263,11 +274,10 @@ main section button:active {
     background-color: hsl(330, 45%, 65%);
     border: 3px dashed hsl(240, 7%, 84%);
     color: hsl(222, 10%, 12%);
-    font-weight: bold;
 }
 
-#projects, #resume {
-    margin: 15px 25px;
+#projects, #skills {
+    margin: 35px 25px;
 }
 
 .content {
@@ -275,9 +285,69 @@ main section button:active {
 }
 
 .highlight {
-    color: hsl(216, 47%, 75%);
+    color: hsl(216, 47%, 72.5%);
     font-style: italic;
     font-weight: bold;
+}
+
+/* Projects section */
+
+.portfolioWebsite, .socialMediaMusicWebsite {
+    text-align: left;
+    border: 3px solid hsl(240, 7%, 84%);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.portfolioWebsite {
+    color: hsl(222, 10%, 12%);
+    background-color: hsl(240, 7%, 84%);
+    margin-top: 20px;
+}
+
+.portfolioWebsite h4 {
+    color: hsl(216, 47%, 52.5%);
+}
+
+.socialMediaMusicWebsite {
+    margin: 35px 0px 25px;
+}
+
+.socialMediaMusicWebsite h4 {
+    color: hsl(216, 47%, 72.5%);
+}
+
+.portfolioWebsite p, .socialMediaMusicWebsite p {
+    margin-top: 5px;
+}
+
+.portfolioWebsite h3, .socialMediaMusicWebsite h3 {
+    text-align: center;
+}
+
+.centerButton {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main section .portfolioWebsite button {
+    background-color: hsl(222, 10%, 12%);
+    border: 3px dashed hsl(330, 45%, 65%);
+    color: hsl(240, 7%, 84%);
+}
+
+main section .portfolioWebsite button:hover {
+    background-color: hsl(222, 10%, 12%); 
+    border: 4px double hsl(240, 7%, 84%);
+    color: hsl(330, 45%, 65%);
+    font-weight: bold;
+}
+
+main section button:active {
+    background-color: hsl(222, 10%, 12%);
+    border: 3px dashed hsl(330, 45%, 65%);
+    color: hsl(240, 7%, 84%);
 }
 
 /* Footer */
@@ -349,5 +419,16 @@ footer ul a:hover {
     footer img {
         width: 50px;
         height: 50px;
+    }
+}
+
+/*  adjust the margin for each section when screen width is greater than 700px */
+@media only screen and (min-width: 700px) {
+    main section {
+        margin: 0px 5%;
+    }
+
+    #projects, #skills {
+        margin: 35px 5%;
     }
 }
