@@ -73,19 +73,19 @@ body {
 }
 
 .navigation.home {
-    right: 388px;
+    right: 364px;
 }
 
 .navigation.projects {
-    right: 288px;
+    right: 274px;
 }
 
 .navigation.resume {
-    right: 188px;
+    right: 174px;
 }
 
 .navigation.contact {
-    right: 88px;
+    right: 74px;
 }
 
 header li a {
@@ -255,6 +255,7 @@ main section button {
     font-weight: 600;
     line-height: 150%;
     font-size: 18px;
+    cursor: pointer;
 }
 
 main section button:hover {
@@ -268,7 +269,6 @@ main section button:active {
     background-color: hsl(330, 45%, 65%);
     border: 3px dashed hsl(240, 7%, 84%);
     color: hsl(222, 10%, 12%);
-    font-weight: bold;
 }
 
 #projects, #resume {
@@ -280,7 +280,7 @@ main section button:active {
 }
 
 .highlight {
-    color: hsl(216, 47%, 75%);
+    color: hsl(216, 47%, 72.5%);
     font-style: italic;
     font-weight: bold;
 }
@@ -300,12 +300,16 @@ main section button:active {
     margin-top: 20px;
 }
 
+.portfolioWebsite h4 {
+    color: hsl(216, 47%, 52.5%);
+}
+
 .socialMediaMusicWebsite {
     margin: 25px 0px;
 }
 
 .socialMediaMusicWebsite h4 {
-    color: hsl(216, 47%, 75%);
+    color: hsl(216, 47%, 72.5%);
 }
 
 .portfolioWebsite p, .socialMediaMusicWebsite p {
@@ -314,6 +318,31 @@ main section button:active {
 
 .portfolioWebsite h3, .socialMediaMusicWebsite h3 {
     text-align: center;
+}
+
+.centerButton {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main section .portfolioWebsite button {
+    background-color: hsl(222, 10%, 12%);
+    border: 3px dashed hsl(330, 45%, 65%);
+    color: hsl(240, 7%, 84%);
+}
+
+main section .portfolioWebsite button:hover {
+    background-color: hsl(222, 10%, 12%); 
+    border: 4px double hsl(240, 7%, 84%);
+    color: hsl(330, 45%, 65%);
+    font-weight: bold;
+}
+
+main section button:active {
+    background-color: hsl(222, 10%, 12%);
+    border: 3px dashed hsl(330, 45%, 65%);
+    color: hsl(240, 7%, 84%);
 }
 
 /* Footer */
@@ -385,5 +414,16 @@ footer ul a:hover {
     footer img {
         width: 50px;
         height: 50px;
+    }
+}
+
+/*  adjust the margin for each section when screen width is greater than 700px */
+@media only screen and (min-width: 700px) {
+    main section {
+        margin: 0px 5%;
+    }
+
+    #projects, #resume {
+        margin: 25px 5%;
     }
 }
