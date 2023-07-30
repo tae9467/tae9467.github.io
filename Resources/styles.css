@@ -143,11 +143,13 @@ header section div {
 .open ul {
     display: flex;
     z-index: 2;
+    -ms-flex-direction: column;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     left: -35px;
     top: 52px;
+    height: -moz-fit-content;
     height: fit-content;
     width: 50px;
     background-color: hsl(222, 10%, 12%);
@@ -206,14 +208,18 @@ main section {
     align-items: center;
     justify-content: center;
     text-align: center;
+    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
 
     margin: 0px 25px;
     padding: 20px;
     width: auto;
+    min-width: -webkit-fill-available; /* supports samsung internet 5.0+ */
+    min-width: -moz-fit-content; /* supports Firefox, Firefox for Android  */
     min-width: fit-content;
     max-width: 100%;
+    min-height: -moz-fit-content; /* supports Firefox, Firefox for Android  */
     min-height: fit-content;
 
     background-color: hsl(222, 10%, 12%);
@@ -369,12 +375,13 @@ footer ul {
     align-items: center;
     justify-content: center;
     text-align: center;
+    -ms-flex-direction: row;
     flex-direction: row;
     position: relative;
     margin: 0px;
     padding: 6px;
     list-style: none;
-    isolation: isolate;
+    /* isolation: isolate; */
 }
 
 footer ul li {
@@ -384,7 +391,9 @@ footer ul li {
 footer ul a {
     text-decoration: none;
     color: hsl(240, 7%, 84%);
+    width: -moz-fit-content;
     width: fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
