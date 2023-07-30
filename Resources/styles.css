@@ -241,7 +241,7 @@ main section p {
     text-align: left;
 }
 
-h3, h4 {
+main section h3, main section h4 {
     margin: 15px 0px 0px;
 }
 
@@ -298,7 +298,7 @@ main section button:active {
 
 /* Projects section */
 
-.portfolioWebsite, .socialMediaMusicWebsite {
+.portfolioWebsite, .socialMediaMusicWebsite, .mySkills {
     text-align: left;
     border: 3px solid hsl(240, 7%, 84%);
     border-radius: 10px;
@@ -319,7 +319,16 @@ main section button:active {
     margin: 35px 0px 25px;
 }
 
-.socialMediaMusicWebsite h4 {
+.mySkills {
+    margin: 20px 0px 25px;
+}
+
+.mySkills h4 {
+    display: inline-flex;
+    margin: 0px;
+}
+
+.socialMediaMusicWebsite h4, .mySkills h4 {
     color: hsl(216, 47%, 72.5%);
 }
 
@@ -327,7 +336,7 @@ main section button:active {
     margin-top: 5px;
 }
 
-.portfolioWebsite h3, .socialMediaMusicWebsite h3 {
+.portfolioWebsite h3, .socialMediaMusicWebsite h3, .mySkills h3 {
     text-align: center;
 }
 
