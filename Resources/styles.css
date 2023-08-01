@@ -291,7 +291,7 @@ main section button:active {
 }
 
 .highlight {
-    color: hsl(216, 47%, 72.5%);
+    color: hsl(216, 47%, 70%);
     font-style: italic;
     font-weight: bold;
 }
@@ -303,6 +303,10 @@ main section button:active {
     border: 3px solid hsl(240, 7%, 84%);
     border-radius: 10px;
     padding: 10px;
+}
+
+.contactInfo {
+    text-align: left;
 }
 
 .portfolioWebsite {
@@ -323,13 +327,13 @@ main section button:active {
     margin: 20px 0px 25px;
 }
 
-.mySkills h4 {
+.mySkills h4, .contactInfo h4 {
     display: inline-flex;
     margin: 0px;
 }
 
-.socialMediaMusicWebsite h4, .mySkills h4 {
-    color: hsl(216, 47%, 72.5%);
+.socialMediaMusicWebsite h4, .mySkills h4, .contactInfo h4 {
+    color: hsl(216, 47%, 70%);
 }
 
 .portfolioWebsite p, .socialMediaMusicWebsite p {
@@ -338,6 +342,15 @@ main section button:active {
 
 .portfolioWebsite h3, .socialMediaMusicWebsite h3, .mySkills h3 {
     text-align: center;
+}
+
+.contactInfo ul a {
+    text-decoration: none;
+    color: hsl(240, 7%, 84%);
+}
+
+.contactInfo ul a:hover {
+    color: hsl(330, 45%, 65%);  
 }
 
 .centerButton {
@@ -390,7 +403,6 @@ footer ul {
     margin: 0px;
     padding: 6px;
     list-style: none;
-    /* isolation: isolate; */
 }
 
 footer ul li {
@@ -421,8 +433,7 @@ footer img:hover {
 }
 
 footer ul a:hover {
-    color: hsl(330, 45%, 65%);
-    
+    color: hsl(330, 45%, 65%);  
 }
 
 /* Resizing based on screens used */
