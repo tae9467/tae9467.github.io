@@ -35,6 +35,7 @@ function resetColor() {
 /**
     * Shows the rest of the content after clicking the read more button in the section you button you clicked on is in
     * @function showContent
+    * @param {string} clickedButton - a classname that gets put onto the clicked button
     * @returns {void}
 */
 function showContent(clickedButton) {
@@ -56,6 +57,7 @@ function showContent(clickedButton) {
 /**
     * Hides the rest of the content after clicking the read more button in the section you button you clicked on is in
     * @function hideContent
+    * @param {string} clickedButton - a classname that gets put onto the clicked button
     * @returns {void}
 */
 function hideContent(clickedButton) {
