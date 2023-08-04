@@ -79,7 +79,7 @@ html {
 header {
     background-color: hsl(222, 10%, 12%);
     padding: 12px;
-    height: 58.4px;
+    height: 58.7px;
     margin-bottom: 37px;
     position: fixed;
     top: 0px;
@@ -285,8 +285,6 @@ main section button:active {
     font-weight: bold;
 }
 
-/* Projects section */
-
 .portfolioWebsite, .socialMediaMusicWebsite, .mySkills {
     text-align: left;
     border: 3px solid hsl(240, 7%, 84%);
@@ -365,6 +363,10 @@ main section button:active {
     background-color: hsl(222, 10%, 12%);
     border: 3px dashed hsl(330, 45%, 65%);
     color: hsl(240, 7%, 84%);
+}
+
+.spacing {
+    letter-spacing: -3px;
 }
 
 /* Footer */
