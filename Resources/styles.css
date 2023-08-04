@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header */
 
 .headerImg, .name a, .navigation {
@@ -50,7 +54,6 @@ body {
     position: relative;
     text-align: right;
     top: -35px;
-    scroll-behavior: smooth;
 }
 
 .navigation a:hover, .name a:hover {
