@@ -73,7 +73,7 @@ html {
 }
 
 .navigation.contact {
-    right: 78px;
+    right: 84px;
 }
 
 header {
@@ -366,7 +366,7 @@ main section button:active {
 }
 
 .spacing {
-    letter-spacing: -3px;
+    letter-spacing: -1.9px;
 }
 
 /* Footer */
