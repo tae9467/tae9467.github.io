@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header */
 
 .headerImg, .name a, .navigation {
@@ -76,8 +80,10 @@ header {
     background-color: hsl(222, 10%, 12%);
     padding: 12px;
     height: 58.4px;
-    margin-bottom: 35px;
-    position: relative;
+    margin-bottom: 37px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
     z-index: 1;
 }
 
@@ -91,7 +97,7 @@ header section {
     float: right;
     clear: none;
     bottom: 50px;
-    right: 3px;
+    right: 26px;
     cursor: pointer;
 }
 
@@ -191,8 +197,9 @@ main section {
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
+    scroll-margin-top: 5.25rem;
 
-    margin: 0px 25px;
+    margin: 117.9px 25px 0px;
     padding: 20px;
     width: auto;
     min-width: -webkit-fill-available; /* supports samsung internet 5.0+ */
@@ -264,7 +271,7 @@ main section button:active {
     color: hsl(222, 10%, 12%);
 }
 
-#projects, #skills {
+#projects, #skills, #contact {
     margin: 35px 25px;
 }
 
@@ -436,10 +443,10 @@ footer ul a:hover {
 /*  adjust the margin for each section when screen width is greater than 700px */
 @media only screen and (min-width: 700px) {
     main section {
-        margin: 0px 5%;
+        margin: 117.9px 5% 0px;
     }
 
-    #projects, #skills {
+    #projects, #skills, #contact {
         margin: 35px 5%;
     }
 }
