@@ -50,6 +50,7 @@ body {
     position: relative;
     text-align: right;
     top: -35px;
+    scroll-behavior: smooth;
 }
 
 .navigation a:hover, .name a:hover {
@@ -266,7 +267,7 @@ main section button:active {
     color: hsl(222, 10%, 12%);
 }
 
-#projects, #skills {
+#projects, #skills, #contact {
     margin: 35px 25px;
 }
 
@@ -441,7 +442,7 @@ footer ul a:hover {
         margin: 117.9px 5% 0px;
     }
 
-    #projects, #skills {
+    #projects, #skills, #contact {
         margin: 35px 5%;
     }
 }
