@@ -452,3 +452,10 @@ footer ul a:hover {
         margin: 35px 5%;
     }
 }
+
+/* underlines links for mobile devices when screen width is less than 700px */
+@media only screen and (max-width: 700px) {
+    * ul a {
+        text-decoration: underline !important;
+    }
+}
