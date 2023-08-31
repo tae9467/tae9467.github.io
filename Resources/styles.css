@@ -453,7 +453,7 @@ footer ul a:hover {
     }
 }
 
-/* underlines links for mobile devices when screen width is less than 700px */
+/* underlines links for most mobile devices when screen width is less than 700px */
 @media only screen and (max-width: 700px) {
     * ul a {
         text-decoration: underline !important;
