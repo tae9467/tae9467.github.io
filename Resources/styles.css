@@ -332,7 +332,6 @@ main section button:active {
 }
 
 .contactInfo ul a {
-    text-decoration: none;
     color: hsl(240, 7%, 84%);
 }
 
@@ -450,12 +449,5 @@ footer ul a:hover {
 
     #projects, #skills, #contact {
         margin: 35px 5%;
-    }
-}
-
-/* underlines links for most mobile devices when screen width is less than 700px */
-@media only screen and (max-width: 700px) {
-    * ul a {
-        text-decoration: underline !important;
     }
 }
