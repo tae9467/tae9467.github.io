@@ -3,6 +3,7 @@
 body {
     background-color: hsl(240, 7%, 84%);
     box-sizing: border-box;
+    letter-spacing: 0.1px;
     margin: 0;
     padding: 0;
 }
