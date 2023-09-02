@@ -3,6 +3,7 @@
 body {
     background-color: hsl(240, 7%, 84%);
     box-sizing: border-box;
+    letter-spacing: 0.1px;
     margin: 0;
     padding: 0;
 }
@@ -42,7 +43,10 @@ html {
     font-family: 'Metal';
     font-weight: 600;
     line-height: 30px;
+    /* Incase max/min doesn't work */
     font-size: 18px;
+    /* Otherwise max font size is 20px, min is 18px */
+    font-size: max(18px, min(4vmin, 20px));
     transition: 0.4s; 
 }
 
@@ -78,6 +82,7 @@ html {
 
 header {
     background-color: hsl(222, 10%, 12%);
+    border: 1.5px solid hsl(222, 10%, 12%);
     padding: 12px;
     height: 58.7px;
     margin-bottom: 37px;
@@ -199,7 +204,7 @@ main section {
     position: relative;
     scroll-margin-top: 5.25rem;
 
-    margin: 117.9px 25px 0px;
+    margin: 117.9px 5% 0px;
     padding: 20px;
     width: auto;
     min-width: -webkit-fill-available; /* supports samsung internet 5.0+ */
@@ -214,10 +219,10 @@ main section {
     color: hsl(240, 7%, 84%);
     font-weight: 500;
     line-height: 150%;
-    font-size: 18px;
-    font-size: 4vmin;
-    /* max font size is 24.5px, min is 4vmin */
-    font-size: min(4vmin, 24.5px);
+    /* Incase max/min doesn't work */
+    font-size: 16px;
+    /* Otherwise max font size is 24.5px, min is 16px */
+    font-size: max(16px, min(4vmin, 24.5px));
 
     border: 4px solid hsl(240, 7%, 84%);
     border-radius: 12px; 
@@ -252,9 +257,10 @@ main section button {
     font-family: 'Metal';
     font-weight: 600;
     line-height: 150%;
-    font-size: 18px;
-    /* max font size is 24.3px, min is 4vmin */
-    font-size: min(4vmin, 20px);
+    /* Incase max/min doesn't work */
+    font-size: 16px;
+    /* Otherwise max font size is 24.5px, min is 16px */
+    font-size: max(16px, min(4vmin, 24.5px));
     cursor: pointer;
 }
 
@@ -272,7 +278,7 @@ main section button:active {
 }
 
 #projects, #skills, #contact {
-    margin: 35px 25px;
+    margin: 35px 5%;
 }
 
 .content {
@@ -379,7 +385,10 @@ footer {
     font-family: 'Metal';
     font-weight: 500;
     line-height: 150%;
+    /* Incase max/min doesn't work */
     font-size: 18px;
+    /* Otherwise max font size is 20px, min is 18px */
+    font-size: max(18px, min(4vmin, 20px));
 }
 
 footer ul {
@@ -431,23 +440,22 @@ footer ul a:hover {
 /* resizes wesite for galaxy fold when screen width is less than 300px */
 @media only screen and (max-width: 300px) {
     /* main */
+    main section {
+        /* Incase max/min doesn't work */
+        font-size: 15px;
+        /* Otherwise max font size is 24.5px, min is 15px */
+        font-size: max(15px, min(4vmin, 24.5px));
+    }
     main section button {
         padding: 5px;
+        /* Incase max/min doesn't work */
+        font-size: 15px;
+        /* Otherwise max font size is 24.5px, min is 15px */
+        font-size: max(15px, min(4vmin, 24.5px));
     }
     /* footer */
     footer img {
         width: 50px;
         height: 50px;
-    }
-}
-
-/*  adjust the margin for each section when screen width is greater than 700px */
-@media only screen and (min-width: 700px) {
-    main section {
-        margin: 117.9px 5% 0px;
-    }
-
-    #projects, #skills, #contact {
-        margin: 35px 5%;
     }
 }
