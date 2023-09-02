@@ -42,7 +42,10 @@ html {
     font-family: 'Metal';
     font-weight: 600;
     line-height: 30px;
+    /* Incase max/min doesn't work */
     font-size: 18px;
+    /* Otherwise max font size is 20px, min is 18px */
+    font-size: max(18px, min(4vmin, 20px));
     transition: 0.4s; 
 }
 
@@ -78,6 +81,7 @@ html {
 
 header {
     background-color: hsl(222, 10%, 12%);
+    border: 1.5px solid hsl(222, 10%, 12%);
     padding: 12px;
     height: 58.7px;
     margin-bottom: 37px;
@@ -380,7 +384,10 @@ footer {
     font-family: 'Metal';
     font-weight: 500;
     line-height: 150%;
+    /* Incase max/min doesn't work */
     font-size: 18px;
+    /* Otherwise max font size is 20px, min is 18px */
+    font-size: max(18px, min(4vmin, 20px));
 }
 
 footer ul {
