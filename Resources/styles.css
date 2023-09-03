@@ -440,18 +440,8 @@ footer ul a:hover {
 /* resizes wesite for galaxy fold when screen width is less than 300px */
 @media only screen and (max-width: 300px) {
     /* main */
-    main section {
-        /* Incase max/min doesn't work */
-        font-size: 15px;
-        /* Otherwise max font size is 24.5px, min is 15px */
-        font-size: max(15px, min(4vmin, 24.5px));
-    }
     main section button {
         padding: 5px;
-        /* Incase max/min doesn't work */
-        font-size: 15px;
-        /* Otherwise max font size is 24.5px, min is 15px */
-        font-size: max(15px, min(4vmin, 24.5px));
     }
     /* footer */
     footer img {
