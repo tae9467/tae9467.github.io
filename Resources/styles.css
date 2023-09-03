@@ -51,7 +51,11 @@ html {
 }
 
 .name a {
-    left: 85px;
+    left: 90px;
+    /* Incase max/min doesn't work */
+    font-size: 21px;
+    /* Otherwise max font size is 23px, min is 21px */
+    font-size: max(21px, min(4vmin, 23px));
 }
 
 .navigation {
