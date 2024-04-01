@@ -34,8 +34,24 @@ html {
     top: 2px;
 }
 
-.name a, .navigation a {
+.name a {
     position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    color: hsl(240, 7%, 84%); 
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    line-height: 30px;
+    transition: 0.4s;
+    left: 90px;
+    /* Incase max/min doesn't work */
+    font-size: 21px;
+    /* Otherwise max font size is 23px, min is 21px */
+    font-size: max(21px, min(4vmin, 23px));
+}
+
+.navigation a {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
@@ -50,40 +66,22 @@ html {
     transition: 0.4s; 
 }
 
-.name a {
-    left: 90px;
-    /* Incase max/min doesn't work */
-    font-size: 21px;
-    /* Otherwise max font size is 23px, min is 21px */
-    font-size: max(21px, min(4vmin, 23px));
-}
-
-.navigation {
-    position: relative;
-    text-align: right;
-    top: -35px;
-}
-
 .navigation a:hover, .name a:hover {
     color: hsl(330, 45%, 65%);
 }
 
-.navigation.about {
-    right: 360px;
+.sectionLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    gap: 50px;
+    bottom: 33px;
+    left: -30px;
 }
-
-.navigation.projects {
-    right: 270px;
-}
-
-.navigation.skills {
-    right: 170px;
-}
-
-.navigation.contact {
-    right: 90px;
-}
-
 header {
     background-color: hsl(222, 10%, 12%);
     border: 1.5px solid hsl(222, 10%, 12%);
@@ -108,20 +106,20 @@ header section {
 
 header section div {
     width: 35px;
-    height: 8.5px;
+    height: 3.5px;
     background-color: hsl(222, 10%, 12%);
     border: 3px solid hsl(240, 7%, 84%);
     border-radius: 5px;
     margin: 6px 0;
     transition: 0.4s;
     position: relative;
-    top: 18px;
-    left: 80%;
+    top: -40px;
+    right: -87%;
 }
 
 .open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-38%, 100%);
-    transform: rotate(-45deg) translate(-38%, 100%);
+    -webkit-transform: rotate(-45deg) translate(-30%, 100%);
+    transform: rotate(-45deg) translate(-30%, 100%);
 }
 
 .open .bar2 {
@@ -131,7 +129,6 @@ header section div {
 .open .bar3 {
     -webkit-transform: rotate(45deg) translate(-30%, -100%);
     transform: rotate(45deg) translate(-30%, -100%);
-    margin-bottom: 20px;
 }
 
 /* mobile-menu after clicking hamburger-icon */
@@ -140,10 +137,11 @@ header section div {
     -ms-flex-direction: column;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
     padding: 0;
-    border-radius: 40px;
     background-color: hsl(222, 10%, 12%);
+    position: relative;
+    top: -35px;
+    left: -13px;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
@@ -152,18 +150,13 @@ header section ul {
 }
 
 header section ul li {
-    margin: 10px;
+    margin: 40px;
     list-style: none;
-}
-
-header .hideInDesktop {
-    position: absolute;
-    left: 10px;
 }
 
 /* hides desktop navigation links when screen width is less than 700px */
 @media only screen and (max-width: 700px) {
-    header .hideInMobile {
+    header .sectionLinks {
         display: none;
     }
 
@@ -465,5 +458,26 @@ footer ul a:hover {
     footer img {
         width: 50px;
         height: 50px;
+    }
+}
+
+@media only screen and (max-width: 535px) {
+    header section div {
+        right: -85%;
+    }
+}
+@media only screen and (max-width: 461px) {
+    header section div {
+        right: -82%;
+    }
+}
+@media only screen and (max-width: 390px) {
+    header section div {
+        right: -79%;
+    }
+}
+@media only screen and (max-width: 330px) {
+    header section div {
+        right: -77%;
     }
 }
