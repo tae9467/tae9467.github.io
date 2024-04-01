@@ -80,7 +80,7 @@ html {
     position: relative;
     gap: 50px;
     bottom: 33px;
-    left: -30px;
+    left: -33px;
 }
 header {
     background-color: hsl(222, 10%, 12%);
@@ -179,9 +179,6 @@ main section {
     margin: 117.9px 5% 0px;
     padding: 20px;
     width: auto;
-    min-width: -webkit-fill-available; /* supports samsung internet 5.0+ */
-    min-width: -moz-fit-content; /* supports Firefox, Firefox for Android  */
-    min-width: fit-content;
     max-width: 100%;
     min-height: -moz-fit-content; /* supports Firefox, Firefox for Android  */
     min-height: fit-content;
@@ -323,7 +320,8 @@ main section button:active {
     color: hsl(240, 7%, 84%);
 }
 .website {
-    text-indent: 4ch;
+    word-wrap: break-word; /* Allows links to wrap within the container */
+    white-space: normal; /* Resets white-space property for links */
 }
 .mySkills {
     margin: 20px 0px 25px;
