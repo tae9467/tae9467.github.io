@@ -95,34 +95,33 @@ header {
     width: 100%;
     z-index: 1;
 }
-
 /* Header for mobile screens */
 
 /* hamburger-icon */
 header section {
-    margin: auto 0;
+    margin: 0 auto;
     display: none;
     position: relative;
-    float: right;
-    clear: none;
-    bottom: 50px;
-    right: 26px;
+    width: 100%;
     cursor: pointer;
 }
 
 header section div {
     width: 35px;
-    height: 3.5px;
+    height: 8.5px;
     background-color: hsl(222, 10%, 12%);
-    border: 3px solid hsl(240, 7%, 84%); 
-    border-radius: 5px; 
+    border: 3px solid hsl(240, 7%, 84%);
+    border-radius: 5px;
     margin: 6px 0;
     transition: 0.4s;
+    position: relative;
+    top: 18px;
+    left: 80%;
 }
 
 .open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-30%, 100%);
-    transform: rotate(-45deg) translate(-30%, 100%);
+    -webkit-transform: rotate(-45deg) translate(-38%, 100%);
+    transform: rotate(-45deg) translate(-38%, 100%);
 }
 
 .open .bar2 {
@@ -132,62 +131,39 @@ header section div {
 .open .bar3 {
     -webkit-transform: rotate(45deg) translate(-30%, -100%);
     transform: rotate(45deg) translate(-30%, -100%);
+    margin-bottom: 20px;
 }
 
 /* mobile-menu after clicking hamburger-icon */
 .open ul {
     display: flex;
-    z-index: 2;
     -ms-flex-direction: column;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    left: -35px;
-    top: 52px;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 50px;
+    gap: 3px;
+    padding: 0;
+    border-radius: 40px;
     background-color: hsl(222, 10%, 12%);
-}
-
-.open ul .about {
-    left: -55px;
-    top: 7px;
-}
-
-.open ul .projects {
-    left: -55px;
-    top: 7px;
-}
-
-.open ul .skills {
-    left: -55px;
-    top: 7px;
-}
-
-.open ul .contact {
-    left: -55px;
-    top: 7px;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
 header section ul {
     display: none;
-    position: absolute;
-    top: 62px;
-    left: 280px;
-    height: calc(100vh - 50px);
-    width: 100%;
 }
 
-/* the space between each link when the hamburger menu is open */
 header section ul li {
-    margin-bottom: 40px;
+    margin: 10px;
+    list-style: none;
+}
+
+header .hideInDesktop {
+    position: absolute;
+    left: 10px;
 }
 
 /* hides desktop navigation links when screen width is less than 700px */
 @media only screen and (max-width: 700px) {
-    header .sectionLinks {
+    header .hideInMobile {
         display: none;
     }
 
@@ -195,7 +171,6 @@ header section ul li {
         display: block;
     }
 }
-
 /* Main */
 
 main section {
@@ -339,19 +314,27 @@ main section button:active {
     background-color: hsl(240, 7%, 84%);
     margin-top: 20px;
 }
-
 .socialMediaMusicWebsite h4 {
     color: hsl(216, 47%, 52.5%);
 }
-
 .portfolioWebsite, .saundersLabsWebsite {
     margin: 35px 0px 25px;
 }
-
+.portfolioWebsite a, .saundersLabsWebsite a {
+    color: hsl(240, 7%, 84%);
+}
+.portfolioWebsite a:hover, .saundersLabsWebsite a:hover {
+    color: hsl(330, 45%, 65%);
+}
+.portfolioWebsite a:active, .saundersLabsWebsite a:active {
+    color: hsl(240, 7%, 84%);
+}
+.website {
+    text-indent: 4ch;
+}
 .mySkills {
     margin: 20px 0px 25px;
 }
-
 .mySkills h4, .contactInfo h4 {
     display: inline-flex;
     margin: 0px;
@@ -375,6 +358,9 @@ main section button:active {
 
 .contactInfo ul a:hover {
     color: hsl(330, 45%, 65%);  
+}
+.contactInfo ul a:active {
+    color: hsl(240, 7%, 84%);
 }
 
 .centerButton {
