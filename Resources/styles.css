@@ -34,8 +34,24 @@ html {
     top: 2px;
 }
 
-.name a, .navigation a {
+.name a {
     position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    color: hsl(240, 7%, 84%); 
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    line-height: 30px;
+    transition: 0.4s;
+    left: 90px;
+    /* Incase max/min doesn't work */
+    font-size: 21px;
+    /* Otherwise max font size is 23px, min is 21px */
+    font-size: max(21px, min(4vmin, 23px));
+}
+
+.navigation a {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
@@ -50,40 +66,22 @@ html {
     transition: 0.4s; 
 }
 
-.name a {
-    left: 90px;
-    /* Incase max/min doesn't work */
-    font-size: 21px;
-    /* Otherwise max font size is 23px, min is 21px */
-    font-size: max(21px, min(4vmin, 23px));
-}
-
-.navigation {
-    position: relative;
-    text-align: right;
-    top: -35px;
-}
-
 .navigation a:hover, .name a:hover {
     color: hsl(330, 45%, 65%);
 }
 
-.navigation.about {
-    right: 360px;
+.sectionLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    gap: 50px;
+    bottom: 33px;
+    left: -33px;
 }
-
-.navigation.projects {
-    right: 270px;
-}
-
-.navigation.skills {
-    right: 170px;
-}
-
-.navigation.contact {
-    right: 90px;
-}
-
 header {
     background-color: hsl(222, 10%, 12%);
     border: 1.5px solid hsl(222, 10%, 12%);
@@ -95,18 +93,14 @@ header {
     width: 100%;
     z-index: 1;
 }
-
 /* Header for mobile screens */
 
 /* hamburger-icon */
 header section {
-    margin: auto 0;
+    margin: 0 auto;
     display: none;
     position: relative;
-    float: right;
-    clear: none;
-    bottom: 50px;
-    right: 26px;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -114,10 +108,13 @@ header section div {
     width: 35px;
     height: 3.5px;
     background-color: hsl(222, 10%, 12%);
-    border: 3px solid hsl(240, 7%, 84%); 
-    border-radius: 5px; 
+    border: 3px solid hsl(240, 7%, 84%);
+    border-radius: 5px;
     margin: 6px 0;
     transition: 0.4s;
+    position: relative;
+    top: -40px;
+    right: -87%;
 }
 
 .open .bar1 {
@@ -137,52 +134,24 @@ header section div {
 /* mobile-menu after clicking hamburger-icon */
 .open ul {
     display: flex;
-    z-index: 2;
     -ms-flex-direction: column;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    left: -35px;
-    top: 52px;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 50px;
+    padding: 0;
     background-color: hsl(222, 10%, 12%);
-}
-
-.open ul .about {
-    left: -55px;
-    top: 7px;
-}
-
-.open ul .projects {
-    left: -55px;
-    top: 7px;
-}
-
-.open ul .skills {
-    left: -55px;
-    top: 7px;
-}
-
-.open ul .contact {
-    left: -55px;
-    top: 7px;
+    position: relative;
+    top: -35px;
+    left: -13px;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
 header section ul {
     display: none;
-    position: absolute;
-    top: 62px;
-    left: 280px;
-    height: calc(100vh - 50px);
-    width: 100%;
 }
 
-/* the space between each link when the hamburger menu is open */
 header section ul li {
-    margin-bottom: 40px;
+    margin: 40px;
+    list-style: none;
 }
 
 /* hides desktop navigation links when screen width is less than 700px */
@@ -195,7 +164,6 @@ header section ul li {
         display: block;
     }
 }
-
 /* Main */
 
 main section {
@@ -211,9 +179,6 @@ main section {
     margin: 117.9px 5% 0px;
     padding: 20px;
     width: auto;
-    min-width: -webkit-fill-available; /* supports samsung internet 5.0+ */
-    min-width: -moz-fit-content; /* supports Firefox, Firefox for Android  */
-    min-width: fit-content;
     max-width: 100%;
     min-height: -moz-fit-content; /* supports Firefox, Firefox for Android  */
     min-height: fit-content;
@@ -339,19 +304,28 @@ main section button:active {
     background-color: hsl(240, 7%, 84%);
     margin-top: 20px;
 }
-
 .socialMediaMusicWebsite h4 {
     color: hsl(216, 47%, 52.5%);
 }
-
 .portfolioWebsite, .saundersLabsWebsite {
     margin: 35px 0px 25px;
 }
-
+.portfolioWebsite a, .saundersLabsWebsite a {
+    color: hsl(240, 7%, 84%);
+}
+.portfolioWebsite a:hover, .saundersLabsWebsite a:hover {
+    color: hsl(330, 45%, 65%);
+}
+.portfolioWebsite a:active, .saundersLabsWebsite a:active {
+    color: hsl(240, 7%, 84%);
+}
+.website {
+    word-wrap: break-word; /* Allows links to wrap within the container */
+    white-space: normal; /* Resets white-space property for links */
+}
 .mySkills {
     margin: 20px 0px 25px;
 }
-
 .mySkills h4, .contactInfo h4 {
     display: inline-flex;
     margin: 0px;
@@ -375,6 +349,9 @@ main section button:active {
 
 .contactInfo ul a:hover {
     color: hsl(330, 45%, 65%);  
+}
+.contactInfo ul a:active {
+    color: hsl(240, 7%, 84%);
 }
 
 .centerButton {
@@ -479,5 +456,26 @@ footer ul a:hover {
     footer img {
         width: 50px;
         height: 50px;
+    }
+}
+
+@media only screen and (max-width: 535px) {
+    header section div {
+        right: -85%;
+    }
+}
+@media only screen and (max-width: 461px) {
+    header section div {
+        right: -82%;
+    }
+}
+@media only screen and (max-width: 390px) {
+    header section div {
+        right: -79%;
+    }
+}
+@media only screen and (max-width: 330px) {
+    header section div {
+        right: -77%;
     }
 }
