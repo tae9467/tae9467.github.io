@@ -334,17 +334,17 @@ main section button:active {
     text-align: left;
 }
 
-.portfolioWebsite, .saundersLabsWebsite {
+.socialMediaMusicWebsite {
     color: hsl(222, 10%, 12%);
     background-color: hsl(240, 7%, 84%);
     margin-top: 20px;
 }
 
-.portfolioWebsite h4, .saundersLabsWebsite h4 {
+.socialMediaMusicWebsite h4 {
     color: hsl(216, 47%, 52.5%);
 }
 
-.socialMediaMusicWebsite {
+.portfolioWebsite, .saundersLabsWebsite {
     margin: 35px 0px 25px;
 }
 
@@ -357,7 +357,7 @@ main section button:active {
     margin: 0px;
 }
 
-.socialMediaMusicWebsite h4, .mySkills h4, .contactInfo h4 {
+.mySkills h4, .contactInfo h4, .portfolioWebsite h4, .saundersLabsWebsite h4 {
     color: hsl(216, 47%, 70%);
 }
 
@@ -383,13 +383,13 @@ main section button:active {
     margin-right: auto;
 }
 
-main section .portfolioWebsite button, main section .saundersLabsWebsite button {
+main section .socialMediaMusicWebsite button {
     background-color: hsl(222, 10%, 12%);
     border: 3px dashed hsl(330, 45%, 65%);
     color: hsl(240, 7%, 84%);
 }
 
-main section .portfolioWebsite button:hover, main section .saundersLabsWebsite button:hover {
+main section .socialMediaMusicWebsite button:hover {
     background-color: hsl(222, 10%, 12%); 
     border: 4px double hsl(240, 7%, 84%);
     color: hsl(330, 45%, 65%);
