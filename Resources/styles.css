@@ -163,6 +163,12 @@ header section ul li {
     header section {
         display: block;
     }
+    header {
+        height: 60px;
+    }
+    .open ul {
+        width: 100%;
+    }
 }
 /* Main */
 
