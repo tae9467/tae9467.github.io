@@ -49,6 +49,7 @@ html {
     font-size: 21px;
     /* Otherwise max font size is 23px, min is 21px */
     font-size: max(21px, min(4vmin, 23px));
+    z-index: 3;
 }
 
 .navigation a {
