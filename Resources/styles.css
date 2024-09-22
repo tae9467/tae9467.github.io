@@ -293,7 +293,7 @@ main section button:active {
     font-size: calc(max(16px, min(4vmin, 24.5px)) + 3px);
 }
 
-.portfolioWebsite, .socialMediaMusicWebsite, .mySkills, .saundersLabsWebsite {
+.portfolioWebsite, .socialMediaMusicWebsite, .toulasBoutiqueWebsite .mySkills, .saundersLabsWebsite {
     text-align: left;
     border: 3px solid hsl(240, 7%, 84%);
     border-radius: 10px;
@@ -304,12 +304,12 @@ main section button:active {
     text-align: left;
 }
 
-.socialMediaMusicWebsite {
+.socialMediaMusicWebsite, .toulasBoutiqueWebsite {
     color: hsl(222, 10%, 12%);
     background-color: hsl(240, 7%, 84%);
     margin-top: 20px;
 }
-.socialMediaMusicWebsite h4 {
+.socialMediaMusicWebsite h4, .toulasBoutiqueWebsite h4 {
     color: hsl(216, 47%, 52.5%);
 }
 .portfolioWebsite, .saundersLabsWebsite {
@@ -340,11 +340,11 @@ main section button:active {
     color: hsl(216, 47%, 70%);
 }
 
-.portfolioWebsite p, .socialMediaMusicWebsite p, .saundersLabsWebsite p {
+.portfolioWebsite p, .socialMediaMusicWebsite p, .toulasBoutiqueWebsite p .saundersLabsWebsite p {
     margin-top: 5px;
 }
 
-.portfolioWebsite h3, .socialMediaMusicWebsite h3, .mySkills h3, .saundersLabsWebsite h3 {
+.portfolioWebsite h3, .socialMediaMusicWebsite h3, .toulasBoutiqueWebsite h3, .mySkills h3, .saundersLabsWebsite h3 {
     text-align: center;
 }
 
@@ -365,13 +365,13 @@ main section button:active {
     margin-right: auto;
 }
 
-main section .socialMediaMusicWebsite button {
+main section .socialMediaMusicWebsite button, main section .toulasBoutiqueWebsite button {
     background-color: hsl(222, 10%, 12%);
     border: 3px dashed hsl(330, 45%, 65%);
     color: hsl(240, 7%, 84%);
 }
 
-main section .socialMediaMusicWebsite button:hover {
+main section .socialMediaMusicWebsite button:hover, main section .toulasBoutiqueWebsite button:hover {
     background-color: hsl(222, 10%, 12%); 
     border: 4px double hsl(240, 7%, 84%);
     color: hsl(330, 45%, 65%);
