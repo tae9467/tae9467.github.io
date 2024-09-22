@@ -241,6 +241,7 @@ main section h1, main section h2, main section h3, main section h4 {
 main section p, main section ul {
     margin-top: 10px;
     margin-bottom: 0px;
+    text-align: left;
 }
 
 main section button {
@@ -420,6 +421,7 @@ footer ul {
 
 footer ul li {
     width: 90px;
+    text-align: left;
 }
 
 footer ul a {
