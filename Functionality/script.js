@@ -51,8 +51,11 @@ function showContent(clickedButton) {
     } else if(clickedButton == readMoreButtons[2]) {
         contentSections[2].style.display = 'block';
         clickedButton.style.display = 'none';
-    } else {
+      } else if(clickedButton == readMoreButtons[3]) {
         contentSections[3].style.display = 'block';
+        clickedButton.style.display = 'none';
+    } else {
+        contentSections[4].style.display = 'block';
         clickedButton.style.display = 'none';
     }
 }
@@ -77,8 +80,11 @@ function hideContent(clickedButton) {
     } else if(clickedButton == readLessButtons[2]) {
         contentSections[2].style.display = 'none';
         readMoreButtons[2].style.display = 'block';
-    } else {
+   } else if(clickedButton == readLessButtons[3]) {
         contentSections[3].style.display = 'none';
         readMoreButtons[3].style.display = 'block';
+    } else {
+        contentSections[4].style.display = 'none';
+        readMoreButtons[4].style.display = 'block';
     }
 }
