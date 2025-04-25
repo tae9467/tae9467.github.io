@@ -140,10 +140,11 @@ header section div {
     align-items: center;
     padding: 0;
     background-color: hsl(222, 10%, 12%);
-    position: relative;
-    top: -40px;
-    left: -14px;
-    width: 101%;
+    position: fixed;
+    top: 83px;
+    left: 0;
+    width: 100vw;
+    margin: auto;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
