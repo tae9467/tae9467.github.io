@@ -98,11 +98,14 @@ header {
 
 /* hamburger-icon */
 header section {
-    margin: 0 auto;
     display: none;
-    position: relative;
-    width: 100%;
     cursor: pointer;
+    width: 42px;
+    margin: 0;
+    position: relative;
+    top: -47px;
+    float: right;
+    right: 27px;
 }
 
 header section div {
@@ -113,9 +116,6 @@ header section div {
     border-radius: 5px;
     margin: 6px 0;
     transition: 0.4s;
-    position: relative;
-    top: -40px;
-    right: -87%;
 }
 
 .open .bar1 {
