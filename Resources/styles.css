@@ -295,7 +295,7 @@ main section button:active {
     font-size: calc(max(16px, min(4vmin, 24.5px)) + 3px);
 }
 
-.portfolioWebsite, .socialMediaMusicWebsite, .toulasBoutiqueWebsite .mySkills, .saundersLabsWebsite {
+.portfolioWebsite, .socialMediaMusicWebsite, .toulasBoutiqueWebsite, .saundersLabsWebsite {
     text-align: left;
     border: 3px solid hsl(240, 7%, 84%);
     border-radius: 10px;
