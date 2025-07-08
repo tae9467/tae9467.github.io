@@ -24,7 +24,7 @@ html {
     background-color: hsl(222, 10%, 12%);
     border-radius: 10%; 
     left: 13px;
-    top: 4px;
+    top: 5px;
 }
 
 .headerImg img {
@@ -65,10 +65,12 @@ html {
     /* Otherwise max font size is 21px, min is 19px */
     font-size: max(19px, min(4vmin, 21px));
     transition: 0.4s; 
+    z-index: 3;
 }
 
 .navigation a:hover, .name a:hover {
     color: hsl(330, 45%, 65%);
+    z-index: 3;
 }
 
 .sectionLinks {
@@ -82,11 +84,47 @@ html {
     gap: 50px;
     bottom: 33px;
     left: -33px;
+    z-index: 3;
 }
+  
+.fancyDesktopHeaderBorder {
+    width: calc(111vw + 55px);
+    height: 137px;
+    position: absolute;
+    top: -35px;
+    left: -19px;
+    object-fit: fill;
+    display: block;
+}
+
+.fancyTabletHeaderBorder {
+    width: calc(111vw + 55px);
+    height: 137px;
+    position: absolute;
+    top: -34px;
+    left: -19px;
+    object-fit: fill;
+    display: block;
+}
+
+.fancyMobileHeaderBorder {
+    width: calc(111vw + 55px);
+    height: 137px;
+    position: absolute;
+    top: -33px;
+    left: -19px;
+    object-fit: fill;
+    display: block;
+}
+
 header {
     background-color: hsl(222, 10%, 12%);
-    border: 1.5px solid hsl(222, 10%, 12%);
-    padding: 12px;
+    border: 4px solid hsl(222, 10%, 12%);
+    /* background-image: url("Images/tabletHeaderBorder.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
+    padding: 15px;
     height: 58.7px;
     margin-bottom: 37px;
     position: fixed;
@@ -106,6 +144,7 @@ header section {
     top: -47px;
     float: right;
     right: 27px;
+    z-index: 3;
 }
 
 header section div {
@@ -116,6 +155,7 @@ header section div {
     border-radius: 5px;
     margin: 6px 0;
     transition: 0.4s;
+    z-index: 3;
 }
 
 .open .bar1 {
@@ -485,5 +525,34 @@ footer ul a:hover {
 @media only screen and (max-width: 330px) {
     header section div {
         right: -77%;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 700px) { 
+ .fancyTabletHeaderBorder, .fancyMobileHeaderBorder {
+    display: none;
+ }
+}
+
+/* Tablet */
+@media only screen and (max-width: 700px) { 
+    .fancyDesktopHeaderBorder, .fancyMobileHeaderBorder {
+        display: none;
+    }
+
+    .fancyTabletHeaderBorder {
+        display: block;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px) { 
+    .fancyDesktopHeaderBorder, .fancyTabletHeaderBorder {
+        display: none;
+    }
+
+    .fancyMobileHeaderBorder {
+        display: block;
     }
 }
