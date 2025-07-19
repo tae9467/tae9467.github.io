@@ -11,6 +11,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -89,31 +90,11 @@ html {
 }
   
 .fancyDesktopHeaderBorder {
-    width: calc(111vw + 55px);
-    height: 137px;
+    width: 100vw;
+    height: 32px;
     position: absolute;
-    top: -35px;
-    left: -19px;
-    object-fit: fill;
-    display: block;
-}
-
-.fancyTabletHeaderBorder {
-    width: calc(111vw + 55px);
-    height: 137px;
-    position: absolute;
-    top: -34px;
-    left: -19px;
-    object-fit: fill;
-    display: block;
-}
-
-.fancyMobileHeaderBorder {
-    width: calc(111vw + 55px);
-    height: 137px;
-    position: absolute;
-    top: -33px;
-    left: -19px;
+    bottom: -28px;
+    left: -3px;
     object-fit: fill;
     display: block;
 }
@@ -125,9 +106,9 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; */
-    padding: 15px;
+    padding: 16px;
     height: 58.7px;
-    margin-bottom: 37px;
+    margin-bottom: 38px;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -286,12 +267,24 @@ main section p, main section ul {
     text-align: left;
 }
 
+main section#about {
+    padding-bottom: 11px;
+}
+
+/* Desktop Version Collapsed */
+.borderSectionImg {
+    position: absolute;
+    width: 101.5%;
+    height: 103%;
+    top: -5px;
+}
+
 main section button {
-    margin-top: 25px;
+    /* margin-top: 25px; */
     margin-bottom: 15px;
     padding: 7px;
     background-color: hsl(330, 45%, 65%);
-    border: 3px dashed hsl(240, 7%, 84%);
+    border: 3px dashed transparent;
     border-radius: 7px;
     color: hsl(222, 10%, 12%);
     font-family: 'Metal', serif;
@@ -302,6 +295,16 @@ main section button {
     /* Otherwise max font size is 24.5px, min is 17px */
     font-size: max(17px, min(4vmin, 24.5px));
     cursor: pointer;
+    position: relative;
+    bottom: -53px;
+}
+
+main section button img {
+    position: absolute;
+    width: 130px;
+    bottom: -12px;
+    left: -7px;
+    height: 71px;
 }
 
 main section button:hover {
@@ -449,11 +452,11 @@ footer {
 }
 
 .fancyDesktopFooterBorder {
-    width: calc(111vw + 55px);
+    width: 100vw;
     height: 32px;
     position: absolute;
-    top: -7px;
-    left: -19px;
+    top: -8px;
+    left: -3px;
     object-fit: fill;
     display: block;
 }
@@ -536,34 +539,5 @@ footer ul a:hover {
 @media only screen and (max-width: 330px) {
     header section div {
         right: -77%;
-    }
-}
-
-/* Desktop */
-@media only screen and (min-width: 700px) { 
- .fancyTabletHeaderBorder, .fancyMobileHeaderBorder {
-    display: none;
- }
-}
-
-/* Tablet */
-@media only screen and (max-width: 700px) { 
-    .fancyDesktopHeaderBorder, .fancyMobileHeaderBorder {
-        display: none;
-    }
-
-    .fancyTabletHeaderBorder {
-        display: block;
-    }
-}
-
-/* Mobile */
-@media only screen and (max-width: 500px) { 
-    .fancyDesktopHeaderBorder, .fancyTabletHeaderBorder {
-        display: none;
-    }
-
-    .fancyMobileHeaderBorder {
-        display: block;
     }
 }
