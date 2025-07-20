@@ -6,7 +6,7 @@ body {
     letter-spacing: 0.1px;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 html {
@@ -204,10 +204,10 @@ main section {
     position: relative;
     scroll-margin-top: 5.25rem;
 
-    margin: 117.9px 5% 0px;
+    margin: 127.9px auto 0px;
     padding: 20px;
     width: auto;
-    max-width: 100%;
+    max-width: 811px;
     min-height: -moz-fit-content; /* supports Firefox, Firefox for Android  */
     min-height: fit-content;
 
@@ -269,6 +269,7 @@ main section p, main section ul {
 
 main section#about {
     padding-bottom: 11px;
+    margin-bottom: 74px;
 }
 
 /* Desktop Version Collapsed */
@@ -279,10 +280,20 @@ main section#about {
     top: -5px;
 }
 
+.borderSectionImgLong {
+    position: absolute;
+    width: 101.5%;
+    height: 101%;
+    top: -5px;
+    display: none;
+}
+
 main section button {
     /* margin-top: 25px; */
     margin-bottom: 15px;
-    padding: 7px;
+    width: 131px;
+    height: 55px;
+    /* padding: 7px; */
     background-color: hsl(330, 45%, 65%);
     border: 3px dashed transparent;
     border-radius: 7px;
@@ -301,7 +312,7 @@ main section button {
 
 main section button img {
     position: absolute;
-    width: 130px;
+    width: 144px;
     bottom: -12px;
     left: -7px;
     height: 71px;
@@ -309,14 +320,12 @@ main section button img {
 
 main section button:hover {
     background-color: hsl(222, 10%, 12%); 
-    border: 4px double hsl(240, 7%, 84%);
     color: hsl(330, 45%, 65%);
     font-weight: bold;
 }
 
 main section button:active {
     background-color: hsl(330, 45%, 65%);
-    border: 3px dashed hsl(240, 7%, 84%);
     color: hsl(222, 10%, 12%);
 }
 
@@ -434,6 +443,26 @@ main section button:active {
     letter-spacing: -1.9px;
 }
 
+.desktopAboutMeDecals {
+    position: absolute;
+    height: 168px;
+    width: auto;
+    display: flex;
+    bottom: -72px;
+    z-index: -1;
+    margin: 10px;
+}
+
+.desktopAboutMeDecals img:nth-of-type(1) {
+    position: relative;
+    right: 369px;
+}
+
+.desktopAboutMeDecals img:nth-of-type(2) {
+    position: relative;
+    left: 377px;
+}
+
 /* Footer */
 
 footer {
@@ -539,5 +568,16 @@ footer ul a:hover {
 @media only screen and (max-width: 330px) {
     header section div {
         right: -77%;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .desktopAboutMeDecals {
+        display: none;
+    }
+
+    main section#about {
+        margin-bottom: 49px;
     }
 }

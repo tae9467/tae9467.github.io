@@ -42,9 +42,14 @@ function showContent(clickedButton) {
     const contentSections = document.querySelectorAll('.content');
     const readMoreButtons = document.querySelectorAll('.readMoreButton');
 
+    const aboutMeSectionBorder = document.querySelector('.borderSectionImg');
+    const aboutMeSectionBorderLong = document.querySelector('.borderSectionImgLong');
+
     if(clickedButton == readMoreButtons[0]) {
         contentSections[0].style.display = 'block';
         clickedButton.style.display = 'none';
+        aboutMeSectionBorder.style.display = 'none';
+        aboutMeSectionBorderLong.style.display = 'block';
     } else if(clickedButton == readMoreButtons[1]) {
         contentSections[1].style.display = 'block';
         clickedButton.style.display = 'none';
@@ -71,9 +76,14 @@ function hideContent(clickedButton) {
     const readMoreButtons = document.querySelectorAll('.readMoreButton');
     const readLessButtons = document.querySelectorAll('.readLessButton');
 
+    const aboutMeSectionBorder = document.querySelector('.borderSectionImg');
+    const aboutMeSectionBorderLong = document.querySelector('.borderSectionImgLong');
+
     if(clickedButton == readLessButtons[0]) {
         contentSections[0].style.display = 'none';
         readMoreButtons[0].style.display = 'block';
+        aboutMeSectionBorder.style.display = 'block';
+        aboutMeSectionBorderLong.style.display = 'none';
     } else if(clickedButton == readLessButtons[1]) {
         contentSections[1].style.display = 'none';
         readMoreButtons[1].style.display = 'block';
