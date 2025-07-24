@@ -351,6 +351,12 @@ main section#designs button img {
     height: 71px;
 }
 
+.figmaSectionBorder {
+    position: absolute;
+    width: 103%;
+    height: 562px;
+}
+
 .figmaBorderContainer {
     position: relative;
     width: fit-content;
