@@ -285,7 +285,20 @@ main section#designs {
     padding-left: 0px;
     padding-right: 0px;
     border: none;
-    margin-top: 111px;
+    margin-top: 90px;
+    min-height: 77%;
+    height: auto;
+    max-height: 444px;
+}
+
+main section#designs h2 {
+    position: relative;
+    top: 35px;
+}
+
+.positioningForDesign {
+    position: relative;
+    top: 36px;
 }
 
 /* Desktop Version Collapsed */
@@ -354,7 +367,7 @@ main section#designs button img {
 .figmaSectionBorder {
     position: absolute;
     width: 103%;
-    height: 562px;
+    height: 103%;
 }
 
 .figmaBorderContainer {
