@@ -288,17 +288,34 @@ main section#designs {
     margin-top: 90px;
     min-height: 77%;
     height: auto;
-    max-height: 444px;
+    max-height: 517px;
 }
 
 main section#designs h2 {
     position: relative;
-    top: 35px;
+    top: 15px;
+}
+
+.carouselArrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.carouselArrows img {
+    width: 111px;
+    height: 111px;
+    cursor: pointer;
 }
 
 .positioningForDesign {
     position: relative;
-    top: 36px;
+    top: 18px;
 }
 
 /* Desktop Version Collapsed */
@@ -378,13 +395,23 @@ main section#designs button img {
 
 .designImg {
     width: 100%;           
-    height: auto;          
+    height: auto;
+    aspect-ratio: 1 / 1;          
     max-width: 360px;
     display: block;
     margin: 5% auto;
     object-fit: cover;
     border-radius: 6px;
 
+}
+
+.figmaDesignsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.figmaDesignsContainer > *:nth-child(n+4) {
+    display: none;
 }
 
 .figmaDesignsContainer img:nth-of-type(2) {
@@ -685,6 +712,14 @@ footer ul a:hover {
         margin-left: 5%;
         margin-right: 5%;
     }
+
+    .figmaDesignsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .figmaDesignsContainer > *:nth-child(n+3) {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 754px) {
@@ -695,6 +730,13 @@ footer ul a:hover {
 
 @media only screen and (max-width: 611px) {
     .tabletAboutMeDecals {
+        display: none;
+    }
+
+    .figmaDesignsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .figmaDesignsContainer > *:nth-child(n+2) {
         display: none;
     }
 
@@ -715,6 +757,11 @@ footer ul a:hover {
     main section#about button {
         bottom: -43px;
     }
+
+    .carouselArrows img {
+        width: 91px;
+        height: 91px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -722,4 +769,11 @@ footer ul a:hover {
         margin-left: 7px;
         margin-right: 7px;
     }
+}
+
+@media only screen and (max-width: 435px) {
+    .carouselArrows img {
+        width: 77px;
+        height: 77px;
+      }
 }
