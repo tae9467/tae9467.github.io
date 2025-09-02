@@ -318,6 +318,10 @@ main section#designs h2 {
     top: 18px;
 }
 
+.projectModalContent {
+    display: none;
+}
+
 /* Desktop Version Collapsed */
 .borderSectionImg {
     position: absolute;
@@ -437,13 +441,75 @@ main section button:active {
 }
 
 #projects, #skills, #contact {
-    margin: 35px 5%;
+    margin: 35px;
+}
+
+.hide {
+    display: none;
+}
+
+#projects {
+    margin: 35px auto;
+    padding: 0;
+    /* width: 100%; */
+    border: none;
+    text-align: center;
+    border-radius: 0;
+    background-color: hsl(240, 7%, 84%);
+}
+
+#projects h2 {
+    color: hsl(222, 10%, 12%);
 }
 
 .content {
     display: none;
 }
 
+.projectGridContainer {
+    display: flex;
+}
+
+.projectgridSquare h3 {
+    color: hsl(216, 47%, 70%);
+    top: 15%;
+    position: absolute;
+}
+
+.projectgridSquare button img {
+    position: absolute;
+    max-width: 220px;
+    width: 110%;
+}
+
+.projectgridSquare button {
+    width: auto;
+    height: 55px;
+    max-width: 206px;
+    min-width: fit-content;
+}
+
+.projectgridSquare {
+    background-image: url('./Images/projectsGridBox.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 90vw;         
+    max-width: 400px;    
+    max-height: 100%;    
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    display: flex;       
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+  
 .highlight {
     color: hsl(216, 47%, 70%);
     font-style: italic;
