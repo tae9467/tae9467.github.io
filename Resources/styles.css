@@ -485,6 +485,8 @@ main section button:active {
 .projectgridSquare button {
     width: auto;
     height: 55px;
+    top: 66%;
+    position: absolute;
     max-width: 206px;
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
@@ -854,9 +856,13 @@ footer ul a:hover {
 }
 
 @media only screen and (max-width: 500px) {
-    main section#about {
+    main section#about,  main section#projects {
         margin-left: 7px;
         margin-right: 7px;
+    }
+
+    .projectgridSquare {
+        width: 100vw;
     }
 }
 
