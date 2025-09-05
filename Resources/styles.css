@@ -468,6 +468,10 @@ main section button:active {
 
 .projectGridContainer {
     display: flex;
+    row-gap: 11px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
 }
 
 .projectgridSquare h3 {
@@ -520,7 +524,8 @@ main section button:active {
     background-repeat: no-repeat;
     background-position: center;
     width: 90vw;         
-    max-width: 400px;    
+    max-width: 400px;   
+    flex: 1 1 33.333%; 
     max-height: 100%;    
     aspect-ratio: 1 / 1;
     margin: auto;
@@ -808,6 +813,10 @@ footer ul a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .projectgridSquare {
+        flex: 1 1 50%; 
+    }
+
     .figmaDesignsContainer > *:nth-child(n+3) {
         display: none;
     }
@@ -827,6 +836,11 @@ footer ul a:hover {
     .figmaDesignsContainer {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .projectgridSquare {
+        flex: 1 1 100%; 
+    }
+
     .figmaDesignsContainer > *:nth-child(n+2) {
         display: none;
     }
