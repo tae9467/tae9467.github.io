@@ -478,6 +478,7 @@ main section button:active {
     color: hsl(216, 47%, 70%);
     top: 15%;
     position: absolute;
+    font-size: calc(1em + 3px);
 }
 
 .projectgridSquare button img {
@@ -844,6 +845,15 @@ footer ul a:hover {
         margin: 0px; 
     }
 
+    .projectgridSquare h3 {
+        top: 16.5%;
+        font-size: calc(1.17em + 3px);
+    }
+
+    .projectgridSquare button {
+        top: 69%;
+    }
+
     .figmaDesignsContainer > *:nth-child(n+2) {
         display: none;
     }
@@ -887,5 +897,9 @@ footer ul a:hover {
     .carouselArrows img {
         width: 77px;
         height: 77px;
-      }
+    }
+
+    .projectgridSquare button {
+        top: 66%;
+    }
 }
