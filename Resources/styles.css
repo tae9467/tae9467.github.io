@@ -540,6 +540,51 @@ main section button:active {
     position: relative;
     overflow: hidden;
 }
+
+.projectModal h3 {
+    color: hsl(216, 47%, 70%);
+    top: 15%;
+    position: absolute;
+}
+
+.projectModal {
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.blurBackground {
+    background-color: hsl(222, 10%, 12%);
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    opacity: .2;
+}
+
+.projectsModalContent {
+    background-image: url('./Images/projectsModal.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 95vw;         
+    max-width: 95vw;   
+    flex: 1 1 100%; 
+    height: fit-content;
+    max-height: 100%;    
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    display: flex;       
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
   
 .highlight {
     color: hsl(216, 47%, 70%);
