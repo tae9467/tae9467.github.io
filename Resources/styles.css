@@ -550,6 +550,7 @@ main section button:active {
     width: 100vw;
     height: 100vh;
     display: flex;
+    /* display: none; */
     justify-content: center; 
     align-items: center;      
     z-index: 1000;
@@ -604,10 +605,15 @@ main section button:active {
 }
 
 .projectsModalButtons {
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 11%;
     text-align: center;
+    z-index: 998;
 }
 
 .projectsModalButtons button img {
