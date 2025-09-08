@@ -603,6 +603,32 @@ main section button:active {
     margin: 0;
 }
 
+.projectsModalButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.projectsModalButtons button img {
+    position: absolute;
+    max-width: 220px;
+    width: 113%;
+}
+
+.projectsModalButtons button {
+    width: auto;
+    height: 55px;
+    max-width: 206px;
+    min-width: fit-content;
+    background-color: hsl(216, 47%, 70%);
+    text-align: center;
+}
+
+.projectsModalButtons button:hover {
+    color: hsl(216, 47%, 70%);
+}
+
 /* ----------------------------project modal-------------------------------------- */
 
 .highlight {
