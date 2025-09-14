@@ -670,7 +670,15 @@ main section button:active {
 .projectsModalButtons button:hover {
     color: hsl(216, 47%, 70%);
 }
-
+.contentInModal hr {
+    max-width: 300px;
+    height: 11px;
+    border: none;
+    background: url("./Images/HRBorderForProjectModal.png") no-repeat center;
+    background-size: cover;
+    margin: auto;
+  }
+  
 /* ----------------------------project modal-------------------------------------- */
 
 .highlight {
