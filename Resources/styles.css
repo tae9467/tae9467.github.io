@@ -112,7 +112,7 @@ header {
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 1;
+    z-index: 500;
 }
 /* Header for mobile screens */
 
@@ -327,7 +327,7 @@ main section#designs h2 {
     position: absolute;
     width: 101.5%;
     height: 103%;
-    top: -5px;
+    top: -6px;
 }
 
 .borderSectionImgLong {
@@ -706,16 +706,33 @@ main section button:active {
     background-color: hsl(330, 45%, 65%);
 }
 
-#skills h2 {
-    color: hsl(222, 10%, 12%);
+/* Border image overlay */
+#skills::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -19px;
+    width: 109%;
+    height: 103%;
+    background: url("./Images/skillsPinkBackgroundBorder.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 1;
 }
 
-#skills .pBorder {
-    position: absolute;
-    left: -9px;
-    width: 106%;
-    height: 103%;
-    top: -9px;
+.mySkills hr {
+    max-width: 100%;
+    height: 11px;
+    border: none;
+    background: url("./Images/HRBorderForProjectModal.png") no-repeat center;
+    background-size: cover;
+    margin: 11px auto;
+  }
+
+#skills h2 {
+    color: hsl(222, 10%, 12%);
 }
 
 .mySkills {
@@ -727,6 +744,10 @@ main section button:active {
     border-radius: 6px;
     z-index: 1;
     overflow: visible;
+}
+
+.mySkills h3 {
+    margin-top: 2%;
 }
 
 /* Border image overlay */
@@ -742,7 +763,6 @@ main section button:active {
     z-index: 2;
     pointer-events: none;
 }
-
 
 .mySkills ul {
     padding-right: 11px;
