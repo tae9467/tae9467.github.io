@@ -556,6 +556,10 @@ main section button:active {
     z-index: 1000;
 }
 
+.hideModal {
+  display: none;
+}
+
 .projectModalOverlay {
     position: absolute;
     top: 0;
