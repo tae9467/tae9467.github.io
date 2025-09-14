@@ -572,6 +572,13 @@ main section button:active {
     z-index: 0;
 }
 
+.projectImg {
+    background-image: url("./Images/TransparentInProgressProjectsimageModal.png");
+    background-position: center 40%, center;
+    background-repeat: no-repeat;
+    background-size: 97%, contain;
+}
+
 /* Modal box */
 .projectModalBox {
     position: relative;
