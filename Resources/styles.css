@@ -602,6 +602,17 @@ main section button:active {
     color: hsl(216, 47%, 70%);
     min-width: fit-content;
     margin: 0;
+    margin-bottom: 6%;
+}
+
+.contentInModal {
+    max-width: 800px;
+    width: 76vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 350px;
+    height: 34vw;
+    white-space: initial;
 }
 
 .projectsModalButtons {
@@ -629,6 +640,14 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
+}
+
+.gradientButton {
+    background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+}
+
+.gradientButton:hover {
+    background: hsl(222, 10%, 12%);
 }
 
 .projectsModalButtons button:hover {
@@ -883,10 +902,16 @@ footer ul a:hover {
     header section div {
         right: -79%;
     }
+    .projectsModalContent h3 {
+        margin-bottom: 5%;
+    }
 }
 @media only screen and (max-width: 330px) {
     header section div {
         right: -77%;
+    }
+    .projectsModalContent h3 {
+        margin-bottom: 3%;
     }
 }
 
