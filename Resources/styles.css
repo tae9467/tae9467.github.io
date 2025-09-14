@@ -613,7 +613,24 @@ main section button:active {
     max-height: 350px;
     height: 34vw;
     white-space: initial;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
 }
+
+/* WebKit Browsers */
+.contentInModal::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .contentInModal::-webkit-scrollbar-track {
+    background: hsl(222, 10%, 12%);
+  }
+  
+  .contentInModal::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+  }
+  
 
 .projectsModalButtons {
     position: absolute;
