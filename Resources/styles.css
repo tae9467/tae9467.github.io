@@ -914,6 +914,10 @@ footer ul a:hover {
     header section div {
         right: -82%;
     }
+
+    .projectsModalButtons button img {
+        left: -5px;
+    }
 }
 @media only screen and (max-width: 390px) {
     header section div {
@@ -925,6 +929,7 @@ footer ul a:hover {
 
     .projectsModalButtons button img {
         height: 61px;
+        left: -5px;
     }
     
     .projectsModalButtons button {
