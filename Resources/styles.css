@@ -202,7 +202,7 @@ main section {
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    scroll-margin-top: 5.25rem;
+    scroll-margin-top: 7rem;
 
     margin: 127.9px auto 0px;
     padding: 20px;
