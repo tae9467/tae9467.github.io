@@ -602,7 +602,7 @@ main section button:active {
     color: hsl(216, 47%, 70%);
     min-width: fit-content;
     margin: 0;
-    margin-bottom: 6%;
+    margin-bottom: 7%;
 }
 
 .contentInModal {
@@ -610,8 +610,8 @@ main section button:active {
     width: 76vw;
     overflow-x: hidden;
     overflow-y: scroll;
-    max-height: 350px;
-    height: 34vw;
+    max-height: 330px;
+    height: 32vw;
     white-space: initial;
     scrollbar-width: thin;
     scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
