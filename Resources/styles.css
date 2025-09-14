@@ -389,6 +389,7 @@ main section#designs button img {
     position: absolute;
     width: 103%;
     height: 103%;
+    top: -8px;
 }
 
 .figmaBorderContainer {
@@ -692,6 +693,63 @@ main section button:active {
   
 /* ----------------------------project modal-------------------------------------- */
 
+/* ----------------------------Skills---------------------------------------------------- */
+#skills {
+    position: relative;
+    min-width: 100%;
+    margin: auto;
+    border: none;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 0;
+    background-color: hsl(330, 45%, 65%);
+}
+
+#skills h2 {
+    color: hsl(222, 10%, 12%);
+}
+
+#skills .pBorder {
+    position: absolute;
+    left: -9px;
+    width: 106%;
+    height: 103%;
+    top: -9px;
+}
+
+.mySkills {
+    background-color: hsl(222, 10%, 12%);
+    position: relative;
+    width: 94%;
+    margin: auto;
+    padding-bottom: 11px;
+    border-radius: 6px;
+    z-index: 1;
+    overflow: visible;
+}
+
+/* Border image overlay */
+.mySkills::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -.7%;
+    width: 101.5%;
+    height: 102.5%;
+    background: url("./Images/skillsBlackBackgroundBorder.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.mySkills ul {
+    padding-right: 11px;
+}
+
+/* ----------------------------------------------------skills--------------------------------------- */
+
 .highlight {
     color: hsl(216, 47%, 70%);
     font-style: italic;
@@ -739,7 +797,7 @@ main section button:active {
     white-space: normal; /* Resets white-space property for links */
 }
 .mySkills {
-    margin: 20px 0px 25px;
+    margin: 21px 0px 25px;
 }
 .mySkills h4, .contactInfo h4 {
     display: inline-flex;
