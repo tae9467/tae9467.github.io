@@ -1075,15 +1075,15 @@ footer ul a:hover {
     .tabletAboutMeDecals {
         width: 105%;
     }
+
+    .mySkills h3 {
+        margin-top: 4%;
+    }
 }
 
 @media only screen and (max-width: 611px) {
     .tabletAboutMeDecals {
         display: none;
-    }
-
-    .mySkills h3 {
-        margin-top: 4%;
     }
 
     .figmaDesignsContainer {
