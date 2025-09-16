@@ -328,6 +328,7 @@ main section#designs h2 {
     width: 101.5%;
     height: 103%;
     top: -6px;
+    pointer-events: none;
 }
 
 .borderSectionImgLong {
@@ -913,6 +914,21 @@ main section button:active {
     height: auto;
     max-height: 100%;
     width: auto;
+}
+
+#contact {
+    position: relative;
+    z-index: 1;
+    margin: 55px auto 60px;
+}
+
+.contactBorder {
+    position: absolute;
+    top: -2%;
+    border-radius: 12px;
+    width: 101.8%;
+    height: 103.5%; 
+    pointer-events: none; 
 }
 
 /* Footer */
