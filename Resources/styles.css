@@ -922,6 +922,14 @@ main section button:active {
     margin: 55px auto 60px;
 }
 
+#contact h2 {
+    margin-top: 4vh;
+}
+
+.contactInfo {
+    margin-bottom: 4vh;
+}
+
 .contactBorder {
     position: absolute;
     top: -2%;
