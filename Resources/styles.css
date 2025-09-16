@@ -928,7 +928,33 @@ main section button:active {
 
 .contactInfo {
     margin-bottom: 4vh;
+    margin-right: 6%;
+    margin-left: 6%;
 }
+
+.contactDecals {
+    position: absolute;
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 2;
+}
+
+.contactFlowerTopLeft {
+    position: absolute;
+    top: -12px;    
+    left: 0%;
+    width: 135px;   
+    height: auto;
+}
+
+.contactFlowerBottomRight {
+    position: absolute;
+    bottom: -14px; 
+    right: 0%;
+    width: 135px;
+    height: auto;
+}
+
 
 .contactBorder {
     position: absolute;
@@ -1095,6 +1121,15 @@ footer ul a:hover {
     }
 }
 
+@media only screen and (max-width: 950px) {
+
+    #contact {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+}
+
 @media only screen and (max-width: 754px) {
     .tabletAboutMeDecals {
         width: 105%;
@@ -1106,8 +1141,18 @@ footer ul a:hover {
 }
 
 @media only screen and (max-width: 611px) {
-    .tabletAboutMeDecals {
+    .tabletAboutMeDecals, .contactDecals {
         display: none;
+    }
+
+    .contactInfo {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #contact {
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
     .figmaDesignsContainer {
