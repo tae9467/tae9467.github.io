@@ -322,6 +322,14 @@ main section#designs h2 {
     display: none;
 }
 
+.projectLink:hover {
+    color: hsl(330, 45%, 65%);
+}
+
+.projectLink, .projectLink:active {
+    color: hsl(240, 7%, 84%);
+}
+
 /* Desktop Version Collapsed */
 .borderSectionImg {
     position: absolute;
