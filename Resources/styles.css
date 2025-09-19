@@ -420,6 +420,31 @@ main section#designs button img {
     opacity: 0.7;
     pointer-events: none;
 }
+
+.floatingRose {
+    position: fixed; /* fixed so it appears relative to viewport */
+    width: 50px;     /* adjust size */
+    pointer-events: none;
+    opacity: 0;
+    animation: floatRose 1s forwards;
+    z-index: 9999;   /* make sure it appears above everything */
+}
+
+@keyframes floatRose {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-30px) scale(1) rotate(15deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-60px) scale(0.8) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
   
 
 .positioningForDesign {
