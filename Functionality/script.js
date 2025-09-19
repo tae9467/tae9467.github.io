@@ -118,9 +118,44 @@ function openModal(modalIndex) {
     * @param {int} modalIndex - a number specifying and keeping track of which websites details you want
     * @returns {void}
 */
-  function closeModal(modalIndex) {
+function closeModal(modalIndex) {
     const modals = document.querySelectorAll('.projectModal');
     if(modals[modalIndex]) {
       modals[modalIndex].classList.add('hideModal');
     }
-  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const designs = document.querySelectorAll('.positioningForDesign');
+    const prevBtn = document.getElementById('prevDesign');
+    const nextBtn = document.getElementById('nextDesign');
+    let startIndex = 0;
+
+    function getVisibleCount() {
+        const width = window.innerWidth;
+        if (width <= 611) return 1;
+        if (width <= 1000) return 2;
+        return 3;
+    }
+
+    function showDesigns() {
+        const visibleCount = getVisibleCount();
+        designs.forEach((design, i) => {
+            design.style.display = (i >= startIndex && i < startIndex + visibleCount) ? 'block' : 'none';
+        });
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const visibleCount = getVisibleCount();
+        if (startIndex + visibleCount < designs.length) startIndex++;
+        showDesigns();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (startIndex > 0) startIndex--;
+        showDesigns();
+    });
+
+    window.addEventListener('resize', showDesigns);
+    showDesigns(); // initial display
+});

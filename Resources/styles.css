@@ -408,6 +408,33 @@ main section#designs button img {
     margin: 21px;
 }
 
+.figmaDesignsContainer {
+    display: flex;
+    overflow: hidden;        /* hides extra items */
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.positioningForDesign {
+    display: none;
+    flex: 0 0 calc(33.333% - 20px); /* show 3 items on desktop */
+
+}
+
+@media (max-width: 1000px) {
+    .positioningForDesign {
+        flex: 0 0 calc(50% - 20px); /* show 2 items on tablet */
+    }
+}
+
+@media (max-width: 611px) {
+    .positioningForDesign {
+        flex: 0 0 100%; /* show 1 item on mobile */
+    }
+}
+
+
 .designImg {
     width: 100%;           
     height: auto;
@@ -420,14 +447,14 @@ main section#designs button img {
 
 }
 
-.figmaDesignsContainer {
+/* .figmaDesignsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .figmaDesignsContainer > *:nth-child(n+4) {
     display: none;
-}
+} */
 
 .figmaDesignsContainer img:nth-of-type(2) {
     width: 103%;
@@ -1131,17 +1158,21 @@ footer ul a:hover {
         margin-right: 5%;
     }
 
-    .figmaDesignsContainer {
+    /* .figmaDesignsContainer {
         grid-template-columns: repeat(2, 1fr);
+    } */
+
+    .positioningForDesign {
+        flex: 0 0 calc(50% - 20px); 
     }
 
     .projectgridSquare {
         flex: 1 1 50%; 
     }
 
-    .figmaDesignsContainer > *:nth-child(n+3) {
+    /* .figmaDesignsContainer > *:nth-child(n+3) {
         display: none;
-    }
+    } */
 }
 
 @media only screen and (max-width: 950px) {
@@ -1178,8 +1209,8 @@ footer ul a:hover {
         margin-right: 2%;
     }
 
-    .figmaDesignsContainer {
-        grid-template-columns: repeat(1, 1fr);
+    .positioningForDesign {
+        flex: 0 0 100%;           
     }
 
     .projectgridSquare {
@@ -1197,10 +1228,10 @@ footer ul a:hover {
     .projectgridSquare button {
         top: 69%;
     }
-
+/* 
     .figmaDesignsContainer > *:nth-child(n+2) {
         display: none;
-    }
+    } */
 
     main section#about {
        padding-bottom: 0px;
