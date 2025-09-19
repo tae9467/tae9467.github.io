@@ -133,24 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let startIndex = 0;
     let currentBreakpoint = getBreakpoint();
 
-    function spawnRose(x, y) {
-        const rose = document.createElement('img');
-        rose.src = './Resources/Images/rose.png';
-        rose.className = 'floatingRose';
-        
-        // random horizontal offset ±20px
-        const offsetX = Math.random() * 40 - 20;
-        rose.style.left = (x + offsetX) + 'px';
-        rose.style.top = y + 'px';
-        
-        document.body.appendChild(rose);
-    
-        rose.addEventListener('animationend', () => {
-            rose.remove();
-        });
-    }
-       
-
     function getBreakpoint() {
         const width = window.innerWidth;
         if (width <= 611) return 'mobile';
@@ -187,19 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
     nextBtn.addEventListener('click', () => {
         if (startIndex + 1 < designs.length) startIndex++;
         showDesigns();
-
-        // spawn rose at arrow position
-        const rect = nextBtn.getBoundingClientRect();
-        spawnRose(rect.left + rect.width/2, rect.top);
     });
 
     prevBtn.addEventListener('click', () => {
         if (startIndex > 0) startIndex--;
         showDesigns();
-
-        // spawn rose at arrow position
-        const rect = prevBtn.getBoundingClientRect();
-        spawnRose(rect.left + rect.width/2, rect.top);
     });
 
     // Only reload on breakpoint change
