@@ -124,6 +124,8 @@ function closeModal(modalIndex) {
       modals[modalIndex].classList.add('hideModal');
     }
 }
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const designs = document.querySelectorAll('.positioningForDesign');
     const prevBtn = document.getElementById('prevDesign');

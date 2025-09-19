@@ -410,7 +410,7 @@ main section#designs button img {
 
 .figmaDesignsContainer {
     display: flex;
-    overflow: hidden;        /* hides extra items */
+    overflow: hidden;  
     gap: 20px;
     justify-content: center;
     position: relative;
@@ -418,27 +418,14 @@ main section#designs button img {
 
 .carouselArrows img.disabled {
     opacity: 0.7;
-    /* cursor: default; */
     pointer-events: none;
-  }
+}
   
 
 .positioningForDesign {
     display: none;
-    flex: 0 0 calc(33.333% - 20px); /* show 3 items on desktop */
+    flex: 0 0 calc(33.333% - 20px);
 
-}
-
-@media (max-width: 1000px) {
-    .positioningForDesign {
-        flex: 0 0 calc(50% - 20px); /* show 2 items on tablet */
-    }
-}
-
-@media (max-width: 611px) {
-    .positioningForDesign {
-        flex: 0 0 100%; /* show 1 item on mobile */
-    }
 }
 
 
@@ -453,15 +440,6 @@ main section#designs button img {
     border-radius: 6px;
 
 }
-
-/* .figmaDesignsContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.figmaDesignsContainer > *:nth-child(n+4) {
-    display: none;
-} */
 
 .figmaDesignsContainer img:nth-of-type(2) {
     width: 103%;
@@ -1165,10 +1143,6 @@ footer ul a:hover {
         margin-right: 5%;
     }
 
-    /* .figmaDesignsContainer {
-        grid-template-columns: repeat(2, 1fr);
-    } */
-
     .positioningForDesign {
         flex: 0 0 calc(50% - 20px); 
     }
@@ -1177,9 +1151,6 @@ footer ul a:hover {
         flex: 1 1 50%; 
     }
 
-    /* .figmaDesignsContainer > *:nth-child(n+3) {
-        display: none;
-    } */
 }
 
 @media only screen and (max-width: 950px) {
