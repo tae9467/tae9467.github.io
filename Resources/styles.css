@@ -416,6 +416,13 @@ main section#designs button img {
     position: relative;
 }
 
+.carouselArrows img.disabled {
+    opacity: 0.7;
+    /* cursor: default; */
+    pointer-events: none;
+  }
+  
+
 .positioningForDesign {
     display: none;
     flex: 0 0 calc(33.333% - 20px); /* show 3 items on desktop */

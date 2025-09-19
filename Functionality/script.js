@@ -124,30 +124,48 @@ function closeModal(modalIndex) {
       modals[modalIndex].classList.add('hideModal');
     }
 }
-
 document.addEventListener("DOMContentLoaded", function () {
     const designs = document.querySelectorAll('.positioningForDesign');
     const prevBtn = document.getElementById('prevDesign');
     const nextBtn = document.getElementById('nextDesign');
     let startIndex = 0;
+    let currentBreakpoint = getBreakpoint();
+
+    function getBreakpoint() {
+        const width = window.innerWidth;
+        if (width <= 611) return 'mobile';
+        if (width <= 1000) return 'tablet';
+        return 'desktop';
+    }
 
     function getVisibleCount() {
-        const width = window.innerWidth;
-        if (width <= 611) return 1;
-        if (width <= 1000) return 2;
-        return 3;
+        const bp = getBreakpoint();
+        return bp === 'mobile' ? 1 : bp === 'tablet' ? 2 : 3;
     }
 
     function showDesigns() {
         const visibleCount = getVisibleCount();
+
+        // Clamp startIndex
+        if (startIndex + visibleCount > designs.length) {
+            startIndex = Math.max(0, designs.length - visibleCount);
+        }
+
         designs.forEach((design, i) => {
             design.style.display = (i >= startIndex && i < startIndex + visibleCount) ? 'block' : 'none';
         });
+
+        updateArrows();
+    }
+
+    function updateArrows() {
+        const visibleCount = getVisibleCount();
+        prevBtn.classList.toggle('disabled', startIndex === 0);
+        nextBtn.classList.toggle('disabled', startIndex + visibleCount >= designs.length);
     }
 
     nextBtn.addEventListener('click', () => {
-        const visibleCount = getVisibleCount();
-        if (startIndex + visibleCount < designs.length) startIndex++;
+        if (startIndex + 1 < designs.length) startIndex++;
         showDesigns();
     });
 
@@ -156,6 +174,14 @@ document.addEventListener("DOMContentLoaded", function () {
         showDesigns();
     });
 
-    window.addEventListener('resize', showDesigns);
-    showDesigns(); // initial display
+    // Only reload on breakpoint change
+    window.addEventListener('resize', () => {
+        const newBreakpoint = getBreakpoint();
+        if (newBreakpoint !== currentBreakpoint) {
+            currentBreakpoint = newBreakpoint;
+            showDesigns();
+        }
+    });
+
+    showDesigns();
 });
