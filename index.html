@@ -60,299 +60,457 @@
                 </ul>
             </section>
             <!-- Just for the border to match Figma Design -->
-            <img class="fancyDesktopHeaderBorder" src="Resources/Images/desktopHeaderBorder.png">
-            <img class="fancyTabletHeaderBorder" src="Resources/Images/desktopHeaderBorder.png">
-            <img class="fancyMobileHeaderBorder" src="Resources/Images/desktopHeaderBorder.png">
+            <img class="fancyDesktopHeaderBorder" src="Resources/Images/desktopFooterBorder.png" alt="Header Border">
         </header>
 
         <main>
             <section id="about">
+                <img class="borderSectionImg" src="./Resources/Images/AboutMeSectionBorder.png" alt="section border">
+                <img class="borderSectionImgLong" src="./Resources/Images/AboutMeSectionBorderLong.png" alt="section border">
                 <h2>About Me</h2>
                 <p>
-                    Hey, I am Toula Elwell! A passionate Software Engineering student at RIT, 
-                    with a flair for creativity and a love for frontend web development. I'm currently taking an immersion 
-                    in the fascinating world of Psychology and pursuing a minor 
-                    in Web Development.
+                        Hi! I'm Toula Elwell — a May 2025 Software Engineering graduate from RIT with a passion for blending creativity and technology. 
+                    During my five years at Rochester Institute of Technology, I earned my bachelor’s in Software Engineering, completed a minor 
+                    in Web Development, and explored an immersion in Psychology to better understand user-centered design.
                 </p>
-                <button type="button" class="readMoreButton" onclick="showContent(this)">Read More</button>
+                <button type="button" class="readMoreButton" onclick="showContent(this)"><img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">Read More</button>
                 <div class="content">
                     <p>
-                        Throughout my journey, I have embraced exciting challenges, including 
-                        participating in hackathons where I had the opportunity to develop some truly 
-                        cool projects. One of my highlights was creating an interactive card game using 
-                        Python. It was a thrilling experience that showcased my problem-solving skills 
-                        and ignited my passion for coding.
+                        <span class="highlight">💡What drives me?</span> I'm inspired by the challenge of transforming ideas into 
+                        engaging digital experiences. From wireframes and mood boards to pixel-perfect layouts, I love designing and crafting websites 
+                        that are not only functional but also visually striking and intuitive to use.
                     </p>
                     <p>
-                        But my fascination with technology does not stop there! Even back in 8th grade, I 
-                        indulged in creating my own secret written languages. I quickly discovered that 
-                        coding shared the same sense of mystery and excitement, making it an 
-                        incredibly fun endeavor.
+                        Back in 8th grade, I indulged in creating my own secret written languages. 
+                        I quickly discovered that coding and designing shared the same sense of mystery and excitement, 
+                        making it an incredibly fun endeavor.
                     </p>                
                     <p>
-                        <span class="highlight">What am I seeking now?</span> An Entry-Level Web Development 
-                        job! I am fueled by the joy of bringing websites to life. 
+                        <span class="highlight">What am I seeking now?</span> Entry-level opportunities 
+                        in Front-End Web Development/Design or Software Engineering! I am fueled by the 
+                        joy of coding and bringing websites to life. 
                         If you are searching for someone who thrives in turning ideas into visually 
                         stunning and functional websites, then we are a perfect match.
                     </p>                 
-                    <button type="button" class="readLessButton" onclick="hideContent(this)">Read Less</button> 
-                </div>                  
+                    <button type="button" class="readLessButton" onclick="hideContent(this)"><img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">Read Less</button> 
+                </div>
+                <div class="desktopAboutMeDecals">
+                    <img src="./Resources/Images/desktopAboutMeFlowerDecalLeft.png">
+                    <img src="./Resources/Images/desktopAboutMeFlowerDecalRight.png">
+                </div>
+                <div class="tabletAboutMeDecals">
+                    <img src="./Resources/Images/tabletAboutMeFlowerDecalLeft.png">
+                    <img src="./Resources/Images/tabletAboutMeFlowerDecalRight.png">
+                </div>                   
+            </section>
+
+            <section id="designs">
+                <img class="figmaSectionBorder" src="./Resources/Images/figmaBorder.png" alt="blue figma section border">
+                <h2>Figma UI/UX Designs</h2>
+                <div class="figmaDesignsContainer">
+                    <!-- Portfolio -->
+                    <div class="positioningForDesign active">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/portfolioDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Saunders Stock Market -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/saundersDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=0-1&t=zp1v0KQubQTUr5yb-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Saunders Labs -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/labsDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-214&t=8OaqDOe7HwNz41Ut-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Camera Store -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/CameraStoreFigmaPic.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/Kssh8OQOStH7DoJOnrLEFt/Web-Design-for-Interview?node-id=0-1&t=Ll8ZSMDa8otc1RO1-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Components Made for Tech Guides Blog -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/ComponentsDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/Kssh8OQOStH7DoJOnrLEFt/Web-Design-for-Interview?node-id=292-79&t=Ll8ZSMDa8otc1RO1-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Where's Waldo -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/WheresWaldoDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4191-26&t=4tFaIRunekZhKGRT-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Toulas Boutique -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/myBoutiqueDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4105-11&t=4tFaIRunekZhKGRT-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                    <!-- Mindfullness App -->
+                    <div class="positioningForDesign">
+                        <div class="figmaBorderContainer">
+                            <img class="designImg" src="./Resources/Images/mindfullnessDesign.jpg">
+                            <img src="./Resources/Images/designBorderforImg.png">
+                        </div>
+                        <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4087-385&t=4tFaIRunekZhKGRT-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Figma Design</button>
+                    </div>
+                </div>
+                <div class="carouselArrows">
+                    <img id="prevDesign" src="./Resources/Images/portfolioDesignArrowLeft.png">
+                    <img id="nextDesign" src="./Resources/Images/portfolioDesignArrowRight.png">
+                </div>
             </section>
 
             <section id="projects">
                 <h2>My Projects</h2>
-
-                <div class="portfolioWebsite">
-                    <h3>Portfolio Website</h3>
-
-                    <h4>Description:</h4>
-                    <p>
-                        Welcome to my personal portfolio website! This project holds a special 
-                        place as it not only showcases my skills and accomplishments but also 
-                        serves as a testament to my passion for web development.
-                    </p>
-                    <hr>
-
-                    <h4>Technologies Used:</h4>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <button type="button" class="readMoreButton centerButton" onclick="showContent(this)">Read More</button>
-                    <div class="content">
-                        <hr>
-
-                        <h4>Tools Used:</h4>
-                        <ul>
-                            <li>Figma</li>
-                            <li>VS Code</li>
-                            <li>Github</li>
-                            <li>Coolors</li>
-                            <li>HTML Validator Extension</li>
-                        </ul>
-                        <hr>
-
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Interactive and user-friendly design.</li>
-                            <li>Responsive layout for seamless viewing across devices.</li>
-                            <li>Integration of skills and experiences to provide a holistic perspective.</li>
-                            <li>Smooth navigation and intuitive UI.</li>
-                        </ul>
-                        <hr>
-
-                        <h4>Insights:</h4>
-                        <p>
-                            Throughout the process of building this website, I have deepened my understanding 
-                            of front-end web technologies. By self-teaching myself HTML, CSS, and JavaScript 
-                            , I have been able to craft this platform 
-                            to reflect both my personality and professional capabilities.
-                        </p>
-                        <p>
-                            This portfolio not only serves as a showcase of my projects but also as a testament 
-                            to my relentless pursuit of knowledge and my passion for coding. As a Software Engineering 
-                            student at RIT and aspiring Web Developer, I continually seek to push the boundaries of my abilities and create visually 
-                            appealing, functional, and meaningful web experiences.
-                        </p>
-                        <button type="button" class="readLessButton centerButton" onclick="hideContent(this)">Read Less</button>
+                <div class="projectGridContainer">
+                    <div class="projectgridSquare">
+                        <h3>Portfolio Website</h3>
+                        <div class="projectBorderAndImg">
+                            
+                            <img class="projectPortfolioImg" src="./Resources/Images/projectIMGBorder.png">
+                        </div>
+                        <button type="button" onclick="openModal(0)"><img src="./Resources/Images/designButtonBorder.png">View Project Details</button>
+                    </div>
+                    <div class="projectgridSquare">
+                        <h3>Saunders Labs Website</h3>
+                        <div class="projectBorderAndImg">
+                            
+                            <img class="projectSaundersImg" src="./Resources/Images/projectIMGBorder.png">
+                        </div>
+                        <button type="button" onclick="openModal(1)"><img src="./Resources/Images/designButtonBorder.png">View Project Details</button>
+                    </div>
+                    <div class="projectgridSquare">
+                        <h3>My Boutique Website</h3>
+                        <div class="projectBorderAndImg">
+                            
+                            <img class="projectImg" src="./Resources/Images/projectIMGBorder.png">
+                        </div>
+                        <button type="button" onclick="openModal(2)"><img src="./Resources/Images/designButtonBorder.png">View Project Details</button>
+                    </div>
+                    <div class="projectgridSquare">
+                        <h3>Melodigram Website</h3>
+                        <div class="projectBorderAndImg">
+                            <img class="projectImg" src="./Resources/Images/projectIMGBorder.png">
+                        </div>
+                        <button type="button" onclick="openModal(3)"><img src="./Resources/Images/designButtonBorder.png">View Project Details</button>
                     </div>
                 </div>
 
-                <div class="saundersLabsWebsite">
-                    <h3>Saunders Labs Website</h3>
+                <div class="projectModal hideModal">
+                    <div class="projectModalOverlay"></div>
+                    <div class="projectModalBox">
+                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <div class="projectsModalContent">
+                          <h3>Portfolio Website</h3>
+                          
+                          <div class="contentInModal">
+                                <p>
+                                    Welcome to my personal portfolio website! This project holds a special 
+                                    place as it not only showcases my skills and accomplishments but also 
+                                    serves as a testament to my passion for web development.
+                                </p>
+                                <!-- <hr> -->
+        
+                                <h4>Technologies Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                                
+                                <!-- <hr> -->
+        
+                                <h4>Tools Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>Figma  - <a class="projectLink" href="https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=XNsxRbOOwejs2dDY-1" title="Click to view Toula's Portfolio Figma Design" target="_blank">View Figma Design</a></li>
+                                    <li>VS Code</li>
+                                    <li>Github</li>
+                                    <li>Photoshop (for editing, recoloring, combining, and refining AI-assisted graphics)</li>
+                                    <li>AI Prompting (ChatGPT, for initial design ideas such as graphics [flowers and carousel arrows], and as an advanced google and debugging resource when troubleshooting CSS)</li>
+                                    <li>Coolors</li>
+                                    <li>HTML Validator Extension</li>
+                                </ul>
 
-                    <h4>Description:</h4>
-                    <p>
-                        This project is a redesign of the Saunders Labs website from the Saunders College of Business at RIT.
-                        The original website lacked mobile responsiveness, so I took the initiative to redesign it using RIT's
-                        colors, typography, and logo in Figma, ensuring a seamless experience across all devices. This project
-                        also marks my second solo website design endeavor.
-                    </p>
-                    <hr>
-                    <h4>Visit Website: </h4><a class="website" href="https://tae9467.github.io/Labs/" target="_blank" title="Click to view my Saunders Labs Website project!">https://tae9467.github.io/Labs/</a>
-                    <hr>
-
-                    <h4>Technologies Used:</h4>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                        <li>CodeIgniter</li>
-                        <li>Bootstrap</li>
-                    </ul>
-                    <button type="button" class="readMoreButton centerButton" onclick="showContent(this)">Read More</button>
-                    <div class="content">
-                        <hr>
-
-                        <h4>Tools Used:</h4>
-                        <ul>
-                            <li>Figma - <a href="https://www.figma.com/file/ZFq1SF5vuWYmqtc3EWTzD7/Labs-3-Portal?type=design&node-id=0%3A1&mode=design&t=a6M1qPdAcAKLbBV8-1" title="Click to view Toula's labs Figma Design" target="_blank">View Figma Design</a></li>
-                            <li>PhpStorm 2023.1.2</li>
-                            <li>Github Desktop</li>
-                            <li>Gitlabs</li>
-                            <li>Laragon</li>
-                        </ul>
-                        <hr>
-
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Mobile-responsive design with RIT's branding.</li>
-                            <li>Enhanced user experience through intuitive navigation.</li>
-                            <li>Improved accessibility for all users.</li>
-                            <li>Efficient codebase using modern web development practices.</li>
-                        </ul>
-                        <hr>
-
-                        <h4>Insights:</h4>
-                        <p>
-                            Redesigning the Saunders Labs website provided me with valuable experience in implementing
-                            responsive design principles and utilizing design tools like Figma. Through this project,
-                            I've further honed my front-end development skills and gained insights into creating accessible
-                            and visually appealing web experiences.
-                        </p>
-                        <p>
-                            This website not only demonstrates my design and development capabilities but also reflects my
-                            dedication to continuous learning and improvement. As a Software Engineering student at RIT and aspiring Web Developer, I'm
-                            committed to pushing the boundaries of web development to create impactful and engaging digital solutions.
-                        </p>
-                        <button type="button" class="readLessButton centerButton" onclick="hideContent(this)">Read Less</button>
-                    </div>
-                </div>
-                
-                <div class="toulasBoutiqueWebsite">
-                    <h3>Toula's Boutique Website (Work-in-Progress)</h3>
-                
-                    <h4>Description:</h4>
-                    <p>
-                        As an aspiring Web Developer with a passion for design and entrepreneurship, 
-                        I am currently working on an exciting personal project called "Toula's Boutique." 
-                        This website will serve as an online shop where I will sell handmade products such as lip gloss, 
-                        slime, art, stickers, and other creative items. I want to create an inviting, user-friendly 
-                        experience for customers to browse, purchase, and engage with my unique creations.
-                    </p>
-                    <hr>
-                
-                    <h4>Technologies Used:</h4>
-                    <ul>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Bootstrap</li>
-                        <li>HTML</li>
-                    </ul>
-                    <button type="button" class="readMoreButton centerButton" onclick="showContent(this)">Read More</button>
-                    <div class="content">
-                        <hr>
-                
-                        <h4>Tools Used:</h4>
-                        <ul>
-                            <li>Figma - <a href="https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/SerenitySweep%3A-The-Mindfullness-App?node-id=4105-11&t=GaziQaHCLlgrp6oi-1" title="Click to view Toula's Boutique Figma Design" target="_blank">View Figma Design</a></li>
-                            <li>VS Code</li>
-                            <li>Github</li>
-                            <li>Coolors</li>
-                            <li>HTML Validator Extension</li>
-                        </ul>
-                        <hr>
-                
-                        <h4>Key Features (Planned):</h4>
-                        <ul>
-                            <li>User-friendly interface with a visually appealing aesthetic.</li>
-                            <li>Product galleries showcasing lip glosses, slime, art, and stickers.</li>
-                            <li>Responsive design for optimal viewing on various devices.</li>
-                            <li>Simple and secure checkout process for seamless purchasing.</li>
-                            <li>Engaging carousel highlighting new or featured products.</li>
-                        </ul>
-                        <hr>
-                
-                        <h4>Project Progress:</h4>
-                        <p>
-                            Currently, "Toula's Boutique" is in its design and development phase. I'm focusing on creating 
-                            a responsive front-end interface that ensures smooth functionality across different devices. 
-                            At the moment, I am designing a Figma prototype to map out the visual elements and user experience for the website. 
-                            Once the Figma design is finalized, I will move on to coding and building the front-end of the site. 
-                        </p>
-                        <p>
-                            After the front-end is complete, I will shift focus to the back-end development, 
-                            specifically integrating a shopping cart and checkout system to provide a seamless purchasing experience for users. 
-                            I am considering using platforms like Shopify or coding the back-end from scratch to achieve these features.
-                        </p>
-
-                        <hr>
-                
-                        <h4>Insights:</h4>
-                        <p>
-                            This project has allowed me to blend my passion for web development and creativity. From 
-                            designing the visual layout to coding interactive features, it's been an incredible learning experience. 
-                            I’m excited to bring this project to life and share my handmade creations with the world through a well-crafted 
-                            online shop.
-                        </p>
-                        <button type="button" class="readLessButton centerButton" onclick="hideContent(this)">Read Less</button>
+                                <!-- <hr> -->
+        
+                                <h4>Key Features:</h4>
+                                <hr>
+                                <ul>
+                                    <li>Interactive and user-friendly design.</li>
+                                    <li>Responsive layout for seamless viewing across devices.</li>
+                                    <li>Integration of skills and experiences to provide a holistic perspective.</li>
+                                    <li>Smooth navigation and intuitive UI.</li>
+                                </ul>
+        
+                                <h4>Insights:</h4>
+                                <hr>
+                                <p>
+                                    Throughout the process of building this website, I deepened my understanding 
+                                    of front-end web technologies. By teaching myself HTML, CSS, and JavaScript, 
+                                    I was able to craft this platform to reflect both my personality and professional capabilities.
+                                </p>
+                                <p>
+                                    This portfolio not only showcases my projects but also highlights my 
+                                    relentless pursuit of knowledge and passion for coding. As a 
+                                    Software Engineering graduate from RIT (May 2025) and aspiring Web Developer, 
+                                    I strive to push the boundaries of my abilities while creating visually 
+                                    appealing, functional, and meaningful web experiences.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectsModalButtons">
+                            <button class="gradientButton" type="button" onclick="closeModal(0)"><img src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                        </div>
                     </div>
                 </div>
 
+                <div class="projectModal hideModal">
+                    <div class="projectModalOverlay"></div>
+                    <div class="projectModalBox">
+                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <div class="projectsModalContent">
+                            <h3>Saunders Labs Website</h3>
+                          
+                            <div class="contentInModal">
+                                <p>
+                                    This project is a redesign of the Saunders Labs website from the Saunders College of Business at RIT.
+                                    The original website lacked mobile responsiveness, so I took the initiative to redesign it using RIT's
+                                    colors, typography, and logo in Figma, ensuring a seamless experience across all devices. This project
+                                    also marks my second solo website design endeavor.
+                                </p>
+                                <!-- <hr> -->
+            
+                                <h4>Technologies Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                    <li>CodeIgniter</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                                <!-- <hr> -->
+        
+                                <h4>Tools Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>Figma - <a class="projectLink" href="https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-214&t=XNsxRbOOwejs2dDY-1" title="Click to view Toula's Saunders labs Figma Design" target="_blank">View Figma Design</a></li>
+                                    <li>PhpStorm 2023.1.2</li>
+                                    <li>Github Desktop</li>
+                                    <li>Gitlabs</li>
+                                    <li>Laragon</li>
+                                </ul>
+                                <!-- <hr> -->
+        
+                                <h4>Key Features:</h4>
+                                <hr>
+                                <ul>
+                                    <li>Mobile-responsive design with RIT's branding.</li>
+                                    <li>Enhanced user experience through intuitive navigation.</li>
+                                    <li>Improved accessibility for all users.</li>
+                                    <li>Efficient codebase using modern web development practices.</li>
+                                </ul>
+                                <!-- <hr> -->
+        
+                                <h4>Insights:</h4>
+                                <hr>
+                                <p>
+                                    Redesigning the Saunders Labs website provided me with valuable experience in implementing
+                                    responsive design principles and utilizing design tools like Figma. Throughout this project,
+                                    I've further honed my front-end development skills and gained insights into creating accessible
+                                    and visually appealing web experiences.
+                                </p>
+                                <p>
+                                    This website not only demonstrates my design and development capabilities but also reflects my
+                                    dedication to continuous learning and improvement. As a 
+                                    Software Engineering graduate from RIT (May 2025) and aspiring Web Developer, I'm
+                                    committed to pushing the boundaries of web development to create impactful and engaging digital solutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectsModalButtons">
+                            <button type="button" onclick="window.open('https://tae9467.github.io/Labs/', '_blank')"><img src="./Resources/Images/designButtonBorder.png">Visit Website</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(1)"><img src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="socialMediaMusicWebsite">
-                    <h3>Social Media Music Website (Work-in-Progress)</h3>
+                <div class="projectModal hideModal">
+                    <div class="projectModalOverlay"></div>
+                    <div class="projectModalBox">
+                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <div class="projectsModalContent">
+                            <h3>My Boutique Website</h3>
+                          
+                            <div class="contentInModal">
+                                <p>
+                                    As an aspiring Web Developer with a passion for design and entrepreneurship, 
+                                    I am currently working on an exciting personal project called "Toula's Boutique." 
+                                    This website will serve as an online shop where I will sell handmade products such as lip gloss, 
+                                    slime, art, stickers, and other creative items. I want to create an inviting, user-friendly 
+                                    experience for customers to browse, purchase, and engage with my unique creations.
+                                </p>
+                                <!-- <hr> -->
+                            
+                                <h4>Technologies Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                    <li>HTML</li>
+                                </ul>
+                                <!-- <hr> -->
+                        
+                                <h4>Tools Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>Figma - <a class="projectLink" href="https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/SerenitySweep%3A-The-Mindfullness-App?node-id=4105-11&t=GaziQaHCLlgrp6oi-1" title="Click to view Toula's Boutique Figma Design" target="_blank">View Figma Design</a></li>
+                                    <li>VS Code</li>
+                                    <li>Github</li>
+                                    <li>AI Prompting (ChatGPT, for initial design ideas such as graphics [Logo and carousel arrows], and as an advanced google and debugging resource when troubleshooting CSS)</li>
+                                    <li>Coolors</li>
+                                    <li>HTML Validator Extension</li>
+                                </ul>
+                                <!-- <hr> -->
+                        
+                                <h4>Key Features (Planned):</h4>
+                                <hr>
+                                <ul>
+                                    <li>User-friendly interface with a visually appealing aesthetic.</li>
+                                    <li>Product galleries showcasing lip glosses, slime, art, and stickers.</li>
+                                    <li>Responsive design for optimal viewing on various devices.</li>
+                                    <li>Simple and secure checkout process for seamless purchasing.</li>
+                                    <li>Engaging carousel highlighting new or featured products.</li>
+                                </ul>
+                                <!-- <hr> -->
+                        
+                                <h4>Project Progress:</h4>
+                                <hr>
+                                <p>
+                                    Currently, "Toula's Boutique" is in its design and development phase. I'm focusing on creating 
+                                    a responsive front-end interface that ensures smooth functionality across different devices. 
+                                    Starting with designing a Figma prototype to map out the visual elements and user experience for the website. 
+                                    Once the Figma design is finalized, I will move on to coding and building the front-end of the site. 
+                                </p>
+                                <p>
+                                    After the front-end is complete, I will shift focus to the back-end development, 
+                                    specifically integrating a shopping cart and checkout system to provide a seamless purchasing experience for users. 
+                                    I am considering using platforms like Shopify, Wordpress, or coding the back-end from scratch to achieve these features.
+                                </p>
+        
+                                <!-- <hr> -->
+                        
+                                <h4>Insights:</h4>
+                                <hr>
+                                <p>
+                                    This project has allowed me to blend my passion for web development and creativity. From 
+                                    designing the visual layout to coding interactive features, it's been an incredible learning experience. 
+                                    I’m excited to bring this project to life and share my handmade creations with the world through a well-crafted 
+                                    online shop.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectsModalButtons">
+                            <button class="gradientButton" type="button" onclick="closeModal(2)"><img src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                        </div>
+                    </div>
+                </div>
 
-                    <h4>Description:</h4>
-                    <p>
-                        As an aspiring Web Developer with a passion for web development and music, 
-                        I am currently working on an exciting personal project called the "Social Media 
-                        Music Website." This project's idea was originally conceived with one of my friends, 
-                        and is heavily inspired by platforms like Instagram and VSCO, with a unique twist: 
-                        each post plays music based on its mood, sourced from 
-                        the Spotify API.
-                    </p>
-                    <hr>
-
-                    <h4>Technologies Used:</h4>
-                    <ul>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                    </ul>
-                    <button type="button" class="readMoreButton centerButton" onclick="showContent(this)">Read More</button>
-                    <div class="content">
-                        <hr>
-
-                        <h4>Tools Used:</h4>
-                        <ul>
-                            <li>Figma</li>
-                            <li>VS Code</li>
-                            <li>Github</li>
-                            <li>Coolors</li>
-                        </ul>
-                        <hr>
-
-                        <h4>Key Features (Planned):</h4>
-                        <ul>
-                            <li>User-friendly interface with an Instagram/VSCO aesthetic.</li>
-                            <li>Seamless integration with the Spotify API for a mood-based music selection.</li>
-                            <li>Creating and sharing posts with personalized music choices.</li>
-                            <li>React components for smooth and efficient rendering.</li>
-                            <li>Responsive design for optimal viewing on various devices.</li>
-                        </ul>
-                        <hr>
-
-                        <h4>Project Progress:</h4>
-                        <p>
-                            As of now, the "Social Media Music Website" project is in its development phase. I 
-                            am actively working on the implementation of the core functionalities and refining 
-                            the user interface using Figma. Then the website's front-end is going to be built with React, 
-                            ensuring a dynamic and engaging user experience.
-                        </p>
-                        <hr>
-
-                        <h4>Insights:</h4>
-                        <p>
-                            This project allows me to combine my passion for music and web development. The 
-                            ongoing process of working with APIs, designing visually appealing layouts, and using 
-                            React to create interactive components has been an enriching learning experience. 
-                            I'm excited to see this project come to life and make a positive impact on users 
-                            who are equally passionate about music and social connections.
-                        </p>
-                        <button type="button" class="readLessButton centerButton" onclick="hideContent(this)">Read Less</button>
+                <div class="projectModal hideModal">
+                    <div class="projectModalOverlay"></div>
+                    <div class="projectModalBox">
+                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <div class="projectsModalContent">
+                            <h3>Melodigram Website</h3>
+                          
+                            <div class="contentInModal">
+                                <p>
+                                    As an aspiring Web Developer with a passion for web development and music, 
+                                    I am currently working on an exciting personal project called the "Melodigram Website." 
+                                    This project's idea was originally conceived with one of my friends, 
+                                    and is heavily inspired by platforms like Instagram and VSCO, with a unique twist: 
+                                    each post plays music based on its mood, sourced from the Spotify API.
+                                </p>
+                                <!-- <hr> -->
+            
+                                <h4>Technologies Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                </ul>
+                                <!-- <hr> -->
+        
+                                <h4>Tools Used:</h4>
+                                <hr>
+                                <ul>
+                                    <li>Figma</li>
+                                    <li>VS Code</li>
+                                    <li>Github</li>
+                                    <li>Coolors</li>
+                                </ul>
+                                <!-- <hr> -->
+        
+                                <h4>Key Features (Planned):</h4>
+                                <hr>
+                                <ul>
+                                    <li>User-friendly interface with an Instagram/VSCO aesthetic.</li>
+                                    <li>Seamless integration with the Spotify API for a mood-based music selection.</li>
+                                    <li>Creating and sharing posts with personalized music choices.</li>
+                                    <li>React components for smooth and efficient rendering.</li>
+                                    <li>Responsive design for optimal viewing on various devices.</li>
+                                </ul>
+                                <!-- <hr> -->
+        
+                                <h4>Project Progress:</h4>
+                                <hr>
+                                <p>
+                                    As of now, the "Melodigram Website" project is in its development phase. I 
+                                    am actively working on the implementation of the core functionalities and refining 
+                                    the user interface using Figma. Then the website's front-end is going to be built with React, 
+                                    ensuring a dynamic and engaging user experience.
+                                </p>
+                                <!-- <hr> -->
+        
+                                <h4>Insights:</h4>
+                                <hr>
+                                <p>
+                                    This project allows me to combine my passion for music and web development. The 
+                                    ongoing process of working with APIs, designing visually appealing layouts, and using 
+                                    React to create interactive components has been an enriching learning experience. 
+                                    I'm excited to see this project come to life and make a positive impact on users 
+                                    who are equally passionate about music and social connections.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectsModalButtons">
+                            <button class="gradientButton" type="button" onclick="closeModal(3)"><img src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -360,7 +518,7 @@
             <section id="skills">
                 <h2>My Skills</h2>
                 <div class="mySkills">
-                    <h3>Languages</h3>
+                     <h3>Languages</h3>
                     <ul>
                         <li><h4>HTML:</h4> Proficient in creating well-structured and semantically correct web pages.</li>
                         <li><h4>CSS:</h4> Experience in building responsive layouts and styling with CSS.</li>
@@ -387,10 +545,16 @@
             </section>
 
             <section id="contact">
+                <img class="contactBorder" src="./Resources/Images/contactBorder.png" alt="">
                 <h2>Contact Me</h2>
                 <div class="contactInfo">
-                    <p>If you are interested in connecting for a frontend development co-op opportunity or have any related inquiries, feel free to reach out to me either through:</p>
-                    <ul>
+                    <p>
+                        If you are interested in hiring me for an <strong>Entry-Level 
+                        Front-End Development/Design</strong> or an 
+                        <strong>Entry-Level Software Engineering</strong> opportunity — 
+                        or have any related inquiries — feel free to reach out through:
+                      </p>
+                      <ul>
                         <li><h4>Email:</h4> 
                             <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"> toula4242@gmail.com</a>
                         </li>
@@ -399,22 +563,31 @@
                         </li>
                     </ul>
                 </div>
+                <div class="contactDecals">
+                    <img class="contactFlowerTopLeft" src="./Resources/Images/contactflower2.png">
+                    <img class="contactFlowerBottomRight" src="./Resources/Images/contactflower1.png">
+                </div> 
             </section>
         </main>
         
+        
         <footer>
+            <!-- Just for the border to match Figma Design -->
+            <section>
+                <img class="fancyDesktopFooterBorder" src="Resources/Images/desktopFooterBorder.png" alt="Footer Border">
+            </section>
             <ul>
                 <li>
-                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
+                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img class="footerImg" src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img class="footerImg" src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
                 </li>
                 <li>
-                    <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"><img src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
+                    <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"><img class="footerImg" src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
                 </li>
                 <li>
-                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
+                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img class="footerImg" src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
                 </li>
             </ul>
         </footer>

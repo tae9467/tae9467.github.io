@@ -42,9 +42,14 @@ function showContent(clickedButton) {
     const contentSections = document.querySelectorAll('.content');
     const readMoreButtons = document.querySelectorAll('.readMoreButton');
 
+    const aboutMeSectionBorder = document.querySelector('.borderSectionImg');
+    const aboutMeSectionBorderLong = document.querySelector('.borderSectionImgLong');
+
     if(clickedButton == readMoreButtons[0]) {
         contentSections[0].style.display = 'block';
         clickedButton.style.display = 'none';
+        aboutMeSectionBorder.style.display = 'none';
+        aboutMeSectionBorderLong.style.display = 'block';
     } else if(clickedButton == readMoreButtons[1]) {
         contentSections[1].style.display = 'block';
         clickedButton.style.display = 'none';
@@ -71,9 +76,14 @@ function hideContent(clickedButton) {
     const readMoreButtons = document.querySelectorAll('.readMoreButton');
     const readLessButtons = document.querySelectorAll('.readLessButton');
 
+    const aboutMeSectionBorder = document.querySelector('.borderSectionImg');
+    const aboutMeSectionBorderLong = document.querySelector('.borderSectionImgLong');
+
     if(clickedButton == readLessButtons[0]) {
         contentSections[0].style.display = 'none';
         readMoreButtons[0].style.display = 'block';
+        aboutMeSectionBorder.style.display = 'block';
+        aboutMeSectionBorderLong.style.display = 'none';
     } else if(clickedButton == readLessButtons[1]) {
         contentSections[1].style.display = 'none';
         readMoreButtons[1].style.display = 'block';
@@ -88,3 +98,92 @@ function hideContent(clickedButton) {
         readMoreButtons[4].style.display = 'block';
     }
 }
+
+/**
+    * Shows a modal depending on which button you clicked
+    * @function openModal
+    * @param {int} modalIndex - a number specifying and keeping track of which websites details you want
+    * @returns {void}
+*/
+function openModal(modalIndex) {
+    const modals = document.querySelectorAll('.projectModal');
+    if(modals[modalIndex]) {
+      modals[modalIndex].classList.remove('hideModal');
+    }
+  }
+
+/**
+    * Closes a modal depending on which button you clicked
+    * @function closeModal
+    * @param {int} modalIndex - a number specifying and keeping track of which websites details you want
+    * @returns {void}
+*/
+function closeModal(modalIndex) {
+    const modals = document.querySelectorAll('.projectModal');
+    if(modals[modalIndex]) {
+      modals[modalIndex].classList.add('hideModal');
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const designs = document.querySelectorAll('.positioningForDesign');
+    const prevBtn = document.getElementById('prevDesign');
+    const nextBtn = document.getElementById('nextDesign');
+    let startIndex = 0;
+    let currentBreakpoint = getBreakpoint();
+
+    function getBreakpoint() {
+        const width = window.innerWidth;
+        if (width <= 611) return 'mobile';
+        if (width <= 1000) return 'tablet';
+        return 'desktop';
+    }
+
+    function getVisibleCount() {
+        const bp = getBreakpoint();
+        return bp === 'mobile' ? 1 : bp === 'tablet' ? 2 : 3;
+    }
+
+    function showDesigns() {
+        const visibleCount = getVisibleCount();
+
+        // Clamp startIndex
+        if (startIndex + visibleCount > designs.length) {
+            startIndex = Math.max(0, designs.length - visibleCount);
+        }
+
+        designs.forEach((design, i) => {
+            design.style.display = (i >= startIndex && i < startIndex + visibleCount) ? 'block' : 'none';
+        });
+
+        updateArrows();
+    }
+
+    function updateArrows() {
+        const visibleCount = getVisibleCount();
+        prevBtn.classList.toggle('disabled', startIndex === 0);
+        nextBtn.classList.toggle('disabled', startIndex + visibleCount >= designs.length);
+    }
+
+    nextBtn.addEventListener('click', () => {
+        if (startIndex + 1 < designs.length) startIndex++;
+        showDesigns();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (startIndex > 0) startIndex--;
+        showDesigns();
+    });
+
+    // Only reload on breakpoint change
+    window.addEventListener('resize', () => {
+        const newBreakpoint = getBreakpoint();
+        if (newBreakpoint !== currentBreakpoint) {
+            currentBreakpoint = newBreakpoint;
+            showDesigns();
+        }
+    });
+
+    showDesigns();
+});
