@@ -306,6 +306,7 @@ main section#designs h2 {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    pointer-events: auto;
 }
 .carouselArrows img {
     width: 111px;
