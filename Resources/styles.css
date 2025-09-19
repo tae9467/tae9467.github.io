@@ -590,6 +590,20 @@ main section button:active {
     background-size: 97%, contain;
 }
 
+.projectPortfolioImg {
+    background-image: url("./Images/portfolioProjectPhoto.jpg");
+    background-position: center 53%, center;
+    background-repeat: no-repeat;
+    background-size: 97% 64%;
+}
+
+.projectSaundersImg {
+    background-image: url("./Images/saundersProjectPhoto.jpg");
+    background-position: center 51%, center;
+    background-repeat: no-repeat;
+    background-size: 97% 61%;
+}
+
 /* Modal box */
 .projectModalBox {
     position: relative;
