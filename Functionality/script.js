@@ -98,3 +98,29 @@ function hideContent(clickedButton) {
         readMoreButtons[4].style.display = 'block';
     }
 }
+
+/**
+    * Shows a modal depending on which button you clicked
+    * @function openModal
+    * @param {int} modalIndex - a number specifying and keeping track of which websites details you want
+    * @returns {void}
+*/
+function openModal(modalIndex) {
+    const modals = document.querySelectorAll('.projectModal');
+    if(modals[modalIndex]) {
+      modals[modalIndex].classList.remove('hideModal');
+    }
+  }
+
+/**
+    * Closes a modal depending on which button you clicked
+    * @function closeModal
+    * @param {int} modalIndex - a number specifying and keeping track of which websites details you want
+    * @returns {void}
+*/
+  function closeModal(modalIndex) {
+    const modals = document.querySelectorAll('.projectModal');
+    if(modals[modalIndex]) {
+      modals[modalIndex].classList.add('hideModal');
+    }
+  }
