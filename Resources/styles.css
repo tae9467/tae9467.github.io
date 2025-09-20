@@ -51,7 +51,7 @@ html {
     font-size: 21px;
     /* Otherwise max font size is 23px, min is 21px */
     font-size: max(21px, min(4vmin, 23px));
-    z-index: 3;
+    z-index: 6;
 }
 
 .navigation a {
@@ -66,7 +66,8 @@ html {
     font-size: 19px;
     /* Otherwise max font size is 21px, min is 19px */
     font-size: max(19px, min(4vmin, 21px));
-    transition: 0.4s; 
+    transition: 0.4s;
+    position: static;
     z-index: 3;
 }
 
