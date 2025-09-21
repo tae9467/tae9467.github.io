@@ -34,6 +34,8 @@ html {
     border: 3px solid hsl(240, 7%, 84%);
     position: relative;
     top: 2px;
+    object-position: 50% 32%;
+    object-fit: cover;
 }
 
 .name a {
