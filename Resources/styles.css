@@ -53,7 +53,7 @@ html {
     font-size: 21px;
     /* Otherwise max font size is 23px, min is 21px */
     font-size: max(21px, min(4vmin, 23px));
-    z-index: 3;
+    z-index: 20;
 }
 
 .navigation a {
@@ -88,7 +88,7 @@ html {
     gap: 50px;
     bottom: 33px;
     left: -33px;
-    z-index: 3;
+    z-index: 2;
 }
   
 .fancyDesktopHeaderBorder {
