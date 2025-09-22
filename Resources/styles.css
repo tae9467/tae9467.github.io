@@ -68,7 +68,8 @@ html {
     font-size: 19px;
     /* Otherwise max font size is 21px, min is 19px */
     font-size: max(19px, min(4vmin, 21px));
-    transition: 0.4s; 
+    transition: 0.4s;
+    position: static;
     z-index: 3;
 }
 
@@ -165,7 +166,7 @@ header section div {
     padding: 0;
     background-color: hsl(222, 10%, 12%);
     position: fixed;
-    top: 83px;
+    top: 87px;
     left: 0;
     width: 100vw;
     margin: auto;
