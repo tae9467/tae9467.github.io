@@ -10,6 +10,10 @@ body {
     /* Custom scrollbar styling */
     scrollbar-width: thin;
     scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+    /* Cross-browser text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 html {
@@ -59,6 +63,23 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
     border-radius: 8px;
     border: 2px solid hsl(222, 10%, 12%);
+  }
+  
+  /* iOS Safari specific fixes for flower decals */
+  .desktopAboutMeDecals,
+  .tabletAboutMeDecals,
+  .contactDecals {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* iOS Safari button fixes */
+  main section button,
+  .projectgridSquare button,
+  .projectsModalButtons button {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -419,6 +440,11 @@ main section button {
     cursor: pointer;
     position: relative;
     bottom: -53px;
+    /* Cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 main section button img {
@@ -427,6 +453,11 @@ main section button img {
     bottom: -12px;
     left: -7px;
     height: 71px;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 main section#designs button {
@@ -572,6 +603,11 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
+    /* Cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .projectgridSquare button:hover {
@@ -790,6 +826,11 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
+    /* Cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .gradientButton {
@@ -1004,29 +1045,46 @@ main section button:active {
     display: flex;
     bottom: -72px;
     z-index: -1;
+    /* Cross-browser compatibility */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .desktopAboutMeDecals img:nth-of-type(1) {
     position: relative;
     right: 369px;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .desktopAboutMeDecals img:nth-of-type(2) {
     position: relative;
     left: 377px;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .tabletAboutMeDecals {
     position: absolute;
     height: 168px;
     width: 104%;
-    /* display: flex; */
     justify-content: space-between; 
     align-items: center;
     bottom: -43px;
     margin: 10px;
     pointer-events: none;
     display: none;
+    /* Cross-browser compatibility */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .tabletAboutMeDecals img {
@@ -1034,6 +1092,11 @@ main section button:active {
     height: auto;
     max-height: 100%;
     width: auto;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 #contact {
@@ -1057,6 +1120,10 @@ main section button:active {
     inset: 0; 
     pointer-events: none; 
     z-index: 2;
+    /* Cross-browser compatibility */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .contactFlowerTopLeft {
@@ -1065,6 +1132,11 @@ main section button:active {
     left: 0%;
     width: 135px;   
     height: auto;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .contactFlowerBottomRight {
@@ -1073,6 +1145,11 @@ main section button:active {
     right: 0%;
     width: 135px;
     height: auto;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 
