@@ -109,6 +109,8 @@ function openModal(modalIndex) {
     const modals = document.querySelectorAll('.projectModal');
     if(modals[modalIndex]) {
       modals[modalIndex].classList.remove('hideModal');
+      // Prevent body scroll when modal is open
+      document.body.classList.add('modal-open');
     }
   }
 
@@ -122,6 +124,8 @@ function closeModal(modalIndex) {
     const modals = document.querySelectorAll('.projectModal');
     if(modals[modalIndex]) {
       modals[modalIndex].classList.add('hideModal');
+      // Restore body scroll when modal is closed
+      document.body.classList.remove('modal-open');
     }
 }
 
