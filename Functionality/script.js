@@ -99,6 +99,9 @@ function hideContent(clickedButton) {
     }
 }
 
+// Store scroll position when modal opens
+let savedScrollPosition = 0;
+
 /**
     * Shows a modal depending on which button you clicked
     * @function openModal
@@ -108,9 +111,16 @@ function hideContent(clickedButton) {
 function openModal(modalIndex) {
     const modals = document.querySelectorAll('.projectModal');
     if(modals[modalIndex]) {
+      // Save current scroll position
+      savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      
       modals[modalIndex].classList.remove('hideModal');
-      // Prevent body scroll when modal is open
+      // Prevent body and html scroll when modal is open
       document.body.classList.add('modal-open');
+      document.documentElement.classList.add('modal-open');
+      
+      // Prevent scroll jump by setting the body's top position
+      document.body.style.top = `-${savedScrollPosition}px`;
     }
   }
 
@@ -124,8 +134,22 @@ function closeModal(modalIndex) {
     const modals = document.querySelectorAll('.projectModal');
     if(modals[modalIndex]) {
       modals[modalIndex].classList.add('hideModal');
-      // Restore body scroll when modal is closed
+      // Restore body and html scroll when modal is closed
       document.body.classList.remove('modal-open');
+      document.documentElement.classList.remove('modal-open');
+      
+      // Temporarily disable smooth scrolling for instant restoration
+      const originalScrollBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = 'auto';
+      
+      // Restore scroll position and reset body top
+      document.body.style.top = '';
+      window.scrollTo(0, savedScrollPosition);
+      
+      // Restore smooth scrolling after restoration
+      setTimeout(() => {
+        document.documentElement.style.scrollBehavior = originalScrollBehavior;
+      }, 0);
     }
 }
 
