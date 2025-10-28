@@ -10,13 +10,6 @@ body {
     /* Custom scrollbar styling */
     scrollbar-width: thin;
     scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
-    /* Cross-browser text rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    /* iOS Safari scroll fix */
-    -webkit-overflow-scrolling: touch;
-    position: relative;
 }
 
 html {
@@ -45,95 +38,6 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
     border-radius: 8px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-
-/* iOS Safari specific scrollbar fixes for main website */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    /* Force scrollbars to always be visible on iOS */
-    overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch;
-    /* Fix scroll momentum issues */
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    width: 12px;
-    -webkit-appearance: none;
-  }
-  
-  html::-webkit-scrollbar-thumb,
-  body::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
-    border-radius: 8px;
-    border: 2px solid hsl(222, 10%, 12%);
-  }
-  
-  /* iOS Safari specific fixes for flower decals */
-  .desktopAboutMeDecals,
-  .tabletAboutMeDecals,
-  .contactDecals {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  /* iOS Safari button fixes */
-  main section button,
-  .projectgridSquare button,
-  .projectsModalButtons button {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  /* iOS Safari mobile menu fixes */
-  header section {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  .open ul {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    /* Prevent scroll interference */
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* iOS Safari modal fixes */
-  .projectModal {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    /* Prevent scroll issues when modal is open */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  .contentInModal {
-    /* Force scrollbar to always be visible on iOS */
-    -webkit-scrollbar-width: thin;
-    -webkit-scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
-    scrollbar-width: thin !important;
-    scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%) !important;
-    /* Prevent scroll momentum issues */
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .contentInModal::-webkit-scrollbar {
-    width: 12px !important;
-    -webkit-appearance: none;
-  }
-  
-  .contentInModal::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%)) !important;
-    border-radius: 8px;
-    border: 2px solid hsl(222, 10%, 12%);
-  }
 }
 
 /* Header */
@@ -252,10 +156,6 @@ header section {
     float: right;
     right: 27px;
     z-index: 3;
-    /* iOS Safari fixes for hamburger menu */
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
 }
 
 header section div {
@@ -296,10 +196,6 @@ header section div {
     left: 0;
     width: 100vw;
     margin: auto;
-    /* iOS Safari fixes for mobile menu */
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    z-index: 1001;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
@@ -501,11 +397,6 @@ main section button {
     cursor: pointer;
     position: relative;
     bottom: -53px;
-    /* Cross-browser compatibility */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 main section button img {
@@ -514,11 +405,6 @@ main section button img {
     bottom: -12px;
     left: -7px;
     height: 71px;
-    /* Cross-browser image rendering */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 main section#designs button {
@@ -664,11 +550,6 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
-    /* Cross-browser compatibility */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .projectgridSquare button:hover {
@@ -890,11 +771,6 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
-    /* Cross-browser compatibility */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .gradientButton {
