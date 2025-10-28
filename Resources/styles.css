@@ -7,11 +7,59 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+}
+
+/* WebKit Browsers - Main Website Scrollbar */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 10px;
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    background: hsl(222, 10%, 12%);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* iOS Safari specific scrollbar fixes for main website */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    /* Force scrollbars to always be visible on iOS */
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 12px;
+    -webkit-appearance: none;
+  }
+  
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    border: 2px solid hsl(222, 10%, 12%);
+  }
 }
 
 /* Header */
@@ -619,6 +667,13 @@ main section button:active {
     background-size: 97% 61%;
 }
 
+.projectScissImg {
+    background-image: url("./Images/sciss.png");
+    background-position: center 51%, center;
+    background-repeat: no-repeat;
+    background-size: 97% 61%;
+}
+
 /* Modal box */
 .projectModalBox {
     position: relative;
@@ -666,21 +721,48 @@ main section button:active {
     white-space: initial;
     scrollbar-width: thin;
     scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+    /* Force scrollbars to be visible on iOS Safari */
+    -webkit-overflow-scrolling: touch;
+    /* Ensure scrollbars are always visible */
+    overflow-y: scroll !important;
 }
 
 /* WebKit Browsers */
 .contentInModal::-webkit-scrollbar {
     width: 10px;
+    -webkit-appearance: none;
   }
   
   .contentInModal::-webkit-scrollbar-track {
     background: hsl(222, 10%, 12%);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   }
   
   .contentInModal::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
     border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
+
+/* iOS Safari specific scrollbar fixes */
+@supports (-webkit-touch-callout: none) {
+  .contentInModal {
+    /* Force scrollbars to always be visible on iOS */
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .contentInModal::-webkit-scrollbar {
+    width: 12px;
+    -webkit-appearance: none;
+  }
+  
+  .contentInModal::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    border: 2px solid hsl(222, 10%, 12%);
+  }
+}
   
 
 .projectsModalButtons {
