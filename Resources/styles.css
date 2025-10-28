@@ -7,11 +7,80 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+    /* Cross-browser text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+}
+
+/* WebKit Browsers - Main Website Scrollbar */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 10px;
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    background: hsl(222, 10%, 12%);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* iOS Safari specific scrollbar fixes for main website */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    /* Force scrollbars to always be visible on iOS */
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 12px;
+    -webkit-appearance: none;
+  }
+  
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    border: 2px solid hsl(222, 10%, 12%);
+  }
+  
+  /* iOS Safari specific fixes for flower decals */
+  .desktopAboutMeDecals,
+  .tabletAboutMeDecals,
+  .contactDecals {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* iOS Safari button fixes */
+  main section button,
+  .projectgridSquare button,
+  .projectsModalButtons button {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Header */
@@ -371,6 +440,11 @@ main section button {
     cursor: pointer;
     position: relative;
     bottom: -53px;
+    /* Cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 main section button img {
@@ -379,6 +453,11 @@ main section button img {
     bottom: -12px;
     left: -7px;
     height: 71px;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 main section#designs button {
@@ -494,10 +573,12 @@ main section button:active {
 
 .projectGridContainer {
     display: flex;
-    row-gap: 11px;
+    row-gap: 5px;
+    column-gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
+    padding: 0 10px;
 }
 
 .projectgridSquare h3 {
@@ -522,6 +603,11 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
+    /* Cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .projectgridSquare button:hover {
@@ -550,12 +636,10 @@ main section button:active {
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
-    width: 90vw;         
-    max-width: 400px;   
-    flex: 1 1 33.333%; 
-    max-height: 100%;    
+    flex: 1 1 calc(33.333% - 10px); 
+    max-width: calc(33.333% - 10px);
+    min-width: 280px;
     aspect-ratio: 1 / 1;
-    margin: auto;
     display: flex;       
     flex-direction: column;
     justify-content: center;
@@ -619,6 +703,13 @@ main section button:active {
     background-size: 97% 61%;
 }
 
+.projectScissImg {
+    background-image: url("./Images/sciss.png");
+    background-position: center 51%, center;
+    background-repeat: no-repeat;
+    background-size: 97% 61%;
+}
+
 /* Modal box */
 .projectModalBox {
     position: relative;
@@ -666,21 +757,48 @@ main section button:active {
     white-space: initial;
     scrollbar-width: thin;
     scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+    /* Force scrollbars to be visible on iOS Safari */
+    -webkit-overflow-scrolling: touch;
+    /* Ensure scrollbars are always visible */
+    overflow-y: scroll !important;
 }
 
 /* WebKit Browsers */
 .contentInModal::-webkit-scrollbar {
     width: 10px;
+    -webkit-appearance: none;
   }
   
   .contentInModal::-webkit-scrollbar-track {
     background: hsl(222, 10%, 12%);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   }
   
   .contentInModal::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
     border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
+
+/* iOS Safari specific scrollbar fixes */
+@supports (-webkit-touch-callout: none) {
+  .contentInModal {
+    /* Force scrollbars to always be visible on iOS */
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .contentInModal::-webkit-scrollbar {
+    width: 12px;
+    -webkit-appearance: none;
+  }
+  
+  .contentInModal::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    border: 2px solid hsl(222, 10%, 12%);
+  }
+}
   
 
 .projectsModalButtons {
@@ -708,6 +826,11 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
+    /* Cross-browser compatibility */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .gradientButton {
@@ -922,29 +1045,46 @@ main section button:active {
     display: flex;
     bottom: -72px;
     z-index: -1;
+    /* Cross-browser compatibility */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .desktopAboutMeDecals img:nth-of-type(1) {
     position: relative;
     right: 369px;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .desktopAboutMeDecals img:nth-of-type(2) {
     position: relative;
     left: 377px;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .tabletAboutMeDecals {
     position: absolute;
     height: 168px;
     width: 104%;
-    /* display: flex; */
     justify-content: space-between; 
     align-items: center;
     bottom: -43px;
     margin: 10px;
     pointer-events: none;
     display: none;
+    /* Cross-browser compatibility */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .tabletAboutMeDecals img {
@@ -952,6 +1092,11 @@ main section button:active {
     height: auto;
     max-height: 100%;
     width: auto;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 #contact {
@@ -975,6 +1120,10 @@ main section button:active {
     inset: 0; 
     pointer-events: none; 
     z-index: 2;
+    /* Cross-browser compatibility */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .contactFlowerTopLeft {
@@ -983,6 +1132,11 @@ main section button:active {
     left: 0%;
     width: 135px;   
     height: auto;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .contactFlowerBottomRight {
@@ -991,6 +1145,11 @@ main section button:active {
     right: 0%;
     width: 135px;
     height: auto;
+    /* Cross-browser image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 
@@ -1151,7 +1310,8 @@ footer ul a:hover {
     }
 
     .projectgridSquare {
-        flex: 1 1 50%; 
+        flex: 1 1 calc(50% - 5px); 
+        max-width: calc(50% - 5px);
     }
 
 }
@@ -1195,9 +1355,9 @@ footer ul a:hover {
     }
 
     .projectgridSquare {
-        flex: 1 1 100%;
-        width: 100vw;         
-        max-width: 100vw;   
+        flex: 1 1 calc(100% - 10px);
+        max-width: calc(100% - 10px);
+        width: auto;
         margin: 0px; 
     }
 
