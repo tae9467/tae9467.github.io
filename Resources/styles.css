@@ -12,6 +12,13 @@ body {
     scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
 }
 
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
