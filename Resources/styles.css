@@ -721,6 +721,13 @@ main section button:active {
     background-size: 97% 61%;
 }
 
+.projectWordPressImg {
+    background-image: url("./Images/wordpressProjectLearning.png");
+    background-position: center 51%, center;
+    background-repeat: no-repeat;
+    background-size: 97% 61%;
+}
+
 /* Modal box */
 .projectModalBox {
     position: relative;
