@@ -119,7 +119,7 @@ body::-webkit-scrollbar-thumb {
     background-color: hsl(222, 10%, 12%);
     border-radius: 10%; 
     left: 13px;
-    top: 5px;
+    top: 6px;
 }
 
 .headerImg img {
@@ -180,7 +180,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     position: relative;
     gap: 50px;
-    bottom: 33px;
+    bottom: 36px;
     left: -33px;
     z-index: 2;
 }
@@ -321,9 +321,20 @@ main section {
     border-radius: 12px; 
 }
 
-main section p {
-    text-indent: 4ch;
-    text-align: left;
+main .pageTitle {
+    text-align: center;
+    color: hsl(330, 45%, 65%);
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    margin: 110px auto 20px;
+    width: min(90vw, 820px);
+    line-height: 1.3;
+    font-size: max(24px, min(5vmin, 36px));
+}
+
+main section p, .textIndent {
+    text-indent: 4ch !important;
+    text-align: left !important;
 }
 
 main section h2 {
@@ -886,6 +897,138 @@ main section button:active {
     margin: auto;
   }
   
+/* -------------------------- WordPress demos page --------------------------- */
+
+body.demo-page {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.demoMain {
+    display: flex;
+    justify-content: center;
+    padding: 181px 20px 70px;
+    box-sizing: border-box;
+}
+
+.demoMain section.demoSection {
+    margin: 0 auto;
+    max-width: 720px;
+    width: 100%;
+    padding: 54px 48px;
+    background-color: hsl(222, 10%, 12%);
+    border: 4px solid hsl(240, 7%, 84%);
+    border-radius: 12px;
+    color: hsl(240, 7%, 84%);
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.demoSection h1, .demoSection h2 {
+    margin-top: 0;
+    color: hsl(330, 45%, 65%);
+}
+
+.demoSection p {
+    text-indent: 0;
+    text-align: left;
+    margin: 16px auto 32px;
+    max-width: 560px;
+}
+
+.demoButtons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: nowrap;
+}
+
+
+button.wordpressDemoButton {
+    position: relative;
+    margin-bottom: 0;
+    width: 240px;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+button.wordpressDemoButton img {
+    width: 110%;
+    left: 51%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    max-width: none;
+}
+
+.demoBackLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 48px;
+    color: hsl(240, 7%, 84%);
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.demoBackLink:hover {
+    color: hsl(330, 45%, 65%);
+}
+
+.demoBackLink:focus {
+    color: hsl(330, 45%, 65%);
+}
+
+.demoBackLink:active {
+    color: hsl(240, 7%, 84%);
+}
+
+.demoSectionBorder {
+    position: absolute;
+    top: 50%;
+    left: 49.9%;
+    transform: translate(-50%, -50%);
+    width: 101%;
+    height: 102.5%;
+    display: block;
+    max-width: none;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+
+.extraStyling button.wordpressDemoButton {
+    bottom: 0;
+}
+
+@media only screen and (max-width: 730px) {
+    .demoButtons {
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+        flex-wrap: nowrap;
+    }
+
+    button.wordpressDemoButton {
+        width: 220px;
+    }
+}
+
+@media only screen and (max-width: 461px) {
+    button.wordpressDemoButton img {
+        transform: translateX(0%);
+    }
+    .extraStyling button.wordpressDemoButton img {
+        transform: translateX(-50%);
+    }
+}
+
 /* ----------------------------project modal-------------------------------------- */
 
 /* ----------------------------Skills---------------------------------------------------- */
