@@ -619,6 +619,8 @@ main section button:active {
     width: 110%;
     left: 50%;
     transform: translateX(-50%);
+    bottom: -12px;
+    height: 71px;
 }
 
 .projectgridSquare button {
@@ -1552,6 +1554,16 @@ footer ul a:hover {
 
     .projectgridSquare button {
         top: 69%;
+        height: 48px;
+        width: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 15px;
+    }
+
+    .projectgridSquare button img {
+        height: 60px;
+        bottom: -10px;
     }
 /* 
     .figmaDesignsContainer > *:nth-child(n+2) {
@@ -1600,6 +1612,15 @@ footer ul a:hover {
     }
 
     .projectgridSquare button {
-        top: 66%;
+        height: 44px;
+        width: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+    }
+
+    .projectgridSquare button img {
+        height: 54px;
+        bottom: -8px;
     }
 }
