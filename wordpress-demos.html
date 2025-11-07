@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WordPress Demo Sites</title>
+        <link rel="stylesheet" href="Resources/styles.css">
+        <script src="Functionality/script.js" defer></script>
+    </head>
+    <body class="demo-page">
+        <header>
+            <nav>
+                <ul>
+                    <li class="headerImg">
+                        <img src="Resources/Images/face.jpg" alt="Picture of Toula" height="60" width="56">
+                    </li>
+                    <li class="name">
+                        <a href="index.html">Toula Elwell</a>
+                    </li>
+                </ul>
+                <ul class="sectionLinks">
+                    <li class="navigation about">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="navigation designs">
+                        <a href="index.html#designs">Designs</a>
+                    </li>
+                    <li class="navigation projects">
+                        <a href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="navigation skills">
+                        <a href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="navigation contact">
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <section onclick="toggleMobileMenu(this)" onmouseover="turnPink()" onmouseleave="resetColor()">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+                <ul>
+                    <li class="navigation about">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="navigation designs">
+                        <a href="index.html#designs">Designs</a>
+                    </li>
+                    <li class="navigation projects">
+                        <a href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="navigation skills">
+                        <a href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="navigation contact">
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </section>
+            <img class="fancyDesktopHeaderBorder" src="Resources/Images/desktopFooterBorder.png" alt="Header Border">
+        </header>
+
+        <main class="demoMain">
+            <section id="wordpress-demos" class="demoSection">
+                <img class="demoSectionBorder" src="./Resources/Images/figmaBorder.png" alt="Decorative blue border framing the WordPress demos section">
+                <h2>WordPress Demo Sites</h2>
+                <p>
+                    Explore the two WordPress demos I built in under 24 hours while rapidly upskilling on the
+                    platform. Each site highlights different theme customizations, layout tweaks, and styling
+                    experiments completed during the learning sprint.
+                </p>
+                <div class="demoButtons">
+                    <button class="wordpressDemoButton" type="button" onclick="window.open('https://toulademo1.wordpress.com/', '_blank')">
+                        <img src="./Resources/Images/designButtonBorder.png" alt=" " loading="lazy">
+                        View Demo 1
+                    </button>
+                    <button class="wordpressDemoButton" type="button" onclick="window.open('https://toulademo2.wordpress.com/', '_blank')">
+                        <img src="./Resources/Images/designButtonBorder.png" alt=" " loading="lazy">
+                        View Demo 2
+                    </button>
+                </div>
+                <a class="demoBackLink" href="index.html#projects" title="Back to Toula's project gallery">
+                    &#8592; Back to Projects
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <section>
+                <img class="fancyDesktopFooterBorder" src="Resources/Images/desktopFooterBorder.png" alt="Footer Border">
+            </section>
+            <ul>
+                <li>
+                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img class="footerImg" src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img class="footerImg" src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
+                </li>
+                <li>
+                    <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"><img class="footerImg" src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
+                </li>
+                <li>
+                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img class="footerImg" src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
+

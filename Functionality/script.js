@@ -158,6 +158,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const designs = document.querySelectorAll('.positioningForDesign');
     const prevBtn = document.getElementById('prevDesign');
     const nextBtn = document.getElementById('nextDesign');
+
+    if (!prevBtn || !nextBtn || designs.length === 0) {
+        return;
+    }
+
     let startIndex = 0;
     let currentBreakpoint = getBreakpoint();
 
