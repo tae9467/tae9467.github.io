@@ -959,14 +959,23 @@ button.wordpressDemoButton img {
     align-items: center;
     gap: 8px;
     margin-top: 48px;
-    color: hsl(330, 45%, 65%);
+    color: hsl(240, 7%, 84%);
     font-family: 'Metal', serif;
     font-weight: 600;
     text-decoration: none;
+    transition: color 0.4s ease;
 }
 
 .demoBackLink:hover {
-    color: hsl(216, 47%, 70%);
+    color: hsl(330, 45%, 65%);
+}
+
+.demoBackLink:focus {
+    color: hsl(330, 45%, 65%);
+}
+
+.demoBackLink:active {
+    color: hsl(240, 7%, 84%);
 }
 
 .demoSectionBorder {
