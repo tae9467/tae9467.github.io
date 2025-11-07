@@ -321,9 +321,9 @@ main section {
     border-radius: 12px; 
 }
 
-main section p {
-    text-indent: 4ch;
-    text-align: left;
+main section p, .textIndent {
+    text-indent: 4ch !important;
+    text-align: left !important;
 }
 
 main section h2 {
@@ -866,19 +866,6 @@ main section button:active {
     text-align: center;
 }
 
-.projectsModalButtons .wordpressDemoButton {
-    width: 240px;
-    max-width: none;
-    min-width: 240px;
-}
-
-.projectsModalButtons .wordpressDemoButton img {
-    width: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -14px;
-}
-
 .gradientButton {
     background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
 }
@@ -950,16 +937,13 @@ body.demo-page {
 
 button.wordpressDemoButton {
     position: relative;
-    bottom: 0;
     margin-bottom: 0;
     width: 240px;
     min-width: 0;
-    flex: 0 0 240px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 11px 18px;
 }
 
 button.wordpressDemoButton img {
@@ -998,6 +982,11 @@ button.wordpressDemoButton img {
     pointer-events: none;
 }
 
+
+.extraStyling button.wordpressDemoButton {
+    bottom: 0;
+}
+
 @media only screen and (max-width: 900px) {
     .demoMain {
         padding: 130px 16px 70px;
@@ -1018,8 +1007,15 @@ button.wordpressDemoButton img {
 
     button.wordpressDemoButton {
         width: 220px;
-        flex: 0 0 auto;
-        padding: 10px 16px;
+    }
+}
+
+@media only screen and (max-width: 461px) {
+    button.wordpressDemoButton img {
+        transform: translateX(0%);
+    }
+    .extraStyling button.wordpressDemoButton img {
+        transform: translateX(-50%);
     }
 }
 
