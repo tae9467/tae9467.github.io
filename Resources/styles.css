@@ -617,6 +617,8 @@ main section button:active {
     position: absolute;
     max-width: 220px;
     width: 110%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .projectgridSquare button {
@@ -628,6 +630,8 @@ main section button:active {
     min-width: fit-content;
     background-color: hsl(216, 47%, 70%);
     text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .projectgridSquare button:hover {
