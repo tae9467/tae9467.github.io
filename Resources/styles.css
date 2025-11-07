@@ -904,7 +904,7 @@ body.demo-page {
     margin: 0 auto;
     max-width: 720px;
     width: 100%;
-    padding: 54px 48px 96px;
+    padding: 54px 48px;
     background-color: hsl(222, 10%, 12%);
     border: 4px solid hsl(240, 7%, 84%);
     border-radius: 12px;
@@ -975,7 +975,7 @@ button.wordpressDemoButton img {
     left: 49.9%;
     transform: translate(-50%, -50%);
     width: 101%;
-    height: 103%;
+    height: 102.5%;
     display: block;
     max-width: none;
     object-fit: fill;
