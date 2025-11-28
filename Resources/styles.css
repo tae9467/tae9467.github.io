@@ -1563,8 +1563,12 @@ footer ul a:hover {
         left: 50%;
         transform: translateX(-50%);
         font-size: max(17px, min(4vmin, 24.5px));
-        line-height: 46px;
-        padding-top: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        line-height: normal;
     }
 
     .projectgridSquare button img {
@@ -1623,8 +1627,12 @@ footer ul a:hover {
         left: 50%;
         transform: translateX(-50%);
         font-size: max(17px, min(4vmin, 24.5px));
-        line-height: 42px;
-        padding-top: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        line-height: normal;
     }
 
     .projectgridSquare button img {
