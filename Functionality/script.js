@@ -199,14 +199,58 @@ document.addEventListener("DOMContentLoaded", function () {
         nextBtn.classList.toggle('disabled', startIndex + visibleCount >= designs.length);
     }
 
+    function getStepSize(direction) {
+        const bp = getBreakpoint();
+        const visibleCount = getVisibleCount();
+        const remaining = designs.length - (startIndex + visibleCount);
+        const before = startIndex;
+
+        if (direction === 'next') {
+            if (bp === 'desktop') {
+                // Desktop: move by 3, unless less than 3 left, then move by 2 or 1
+                if (remaining >= 3) return 3;
+                if (remaining >= 2) return 2;
+                return remaining >= 1 ? 1 : 0;
+            } else if (bp === 'tablet') {
+                // Tablet: move by 2, unless only 1 left, then move by 1
+                if (remaining >= 2) return 2;
+                return remaining >= 1 ? 1 : 0;
+            } else {
+                // Mobile: move by 1
+                return remaining >= 1 ? 1 : 0;
+            }
+        } else {
+            // Previous direction
+            if (bp === 'desktop') {
+                // Desktop: move back by 3, unless less than 3 before, then move by 2 or 1
+                if (before >= 3) return 3;
+                if (before >= 2) return 2;
+                return before >= 1 ? 1 : 0;
+            } else if (bp === 'tablet') {
+                // Tablet: move back by 2, unless only 1 before, then move by 1
+                if (before >= 2) return 2;
+                return before >= 1 ? 1 : 0;
+            } else {
+                // Mobile: move back by 1
+                return before >= 1 ? 1 : 0;
+            }
+        }
+    }
+
     nextBtn.addEventListener('click', () => {
-        if (startIndex + 1 < designs.length) startIndex++;
-        showDesigns();
+        const step = getStepSize('next');
+        if (step > 0) {
+            startIndex += step;
+            showDesigns();
+        }
     });
 
     prevBtn.addEventListener('click', () => {
-        if (startIndex > 0) startIndex--;
-        showDesigns();
+        const step = getStepSize('prev');
+        if (step > 0) {
+            startIndex -= step;
+            showDesigns();
+        }
     });
 
     // Only reload on breakpoint change
