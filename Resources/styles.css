@@ -1176,6 +1176,14 @@ button.wordpressDemoButton img {
     color: hsl(216, 47%, 70%);
 }
 
+.mySkills li:nth-child(odd) h4 {
+    color: hsl(330, 45%, 65%);
+}
+
+.mySkills li:nth-child(even) h4 {
+    color: hsl(216, 47%, 70%);
+}
+
 .portfolioWebsite p, .socialMediaMusicWebsite p, .toulasBoutiqueWebsite p .saundersLabsWebsite p {
     margin-top: 5px;
 }
