@@ -548,6 +548,10 @@ main section#designs button img {
 
 }
 
+.designImg[src*="iFamilyDesigns.png"] {
+    object-position: left;
+}
+
 .figmaDesignsContainer img:nth-of-type(2) {
     width: 103%;
     height: 104%;
