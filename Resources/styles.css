@@ -548,6 +548,10 @@ main section#designs button img {
 
 }
 
+.designImg[src*="iFamilyDesigns.png"] {
+    object-position: left;
+}
+
 .figmaDesignsContainer img:nth-of-type(2) {
     width: 103%;
     height: 104%;
@@ -1172,6 +1176,14 @@ button.wordpressDemoButton img {
     color: hsl(216, 47%, 70%);
 }
 
+.mySkills li:nth-child(odd) h4 {
+    color: hsl(330, 45%, 65%);
+}
+
+.mySkills li:nth-child(even) h4 {
+    color: hsl(216, 47%, 70%);
+}
+
 .portfolioWebsite p, .socialMediaMusicWebsite p, .toulasBoutiqueWebsite p .saundersLabsWebsite p {
     margin-top: 5px;
 }
@@ -1559,8 +1571,12 @@ footer ul a:hover {
         left: 50%;
         transform: translateX(-50%);
         font-size: max(17px, min(4vmin, 24.5px));
-        line-height: 46px;
-        padding-top: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        line-height: normal;
     }
 
     .projectgridSquare button img {
@@ -1619,8 +1635,12 @@ footer ul a:hover {
         left: 50%;
         transform: translateX(-50%);
         font-size: max(17px, min(4vmin, 24.5px));
-        line-height: 42px;
-        padding-top: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        line-height: normal;
     }
 
     .projectgridSquare button img {
