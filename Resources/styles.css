@@ -839,6 +839,10 @@ main section button:active {
         min-width: fit-content !important;
         padding: 0 11% !important;
     }
+
+    button.wordpressDemoButton img {
+        width: 115% !important;
+    }
 }
 
 .projectsModalContent {
