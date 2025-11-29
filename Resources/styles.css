@@ -515,7 +515,7 @@ main section#designs button img {
 
 /* Case Study and View Design buttons - border image width 113% */
 .designButtonsContainer button img {
-    width: 113%;
+    width: 113% !important;
 }
 
 /* View Design buttons - gradient from pink to blue */
@@ -1613,7 +1613,7 @@ footer ul a:hover {
     }
 
     .designButtonsContainer {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 10px;
     }
 
