@@ -47,8 +47,9 @@
 
 #case-studies h2 {
     color: hsl(222, 10%, 12%);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    margin: 20px;
 }
 
 .caseStudiesContainer {
@@ -195,6 +196,10 @@
     font-weight: bold;
 }
 
+.designLinks button:nth-child(2) {
+    background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%)) !important;
+}
+
 .backArrow {
     display: inline-flex;
     align-items: center;
@@ -317,6 +322,28 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .caseStudyLink {
+        max-width: 129px !important;
+        width: 129px;
+    }
+
+    .caseStudyLink::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        bottom: -12px;
+        left: -11px;
+        height: 70px;
+        background-image: url(./Images/AboutMeButtonBorder.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        overflow: visible;
     }
 }
 
