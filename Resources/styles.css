@@ -485,12 +485,23 @@ main section button img {
     height: 71px;
 }
 
+.designButtonsContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 46px;
+    flex-wrap: wrap;
+}
+
 main section#designs button {
     width: auto;
     height: 55px;
-    bottom: 46px;
+    bottom: 0;
     max-width: 206px;
     min-width: fit-content;
+    position: relative;
 }
 
 main section#designs button img {
@@ -1550,6 +1561,11 @@ footer ul a:hover {
 
     .positioningForDesign {
         flex: 0 0 100%;           
+    }
+
+    .designButtonsContainer {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .projectgridSquare {

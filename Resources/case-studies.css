@@ -1,0 +1,227 @@
+/* Case Studies Page Styles */
+
+#case-studies {
+    position: relative;
+    min-width: 100%;
+    margin: auto;
+    border: none;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 0;
+    background-color: hsl(330, 45%, 65%);
+    margin-top: 150px;
+}
+
+/* Border image overlay */
+#case-studies::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -12px;
+    width: 103%;
+    height: 101.5%;
+    background: url("./Images/skillsPinkBackgroundBorder.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 1;
+}
+
+#case-studies h2 {
+    color: hsl(222, 10%, 12%);
+    margin-top: 20px;
+}
+
+.caseStudiesContainer {
+    background-color: hsl(222, 10%, 12%);
+    position: relative;
+    width: 94%;
+    margin: auto;
+    padding-bottom: 11px;
+    border-radius: 6px;
+    z-index: 1;
+    overflow: visible;
+}
+
+/* Border image overlay for case studies container */
+.caseStudiesContainer::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -0.5%;
+    width: 101%;
+    height: 101.5%;
+    background: url("./Images/skillsBlackBackgroundBorder.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.caseStudy {
+    display: none;
+    text-align: left;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.caseStudy.active {
+    display: block;
+}
+
+.caseStudy h3 {
+    text-align: center;
+    color: hsl(330, 45%, 65%);
+    margin-top: 2%;
+}
+
+.caseStudy h4 {
+    color: hsl(216, 47%, 70%);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.caseStudy p {
+    margin: 10px 0;
+    text-indent: 0;
+}
+
+.caseStudy ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.caseStudy li {
+    margin: 5px 0;
+}
+
+.caseStudy hr {
+    max-width: 100%;
+    height: 11px;
+    border: none;
+    background: url("./Images/HRBorderForProjectModal.png") no-repeat center;
+    background-size: cover;
+    margin: 20px auto;
+}
+
+.designLinks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.caseStudyLink {
+    color: hsl(216, 47%, 70%);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid hsl(216, 47%, 70%);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.caseStudyLink:hover {
+    color: hsl(330, 45%, 65%);
+    border-color: hsl(330, 45%, 65%);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.backArrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: hsl(222, 10%, 12%);
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.backArrow svg {
+    stroke: hsl(222, 10%, 12%);
+    transition: stroke 0.4s ease;
+}
+
+.backArrow:hover {
+    color: hsl(240, 7%, 84%);
+}
+
+.backArrow:hover svg {
+    stroke: hsl(240, 7%, 84%);
+}
+
+.scrollToTopButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: hsl(330, 45%, 65%);
+    color: hsl(222, 10%, 12%);
+    border: 3px solid hsl(222, 10%, 12%);
+    border-radius: 50px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.scrollToTopButton:hover {
+    background-color: hsl(222, 10%, 12%);
+    color: hsl(330, 45%, 65%);
+    border-color: hsl(330, 45%, 65%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.scrollToTopButton svg {
+    stroke: currentColor;
+}
+
+.scrollToTopButton.hidden {
+    display: none !important;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 730px) {
+    .backArrow {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        color: hsl(222, 10%, 12%);
+    }
+
+    .backArrow svg {
+        stroke: hsl(222, 10%, 12%);
+    }
+
+    .scrollToTopButton {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .caseStudy {
+        padding: 15px;
+    }
+
+    .designLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
