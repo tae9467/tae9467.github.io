@@ -13,20 +13,9 @@
     margin-top: 150px;
 }
 
-/* Border image overlay */
+/* Border image overlay - removed */
 #case-studies::after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -12px;
-    width: 103%;
-    height: 101.5%;
-    background: url("./Images/skillsPinkBackgroundBorder.png") no-repeat center;
-    background-size: 100% 100%;
-    z-index: 2;
-    pointer-events: none;
-    overflow: visible;
-    z-index: 1;
+    display: none !important;
 }
 
 #case-studies h2 {
@@ -37,26 +26,17 @@
 .caseStudiesContainer {
     background-color: hsl(222, 10%, 12%);
     position: relative;
-    width: 94%;
+    width: 102%;
     margin: auto;
     padding-bottom: 11px;
-    border-radius: 6px;
+    border-radius: 0px;
     z-index: 1;
-    overflow: visible;
+    overflow: hidden;
 }
 
-/* Border image overlay for case studies container */
+/* Border image overlay for case studies container - removed */
 .caseStudiesContainer::after {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -0.5%;
-    width: 101%;
-    height: 101.5%;
-    background: url("./Images/skillsBlackBackgroundBorder.png") no-repeat center;
-    background-size: 100% 100%;
-    z-index: 2;
-    pointer-events: none;
+    display: none !important;
 }
 
 .caseStudy {
@@ -163,8 +143,8 @@
     right: 30px;
     background-color: hsl(330, 45%, 65%);
     color: hsl(222, 10%, 12%);
-    border: 3px solid hsl(222, 10%, 12%);
-    border-radius: 50px;
+    border: 3px dashed transparent;
+    border-radius: 7px;
     padding: 12px 20px;
     cursor: pointer;
     font-family: 'Metal', serif;
@@ -178,10 +158,19 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+.scrollToTopButton img {
+    position: absolute;
+    width: 167px;
+    bottom: -12px;
+    left: -9px;
+    height: 78px;
+    z-index: -1;
+}
+
 .scrollToTopButton:hover {
     background-color: hsl(222, 10%, 12%);
     color: hsl(330, 45%, 65%);
-    border-color: hsl(330, 45%, 65%);
+    font-weight: bold;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }
@@ -213,6 +202,15 @@
         right: 20px;
         padding: 10px 16px;
         font-size: 14px;
+    }
+
+    .scrollToTopButton img {
+        position: absolute;
+        width: 149px;
+        bottom: -12px;
+        left: -8px;
+        height: 69px;
+        z-index: -1;
     }
 
     .caseStudy {
