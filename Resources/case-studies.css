@@ -30,6 +30,21 @@
     pointer-events: none;
 }
 
+/* Top border for pink section */
+#case-studies::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103vw;
+    height: 20px;
+    background: url("./Images/borderforcasestudy.png") no-repeat center bottom;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
 #case-studies h2 {
     color: hsl(222, 10%, 12%);
     margin-top: 20px;
@@ -56,6 +71,21 @@
     width: 103vw;
     height: 20px;
     background: url("./Images/borderforcasestudy.png") no-repeat center top;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Top border for black container */
+.caseStudiesContainer::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103vw;
+    height: 20px;
+    background: url("./Images/borderforcasestudy.png") no-repeat center bottom;
     background-size: cover;
     z-index: 10;
     pointer-events: none;
