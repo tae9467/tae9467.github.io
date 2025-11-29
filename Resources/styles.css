@@ -507,7 +507,7 @@ main section#designs button {
 main section#designs button img {
     position: absolute;
     max-width: 219px;
-    width: 110%;
+    width: 113%;
     bottom: -12px;
     left: -7px;
     height: 71px;
@@ -1728,5 +1728,16 @@ footer ul a:hover {
     .projectgridSquare button img {
         height: 54px;
         bottom: -8px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main section#designs button img {
+        position: absolute;
+        max-width: 219px;
+        width: 113%;
+        bottom: -12px;
+        left: -5px;
+        height: 71px;
     }
 }
