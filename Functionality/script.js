@@ -264,3 +264,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showDesigns();
 });
+
+/**
+ * Updates WordPress demo button text based on screen width
+ * @function updateWordPressButtonText
+ * @returns {void}
+ */
+function updateWordPressButtonText() {
+    const wordpressButton = document.querySelector('.wordpressDemoButton');
+    if (wordpressButton) {
+        // Get the image element to preserve it
+        const img = wordpressButton.querySelector('img');
+        const newText = window.innerWidth <= 411 ? 'Demos' : 'View Demos';
+        
+        // Replace text while preserving the image
+        if (img) {
+            wordpressButton.innerHTML = img.outerHTML + newText;
+        } else {
+            wordpressButton.textContent = newText;
+        }
+    }
+}
+
+// Update button text on load and resize
+document.addEventListener('DOMContentLoaded', function() {
+    updateWordPressButtonText();
+    window.addEventListener('resize', updateWordPressButtonText);
+});

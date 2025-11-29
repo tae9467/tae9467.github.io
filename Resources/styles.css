@@ -828,6 +828,19 @@ main section button:active {
     }
 }
 
+/* WordPress modal buttons - reduce gap at 411px and below */
+@media only screen and (max-width: 411px) {
+    .projectsModalButtons:has(.wordpressDemoButton) {
+        gap: 6%;
+    }
+
+    .wordpressDemoButton {
+        width: fit-content !important;
+        min-width: fit-content !important;
+        padding: 0 11% !important;
+    }
+}
+
 .projectsModalContent {
     position: absolute;
     top: 13%;         
