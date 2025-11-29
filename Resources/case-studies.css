@@ -154,22 +154,45 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0;
+    position: relative;
+    top: 0px;
+}
+
+.designLinks button {
+    top: 0px;
 }
 
 .caseStudyLink {
-    color: hsl(216, 47%, 70%);
+    color: hsl(222, 10%, 12%);
     text-decoration: none;
+    font-family: 'Metal', serif;
     font-weight: 600;
-    padding: 10px 20px;
-    border: 2px solid hsl(216, 47%, 70%);
-    border-radius: 5px;
+    padding: 12px 20px;
+    border: 3px dashed transparent;
+    border-radius: 7px;
+    background-color: hsl(330, 45%, 65%);
     transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: fit-content;
+}
+
+.caseStudyLink img {
+    position: absolute;
+    width: 115%;
+    bottom: -12px;
+    left: -10px;
+    height: 71px;
+    /* z-index: 0; */
 }
 
 .caseStudyLink:hover {
+    background-color: hsl(222, 10%, 12%);
     color: hsl(330, 45%, 65%);
-    border-color: hsl(330, 45%, 65%);
-    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
 }
 
 .backArrow {
