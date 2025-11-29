@@ -295,5 +295,10 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .caseStudyLink {
+        max-width: 90vw !important;
+        width: 90vw;
+    }
 }
 
