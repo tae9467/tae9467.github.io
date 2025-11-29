@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Case studies showcasing Toula Elwell's portfolio projects, SCA website redesign, and Teddy Bear Finder design work.">
+        <title>Case Studies | Toula Elwell</title>
+        <link rel="stylesheet" href="Resources/styles.css">
+        <link rel="stylesheet" href="Resources/case-studies.css">
+        <script src="Functionality/script.js" defer></script>
+        <script src="Functionality/case-studies.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="headerImg">
+                        <img src="Resources/Images/face.jpg" alt="Picture of Toula" height="60" width="56">
+                    </li>
+                    <li class="name">
+                        <a href="index.html">Toula Elwell</a>
+                    </li>
+                </ul>
+                <ul class="sectionLinks">
+                    <li class="navigation about">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="navigation designs">
+                        <a href="index.html#designs">Designs</a>
+                    </li>
+                    <li class="navigation projects">
+                        <a href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="navigation skills">
+                        <a href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="navigation contact">
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- For mobile screens -->
+            <section onclick="toggleMobileMenu(this)" onmouseover="turnPink()" onmouseleave="resetColor()">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+                <ul>
+                    <li class="navigation about">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="navigation designs">
+                        <a href="index.html#designs">Designs</a>
+                    </li>
+                    <li class="navigation projects">
+                        <a href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="navigation skills">
+                        <a href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="navigation contact">
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </section>
+            <!-- Just for the border to match Figma Design -->
+            <img class="fancyDesktopHeaderBorder" src="Resources/Images/desktopFooterBorder.png" alt="Header Border">
+        </header>
+
+        <main>
+            <section id="case-studies">
+                <h2 id="caseStudyTitle">Case Studies</h2>
+                <div class="caseStudiesContainer">
+                    <!-- Portfolio Website Case Study -->
+                    <div id="portfolio-study" class="caseStudy">
+                        <div class="designLinks">
+                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')" class="caseStudyLink">
+                                <img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">
+                                View Design
+                            </button>
+                        </div>
+                        <hr>
+                        
+                        <h4>Project Overview</h4>
+                        <p>
+                            Welcome to my personal portfolio website! This project holds a special place as it not only showcases my skills and accomplishments but also serves as a testament to my passion for web development. I built this website to create a professional online presence that reflects both my personality and technical capabilities.
+                        </p>
+                        <p>
+                            This portfolio was created for myself to demonstrate my front-end development skills and design capabilities to potential employers and clients.
+                        </p>
+                        <hr>
+
+                        <h4>My Role</h4>
+                        <p>
+                            UI/UX Designer • Front-End Developer
+                        </p>
+                        <hr>
+
+                        <h4>The Problem</h4>
+                        <p>
+                            As a Software Engineering graduate and aspiring Web Developer, I needed a platform to showcase my projects, skills, and experiences in a way that was both visually appealing and functionally robust. The website needed to be responsive, accessible, and demonstrate my understanding of modern web development practices.
+                        </p>
+                        <hr>
+
+                        <h4>My Solution</h4>
+                        <p>
+                            I designed and developed a fully responsive portfolio website using HTML, CSS, and JavaScript. The site features:
+                        </p>
+                        <ul>
+                            <li>Interactive and user-friendly design with smooth navigation</li>
+                            <li>Responsive layout for seamless viewing across all devices</li>
+                            <li>Integration of skills and experiences to provide a holistic perspective</li>
+                            <li>Figma design implementation with custom graphics and borders</li>
+                            <li>Modal system for detailed project information</li>
+                            <li>Carousel functionality for design showcase</li>
+                        </ul>
+                        <p>
+                            Technologies used include HTML, CSS, JavaScript, Figma for design, VS Code for development, and GitHub for version control. I also utilized Photoshop for editing graphics and AI tools for design inspiration and debugging assistance.
+                        </p>
+                        <hr>
+
+                        <h4>Design Process</h4>
+                        <ul>
+                            <li><strong>Research & Initial Version:</strong> For the first version of this portfolio, I conducted research on portfolio best practices and gathered feedback from others during both the design and development phases. This initial iteration helped me understand what worked and what needed improvement.</li>
+                            <li><strong>Redesign Approach:</strong> This current version is a complete redesign based on learnings from the first version. I started by researching what I needed for the new design, identifying key improvements and areas to enhance.</li>
+                            <li><strong>Information Architecture:</strong> Since this was a redesign of an existing site, I leveraged the existing site structure and mapped out the user flow, ensuring logical navigation and clear information hierarchy. I didn't need to create wireframes as the existing site provided the foundation for the layout structure.</li>
+                            <li><strong>AI-Assisted Graphics Creation:</strong> Leveraged AI tools to generate initial designs for decorative elements like roses and carousel arrows, then refined and edited them in Photoshop to match the overall aesthetic and ensure they fit seamlessly into the design.</li>
+                            <li><strong>Responsive Design:</strong> Used a mobile-first approach, designing breakpoints for mobile, tablet, and desktop to ensure optimal viewing experience across all devices. Tested designs on multiple screen sizes throughout the process.</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Constraints & Challenges</h4>
+                        <ul>
+                            <li><strong>Technical Constraints:</strong> As a self-taught project, I had to balance learning new technologies while delivering a polished final product. I overcame this by breaking down complex features into manageable components and utilizing resources like documentation and AI tools for troubleshooting.</li>
+                            <li><strong>Design Constraints:</strong> Needed to create a portfolio that showcased both technical skills and design capabilities while maintaining a cohesive visual identity. Solved this by establishing consistent styling choices early in the process, including a cohesive color palette, typography, and reusable styling patterns across components.</li>
+                            <li><strong>Time Management:</strong> Balancing project work with learning required careful prioritization. I focused on core functionality first, then iteratively improved and refined features.</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Impact / What You Learned</h4>
+                        <p>
+                            Throughout the process of building this website, I deepened my understanding of front-end web technologies. By teaching myself HTML, CSS, and JavaScript, I was able to craft this platform to reflect both my personality and professional capabilities. This portfolio not only showcases my projects but also highlights my relentless pursuit of knowledge and passion for coding. The experience reinforced my commitment to creating visually appealing, functional, and meaningful web experiences.
+                        </p>
+                    </div>
+
+                    <!-- SCA Website Redesign Case Study -->
+                    <div id="sca-study" class="caseStudy">
+                        <div class="designLinks">
+                            <button type="button" onclick="window.open('https://www.figma.com/design/EMpnyNgMNjdiz2XKXkCQeu/Springfield-Commonwealth-Academy-Main-Webpage?node-id=3144-2&t=z3HfJ2ANRieOg1Fz-1', '_blank')" class="caseStudyLink">
+                                <img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">
+                                View Design
+                            </button>
+                            <button type="button" onclick="window.open('https://springfield-ca.webflow.io/', '_blank')" class="caseStudyLink">
+                                <img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">
+                                View Website
+                            </button>
+                        </div>
+                        <hr>
+                        
+                        <h4>Project Overview</h4>
+                        <p>
+                            This project involved redesigning and developing all 17 pages of Springfield Commonwealth Academy's main school website within a 3-week timeline. My manager wanted me to redesign the webpage with a focus on AI, ensuring parents and visitors understand that this is a private boarding school that combines traditional learning with AI.
+                        </p>
+                        <p>
+                            This website was built for Springfield Commonwealth Academy to modernize their online presence and clearly communicate their unique educational approach.
+                        </p>
+                        <hr>
+
+                        <h4>My Role</h4>
+                        <p>
+                            UI/UX Designer • Web Developer
+                        </p>
+                        <hr>
+
+                        <h4>The Problem</h4>
+                        <p>
+                            The existing Springfield Commonwealth Academy website needed a complete redesign to better communicate the school's identity as a private boarding school that uniquely combines traditional learning with AI technology. The website needed to be modern, prestigious, and clearly convey the school's innovative approach to education.
+                        </p>
+                        <hr>
+
+                        <h4>My Solution</h4>
+                        <p>
+                            I redesigned and developed the complete website using Webflow and Figma. The solution includes:
+                        </p>
+                        <ul>
+                            <li>Main page with a video to showcase the school</li>
+                            <li>Comprehensive homepage design where each section has a button linking to main navigation links, eliminating the need to click navigation links</li>
+                            <li>New "School News" page with a news banner at the top</li>
+                            <li>Prestigious design using school colors as accents with star elements for visual impact</li>
+                            <li>Focus on AI integration and private boarding school identity</li>
+                            <li>Responsive design utilizing existing mobile and tablet layouts from Webflow</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Design Process & Research</h4>
+                        <ul>
+                            <li><strong>Stakeholder Interviews:</strong> Started by meeting with my manager to understand pain points, business goals, and user needs. Identified key requirements: emphasizing AI integration, communicating the private boarding school identity, and creating a prestigious feel.</li>
+                            <li><strong>Competitive Analysis:</strong> Conducted research by analyzing top schools and other AI-focused educational institutions to understand industry standards, best practices, and how competitors structured their websites. This informed information architecture and content strategy decisions.</li>
+                            <li><strong>Information Architecture & Layout Strategy:</strong> Since this was a redesign of an existing site, I leveraged the existing site structure and layout patterns while strategically adding my own new layouts intermixed throughout. This approach maintained familiarity for existing users while introducing modern design elements and improved user flows. I mapped out the site structure for all 17 pages, establishing clear navigation patterns and content hierarchy without needing to create wireframes, as the existing site provided the foundation.</li>
+                            <li><strong>Design System & Components:</strong> Developed a cohesive design system in Figma with reusable components, ensuring consistency across all pages. Used school colors strategically as accents and incorporated star elements as a visual motif to reinforce the prestigious brand identity.</li>
+                            <li><strong>Collaborative Design Process:</strong> Throughout the redesign process, I actively sought feedback from team members and kept the Figma link available for everyone to review and suggest changes. This iterative, collaborative approach ensured the design met various perspectives and requirements before moving to implementation.</li>
+                            <li><strong>Week 1 - Research & Design:</strong> Completed the complete redesign in 3 days using Figma, incorporating all feedback and stakeholder requirements.</li>
+                            <li><strong>Week 2-3 - Implementation:</strong> Before beginning implementation, I asked my manager for her opinion on the redesign and whether I should proceed with starting the development. She gave me the go-ahead, and I began building the implementation of the redesign in Webflow, completing 11 out of 17 pages in the first week. The redesign emphasizes the school's prestigious nature through strategic use of their main colors as accents and incorporating star elements throughout the design.</li>
+                            <li><strong>Accessibility & Responsive Design:</strong> Ensured all designs met accessibility standards and were fully responsive, utilizing Webflow's responsive design capabilities to create seamless experiences across mobile, tablet, and desktop devices.</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Constraints & Challenges</h4>
+                        <ul>
+                            <li><strong>Tight Timeline:</strong> Redesigning 17 pages in 3 weeks required efficient workflow and prioritization. I addressed this by completing the full design in 3 days, then focusing on high-priority pages first during implementation.</li>
+                            <li><strong>Stakeholder Alignment:</strong> Balancing multiple perspectives from team members while maintaining design consistency. Solved this through transparent communication, keeping the Figma link accessible for feedback, and synthesizing input into cohesive design decisions.</li>
+                            <li><strong>Brand Identity:</strong> Needed to communicate both the prestigious nature of a private boarding school and innovative AI integration without conflicting messages. Achieved this through strategic use of school colors as accents, star elements for prestige, and clear content hierarchy emphasizing both aspects.</li>
+                            <li><strong>Technical Constraints:</strong> Working within Webflow's capabilities while maintaining design fidelity. I leveraged Webflow's responsive design features and component system to efficiently implement the designs while ensuring quality.</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Impact / What You Learned</h4>
+                        <p>
+                            This project provided valuable experience in working with stakeholders to understand requirements, conducting competitive research, and rapidly iterating on designs. Working with Webflow allowed me to efficiently implement responsive designs while maintaining quality. The project demonstrated my ability to work under tight deadlines, completing 11 pages in the first week while ensuring the design clearly communicates the school's unique value proposition.
+                        </p>
+                    </div>
+
+                    <!-- Teddy Bear Finder Case Study -->
+                    <div id="teddy-bear-study" class="caseStudy">
+                        <div class="designLinks">
+                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2249-63&t=Zrs5WslKInBCCVx8-1', '_blank')" class="caseStudyLink">
+                                <img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">
+                                View Design
+                            </button>
+                        </div>
+                        <hr>
+                        
+                        <h4>Project Overview</h4>
+                        <p>
+                            Teddy Bear Finder is a fun, community-driven platform designed to help users browse, post, and find unique teddy bears based on their preferences. I built this as a personal project to practice UI/UX design, responsive layout structure, and Webflow development.
+                        </p>
+                        <p>
+                            The inspiration for this project came from a deeply personal experience - I lost my beloved teddy bear that I had cherished for 22 years of my life. While searching for a replacement, I discovered that only Google image search was available, which didn't yield any helpful results. This gap in the market inspired me to create a dedicated platform where people can help each other find their lost stuffed animals.
+                        </p>
+                        <hr>
+
+                        <h4>My Role</h4>
+                        <p>
+                            UI/UX Designer • Web Developer
+                        </p>
+                        <hr>
+
+                        <h4>The Problem</h4>
+                        <p>
+                            Many people want to find or share unique teddy bears but don't have a simple, visual platform where they can browse bears, create profiles, and post their own. When I lost my lifelong bear and was looking for a duplicate replacement, I couldn't find one. Making this website will help others find their bear duplicates a lot quicker or at all - I never found a duplicate myself.
+                        </p>
+                        <hr>
+
+                        <h4>My Solution</h4>
+                        <p>
+                            I designed and developed a clean, friendly interface featuring:
+                        </p>
+                        <ul>
+                            <li>A home page</li>
+                            <li>Browse Bears section</li>
+                            <li>Post a Bear functionality</li>
+                            <li>Contact page</li>
+                            <li>Profile page (coming soon!), login, log out, sign up pages</li>
+                        </ul>
+                        <p>
+                            I used soft colors, rounded components, and micro-interactions to create a comforting, whimsical feel. I chose pastel blues and purple to make the theme appear heavenish, creating a comforting and peaceful atmosphere for users who may be searching for something very meaningful to them.
+                        </p>
+                        <hr>
+
+                        <h4>Design Process & User-Centered Approach</h4>
+                        <ul>
+                            <li><strong>User Research & Empathy:</strong> The design was driven by personal experience and empathy for users who have lost meaningful items. I considered the emotional state of users searching for lost teddy bears and designed the interface to be comforting and supportive rather than clinical or transactional.</li>
+                            <li><strong>Information Architecture:</strong> Structured the site to prioritize key user actions: browsing bears, posting lost bears, and contacting others. Created clear navigation paths that guide users through their journey of finding or sharing bears.</li>
+                            <li><strong>Design System & Components:</strong> Developed a cohesive component library in Figma with reusable elements, ensuring consistency across all pages. Used rounded corners, soft shadows, and gentle animations to create a friendly, approachable aesthetic.</li>
+                            <li><strong>Color Psychology:</strong> Deliberately chose pastel blues and purples to evoke feelings of peace, comfort, and hope - creating a "heavenish" theme that provides emotional support to users during what can be an emotional search process.</li>
+                            <li><strong>Responsive Design:</strong> Designed with a mobile-first approach, ensuring the platform is accessible and easy to use on any device, as users may need to quickly post or browse bears while on the go.</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Constraints & Challenges</h4>
+                        <ul>
+                            <li><strong>Emotional Design Challenge:</strong> Designing for users who may be experiencing loss or emotional distress required careful consideration of tone and visual language. I addressed this through color psychology, soft design elements, and creating a supportive, comforting interface.</li>
+                            <li><strong>Feature Prioritization:</strong> As a personal project, needed to balance scope with available resources. Focused on core functionality (browse, post, contact) first, with profile and authentication features planned for future iterations.</li>
+                            <li><strong>User Flow Complexity:</strong> Creating intuitive flows for both users who lost bears and those who found them required clear information architecture. Solved this through user journey mapping and logical navigation structure.</li>
+                        </ul>
+                        <hr>
+
+                        <h4>Impact / What You Learned</h4>
+                        <p>
+                            Improved my layout consistency, Figma component structuring, and responsive Webflow design techniques. This project represents my commitment to using technology for positive social impact. The Teddy Bear Finder Website combines my technical skills with a meaningful mission to help families reunite with their beloved stuffed animals. It's a perfect example of how web development can create solutions that bring joy and comfort to people's lives.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <button id="scrollToTop" class="scrollToTopButton hidden" onclick="scrollToTop()" aria-label="Scroll to top">
+            <img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Scroll to Top
+        </button>
+        
+        <footer>
+            <!-- Just for the border to match Figma Design -->
+            <section>
+                <img class="fancyDesktopFooterBorder" src="Resources/Images/desktopFooterBorder.png" alt="Footer Border">
+            </section>
+            <ul>
+                <li>
+                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img class="footerImg" src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img class="footerImg" src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
+                </li>
+                <li>
+                    <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"><img class="footerImg" src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
+                </li>
+                <li>
+                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img class="footerImg" src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
+

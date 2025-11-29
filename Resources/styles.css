@@ -485,12 +485,23 @@ main section button img {
     height: 71px;
 }
 
+.designButtonsContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* bottom: 46px; */
+    flex-wrap: wrap;
+}
+
 main section#designs button {
     width: auto;
     height: 55px;
     bottom: 46px;
     max-width: 206px;
     min-width: fit-content;
+    position: relative;
 }
 
 main section#designs button img {
@@ -500,6 +511,20 @@ main section#designs button img {
     bottom: -12px;
     left: -7px;
     height: 71px;
+}
+
+/* Case Study and View Design buttons - border image width 113% */
+.designButtonsContainer button img {
+    width: 113% !important;
+}
+
+/* View Design buttons - gradient from pink to blue */
+.designButtonsContainer button:last-child {
+    background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%)) !important;
+}
+
+.designButtonsContainer button:last-child:hover {
+    background: hsl(222, 10%, 12%) !important;
 }
 
 .figmaSectionBorder {
@@ -766,6 +791,58 @@ main section button:active {
     max-height: 600px;
     display: block;
     margin: 0 auto;  
+}
+
+/* Mobile view for modal image */
+@media only screen and (max-width: 730px) {
+    .modalImg {
+        width: 150%;
+        height: 100vh;
+        max-height: 633px;
+        display: block;
+        margin: 0 auto;
+        left: -22%;
+        position: relative;
+    }
+
+    .contentInModal {
+        top: 50px;
+        width: 90vw !important;
+        position: relative;
+        height: auto !important;
+    }
+
+    .projectsModalButtons {
+        bottom: 45px !important;
+    }
+}
+
+/* Smaller mobile view for modal */
+@media only screen and (max-width: 401px) {
+    .contentInModal {
+        top: 66px;
+    }
+
+    .projectsModalButtons {
+        gap: 4%;
+    }
+}
+
+/* WordPress modal buttons - reduce gap at 411px and below */
+@media only screen and (max-width: 411px) {
+    .projectsModalButtons:has(.wordpressDemoButton) {
+        gap: 6%;
+    }
+
+    .wordpressDemoButton {
+        width: fit-content !important;
+        min-width: fit-content !important;
+        padding: 0 11% !important;
+    }
+
+    button.wordpressDemoButton img {
+        width: 115% !important;
+    }
 }
 
 .projectsModalContent {
@@ -1550,6 +1627,11 @@ footer ul a:hover {
 
     .positioningForDesign {
         flex: 0 0 100%;           
+    }
+
+    .designButtonsContainer {
+        /* flex-direction: column; */
+        gap: 10px;
     }
 
     .projectgridSquare {

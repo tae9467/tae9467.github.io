@@ -1,0 +1,349 @@
+/* Case Studies Page Styles */
+
+#case-studies {
+    position: relative;
+    min-width: 100%;
+    margin: auto;
+    border: none;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 0;
+    background-color: hsl(330, 45%, 65%);
+    margin-top: 150px;
+    padding-bottom: 24px;
+    margin-bottom: 68px;
+}
+
+/* Top border for pink section */
+#case-studies::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103vw;
+    height: 20px;
+    background: url("./Images/borderforcasestudy.png") no-repeat center top;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Top border for pink section */
+#case-studies::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103vw;
+    height: 20px;
+    background: url("./Images/borderforcasestudy.png") no-repeat center bottom;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#case-studies h2 {
+    color: hsl(222, 10%, 12%);
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    margin: 20px;
+}
+
+.caseStudiesContainer {
+    background-color: hsl(222, 10%, 12%);
+    position: relative;
+    width: 102%;
+    margin: auto;
+    /* padding-bottom: 21px; */
+    border-radius: 0px;
+    z-index: 1;
+}
+
+/* Top border for black container */
+.caseStudiesContainer::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103vw;
+    height: 20px;
+    background: url("./Images/borderforcasestudy.png") no-repeat center top;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Top border for black container */
+.caseStudiesContainer::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103vw;
+    height: 20px;
+    background: url("./Images/borderforcasestudy.png") no-repeat center bottom;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.caseStudy {
+    display: none;
+    text-align: left;
+    padding: 20px;
+    /* margin: 20px 0; */
+}
+
+.caseStudy.active {
+    display: block;
+}
+
+.caseStudy h3 {
+    text-align: center;
+    color: hsl(330, 45%, 65%);
+    margin-top: 2%;
+}
+
+.caseStudy h4 {
+    color: hsl(216, 47%, 70%);
+    text-align: center !important;
+    /* margin-top: 20px; */
+    /* margin-bottom: 10px; */
+    display: block;
+}
+
+.caseStudy p {
+    margin: 10px 0;
+    text-indent: 0;
+}
+
+.caseStudy ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.caseStudy li {
+    margin: 5px 0;
+}
+
+/* Alternate bolded words in bullet sections: pink, white, pink, white */
+.caseStudy ul li:nth-child(odd) strong {
+    color: hsl(330, 45%, 65%);
+}
+
+.caseStudy ul li:nth-child(even) strong {
+    color: hsl(240, 7%, 84%);
+}
+
+.caseStudy hr {
+    max-width: 100%;
+    height: 11px;
+    border: none;
+    background: url("./Images/HRBorderForProjectModal.png") no-repeat center;
+    background-size: cover;
+    margin: 20px auto;
+}
+
+.designLinks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    position: relative;
+    top: 0px;
+}
+
+.designLinks button {
+    top: 0px;
+}
+
+.caseStudyLink {
+    color: hsl(222, 10%, 12%);
+    text-decoration: none;
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: 3px dashed transparent;
+    border-radius: 7px;
+    background-color: hsl(330, 45%, 65%);
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: fit-content;
+}
+
+.caseStudyLink img {
+    position: absolute;
+    width: 115%;
+    bottom: -12px;
+    left: -10px;
+    height: 71px;
+    /* z-index: 0; */
+}
+
+.caseStudyLink:hover {
+    background-color: hsl(222, 10%, 12%);
+    color: hsl(330, 45%, 65%);
+    font-weight: bold;
+}
+
+.designLinks button:nth-child(2) {
+    background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%)) !important;
+}
+
+.backArrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: hsl(222, 10%, 12%);
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.backArrow svg {
+    stroke: hsl(222, 10%, 12%);
+    transition: stroke 0.4s ease;
+}
+
+.backArrow:hover {
+    color: hsl(240, 7%, 84%);
+}
+
+.backArrow:hover svg {
+    stroke: hsl(240, 7%, 84%);
+}
+
+.scrollToTopButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: hsl(330, 45%, 65%);
+    color: hsl(222, 10%, 12%);
+    border: 3px dashed transparent;
+    border-radius: 7px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.scrollToTopButton img {
+    position: absolute;
+    width: 167px;
+    bottom: -12px;
+    left: -9px;
+    height: 78px;
+    z-index: -1;
+}
+
+.scrollToTopButton:hover {
+    background-color: hsl(222, 10%, 12%);
+    color: hsl(330, 45%, 65%);
+    font-weight: bold;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.scrollToTopButton svg {
+    stroke: currentColor;
+}
+
+.scrollToTopButton.hidden {
+    display: none !important;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 730px) {
+    .backArrow {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        color: hsl(222, 10%, 12%);
+    }
+
+    .backArrow svg {
+        stroke: hsl(222, 10%, 12%);
+    }
+
+    .scrollToTopButton {
+        display: none !important;
+    }
+
+    .caseStudy {
+        padding: 15px;
+    }
+
+    .designLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caseStudyLink {
+        max-width: 308px !important;
+        width: 308px;
+    }
+
+    .caseStudyLink img {
+        display: none;
+    }
+
+    .caseStudyLink::before {
+        content: '';
+        position: absolute;
+        width: 104%;
+        bottom: -12px;
+        left: -4px;
+        height: 70px;
+        background-image: url(./Images/longbuttonborder.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .caseStudyLink {
+        max-width: 129px !important;
+        width: 129px;
+    }
+
+    .caseStudyLink::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        bottom: -12px;
+        left: -11px;
+        height: 70px;
+        background-image: url(./Images/AboutMeButtonBorder.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        overflow: visible;
+    }
+}
+
