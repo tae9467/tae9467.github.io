@@ -297,8 +297,26 @@
     }
 
     .caseStudyLink {
-        max-width: 90vw !important;
-        width: 90vw;
+        max-width: 308px !important;
+        width: 308px;
+    }
+
+    .caseStudyLink img {
+        display: none;
+    }
+
+    .caseStudyLink::before {
+        content: '';
+        position: absolute;
+        width: 104%;
+        bottom: -12px;
+        left: -4px;
+        height: 70px;
+        background-image: url(./Images/longbuttonborder.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
     }
 }
 
