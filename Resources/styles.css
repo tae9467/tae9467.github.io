@@ -835,13 +835,18 @@ main section button:active {
     }
 
     .wordpressDemoButton {
-        width: fit-content !important;
+        /* width: fit-content !important; */
         min-width: fit-content !important;
         padding: 0 11% !important;
     }
 
-    button.wordpressDemoButton img {
-        width: 115% !important;
+    .demoMain {
+        padding: 161px 10px 50px !important;
+    }
+
+    .demoMain section.demoSection {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
     }
 }
 

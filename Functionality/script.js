@@ -270,24 +270,25 @@ document.addEventListener("DOMContentLoaded", function () {
  * @function updateWordPressButtonText
  * @returns {void}
  */
-function updateWordPressButtonText() {
-    const wordpressButton = document.querySelector('.wordpressDemoButton');
-    if (wordpressButton) {
-        // Get the image element to preserve it
-        const img = wordpressButton.querySelector('img');
-        const newText = window.innerWidth <= 411 ? 'Demos' : 'View Demos';
-        
-        // Replace text while preserving the image
-        if (img) {
-            wordpressButton.innerHTML = img.outerHTML + newText;
-        } else {
-            wordpressButton.textContent = newText;
-        }
-    }
-}
+// Disabled - button text is now set in HTML and should not be overridden
+// function updateWordPressButtonText() {
+//     const wordpressButton = document.querySelector('.wordpressDemoButton');
+//     if (wordpressButton) {
+//         // Get the image element to preserve it
+//         const img = wordpressButton.querySelector('img');
+//         const newText = window.innerWidth <= 411 ? 'Demos' : 'Demo 1';
+//         
+//         // Replace text while preserving the image
+//         if (img) {
+//             wordpressButton.innerHTML = img.outerHTML + newText;
+//         } else {
+//             wordpressButton.textContent = newText;
+//         }
+//     }
+// }
 
 // Update button text on load and resize
-document.addEventListener('DOMContentLoaded', function() {
-    updateWordPressButtonText();
-    window.addEventListener('resize', updateWordPressButtonText);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     updateWordPressButtonText();
+//     window.addEventListener('resize', updateWordPressButtonText);
+// });
