@@ -513,6 +513,20 @@ main section#designs button img {
     height: 71px;
 }
 
+/* Case Study and View Design buttons - border image width 113% */
+.designButtonsContainer button img {
+    width: 113%;
+}
+
+/* View Design buttons - gradient from pink to blue */
+.designButtonsContainer button:last-child {
+    background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%)) !important;
+}
+
+.designButtonsContainer button:last-child:hover {
+    background: hsl(222, 10%, 12%) !important;
+}
+
 .figmaSectionBorder {
     position: absolute;
     width: 103%;
@@ -777,6 +791,41 @@ main section button:active {
     max-height: 600px;
     display: block;
     margin: 0 auto;  
+}
+
+/* Mobile view for modal image */
+@media only screen and (max-width: 730px) {
+    .modalImg {
+        width: 150%;
+        height: 100vh;
+        max-height: 633px;
+        display: block;
+        margin: 0 auto;
+        left: -22%;
+        position: relative;
+    }
+
+    .contentInModal {
+        top: 50px;
+        width: 90vw !important;
+        position: relative;
+        height: auto !important;
+    }
+
+    .projectsModalButtons {
+        bottom: 45px !important;
+    }
+}
+
+/* Smaller mobile view for modal */
+@media only screen and (max-width: 401px) {
+    .contentInModal {
+        top: 66px;
+    }
+
+    .projectsModalButtons {
+        gap: 4%;
+    }
 }
 
 .projectsModalContent {
