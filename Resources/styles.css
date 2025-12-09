@@ -115,20 +115,46 @@ body::-webkit-scrollbar-thumb {
 
 .headerImg {
     position: absolute;
-    border: 3px solid hsl(240, 7%, 84%);
-    background-color: hsl(222, 10%, 12%);
-    border-radius: 10%; 
     left: 13px;
     top: 6px;
+    pointer-events: none;
+    z-index: 100;
 }
 
-.headerImg img {
+.headerImg > * {
+    pointer-events: auto;
+}
+
+.headerImgLink {
+    display: block;
+    border: 3px solid hsl(240, 7%, 84%);
+    background-color: hsl(222, 10%, 12%);
+    border-radius: 10%;
+    transition: 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    pointer-events: auto;
+}
+
+.headerImgLink:hover {
+    border: 3px solid hsl(330, 45%, 65%);
+}
+
+.headerImgLink img {
     border-radius: 50%; 
     border: 3px solid hsl(240, 7%, 84%);
     position: relative;
     top: 2px;
     object-position: 50% 32%;
     object-fit: cover;
+    transition: 0.4s;
+    display: block;
+    pointer-events: auto;
+}
+
+.headerImgLink:hover img {
+    border: 3px solid hsl(330, 45%, 65%);
 }
 
 .name a {
@@ -170,6 +196,7 @@ body::-webkit-scrollbar-thumb {
     color: hsl(330, 45%, 65%);
     z-index: 3;
 }
+
 
 .sectionLinks {
     display: flex;
