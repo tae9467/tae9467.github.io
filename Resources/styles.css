@@ -774,6 +774,13 @@ main section button:active {
     background-size: 97% 61%;
 }
 
+.projectSCAImg {
+    background-image: url("./Images/SCAMAINWEBSITE.png");
+    background-position: center 51%, center;
+    background-repeat: no-repeat;
+    background-size: 97% 61%;
+}
+
 /* Modal box */
 .projectModalBox {
     position: relative;
