@@ -6,6 +6,14 @@
 */
 function toggleMobileMenu(menu) {
     menu.classList.toggle('open');
+    // Hide main scrollbar when menu is open
+    if (menu.classList.contains('open')) {
+        document.body.classList.add('menu-open');
+        document.documentElement.classList.add('menu-open');
+    } else {
+        document.body.classList.remove('menu-open');
+        document.documentElement.classList.remove('menu-open');
+    }
 }
 
 /**
@@ -254,6 +262,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Only reload on breakpoint change
+    // Close mobile menu when navigation links are clicked
+    const mobileMenuLinks = document.querySelectorAll('header section ul li a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileMenu = document.querySelector('header section');
+            if (mobileMenu && mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+                document.body.classList.remove('menu-open');
+                document.documentElement.classList.remove('menu-open');
+            }
+        });
+    });
+
     window.addEventListener('resize', () => {
         const newBreakpoint = getBreakpoint();
         if (newBreakpoint !== currentBreakpoint) {

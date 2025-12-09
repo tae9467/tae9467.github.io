@@ -263,6 +263,9 @@ header section div {
     left: 0;
     width: 100vw;
     margin: auto;
+    max-height: calc(100vh - 87px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* mobile menu hidden until hamburger-icon clicked */
@@ -275,8 +278,39 @@ header section ul li {
     list-style: none;
 }
 
+/* Hide main website scrollbar when mobile menu is open */
+body.menu-open,
+html.menu-open {
+    overflow: hidden !important;
+}
+
+/* Custom scrollbar for mobile menu */
+.open ul::-webkit-scrollbar {
+    width: 10px;
+    -webkit-appearance: none;
+}
+
+.open ul::-webkit-scrollbar-track {
+    background: hsl(222, 10%, 12%);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.open ul::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* Firefox scrollbar for mobile menu */
+@-moz-document url-prefix() {
+    .open ul {
+        scrollbar-width: thin;
+        scrollbar-color: hsl(330, 45%, 65%) hsl(222, 10%, 12%);
+    }
+}
+
 /* hides desktop navigation links when screen width is less than 700px */
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 911px) {
     header .sectionLinks {
         display: none;
     }
