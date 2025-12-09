@@ -163,6 +163,51 @@ function closeModal(modalIndex) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Make header image and name link turn pink together on hover
+    const headerImgLink = document.querySelector('.headerImgLink');
+    const headerImg = headerImgLink ? headerImgLink.querySelector('img') : null;
+    const nameLink = document.querySelector('.name a');
+    
+    function setPinkColors() {
+        if (nameLink) {
+            nameLink.style.color = 'hsl(330, 45%, 65%)';
+        }
+        if (headerImgLink) {
+            headerImgLink.style.borderColor = 'hsl(330, 45%, 65%)';
+        }
+        if (headerImg) {
+            headerImg.style.borderColor = 'hsl(330, 45%, 65%)';
+        }
+    }
+    
+    function resetColors() {
+        if (nameLink) {
+            nameLink.style.color = '';
+        }
+        if (headerImgLink) {
+            headerImgLink.style.borderColor = '';
+        }
+        if (headerImg) {
+            headerImg.style.borderColor = '';
+        }
+    }
+    
+    if (headerImgLink && nameLink) {
+        // When hovering over header image link (including the image itself), make name link and borders pink
+        headerImgLink.addEventListener('mouseenter', setPinkColors);
+        headerImgLink.addEventListener('mouseleave', resetColors);
+        
+        // Also add to the image directly in case it's needed
+        if (headerImg) {
+            headerImg.addEventListener('mouseenter', setPinkColors);
+            headerImg.addEventListener('mouseleave', resetColors);
+        }
+        
+        // When hovering over name link, make header image border pink
+        nameLink.addEventListener('mouseenter', setPinkColors);
+        nameLink.addEventListener('mouseleave', resetColors);
+    }
+    
     const designs = document.querySelectorAll('.positioningForDesign');
     const prevBtn = document.getElementById('prevDesign');
     const nextBtn = document.getElementById('nextDesign');
