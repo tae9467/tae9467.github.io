@@ -599,6 +599,12 @@ main section#designs button img {
     position: relative;
     width: fit-content;
     margin: 21px;
+    border-radius: 6px;
+    transition: box-shadow 0.3s;
+}
+
+.figmaBorderContainer:hover {
+    box-shadow: 0 0 16px hsla(330, 45%, 65%, 0.55);
 }
 
 .figmaDesignsContainer {
@@ -660,7 +666,7 @@ main section button:active {
     color: hsl(222, 10%, 12%);
 }
 
-#projects, #skills, #contact {
+#projects, #skills, #services, #contact {
     margin: 35px;
 }
 
@@ -1506,6 +1512,174 @@ main section button:active {
     pointer-events: none; 
 }
 
+/* ----------------------------Services--------------------------------------- */
+
+#services {
+    min-width: 100%;
+    margin: auto;
+    border: none;
+    border-radius: 0;
+    padding: 30px 0 44px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: hsl(222, 10%, 12%);
+    position: relative;
+    box-sizing: border-box;
+}
+
+#services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, hsl(330, 45%, 65%), hsl(216, 47%, 70%));
+}
+
+#services::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, hsl(216, 47%, 70%), hsl(330, 45%, 65%));
+}
+
+#services h2 {
+    color: hsl(330, 45%, 65%);
+    margin-bottom: 0;
+}
+
+.servicesIntro {
+    color: hsl(216, 47%, 70%);
+    font-style: italic;
+    text-indent: 0 !important;
+    text-align: center !important;
+    margin: 6px auto 20px !important;
+}
+
+.servicesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    max-width: 920px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px 0 24px;
+    box-sizing: border-box;
+}
+
+.serviceCard {
+    background-color: hsl(222, 10%, 17%);
+    border-radius: 8px;
+    padding: 22px 20px 18px;
+    /* flex basis lets cards naturally fill rows: 3 on desktop, 2 on tablet */
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-width: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Fuzzy image border — same PNG the design carousel uses */
+.serviceCard::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    background: url("./Images/designBorderforImg.png") no-repeat center;
+    background-size: 100% 100%;
+    pointer-events: none;
+    /* sits above background but below text — PNG centre is transparent */
+    z-index: 1;
+}
+
+.serviceCard:hover {
+    box-shadow: 0 0 16px hsla(330, 45%, 65%, 0.55);
+}
+
+.serviceCard h3 {
+    color: hsl(216, 47%, 70%);
+    margin: 0;
+    font-size: calc(1em + 1px);
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.serviceCard p {
+    color: hsl(240, 7%, 84%);
+    margin: 0 !important;
+    flex: 1;
+    text-indent: 0 !important;
+    text-align: left !important;
+    font-size: max(14px, min(3.5vmin, 18px));
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+}
+
+.serviceRate {
+    color: hsl(330, 45%, 65%);
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    font-size: max(14px, min(3vmin, 17px));
+    margin-top: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.servicesNote {
+    font-style: italic;
+    color: hsl(216, 47%, 70%);
+    margin-top: 10px !important;
+    text-indent: 0 !important;
+    text-align: center !important;
+    width: 88%;
+}
+
+/* tablet: 2 columns */
+@media only screen and (max-width: 720px) {
+    .servicesGrid {
+        gap: 24px;
+        width: 88%;
+    }
+
+    .serviceCard {
+        flex: 1 1 calc(50% - 24px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+/* mobile: 1 column */
+@media only screen and (max-width: 480px) {
+    .servicesGrid {
+        flex-direction: column;
+        align-items: center;
+        width: 84%;
+        gap: 26px;
+    }
+
+    .serviceCard {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+}
+
 /* Footer */
 
 footer {
@@ -1812,5 +1986,245 @@ footer ul a:hover {
         bottom: -12px;
         left: -5px;
         height: 71px;
+    }
+}
+
+/* ===== Freelance Inquiry Form Page ===== */
+#freelance-inquiry {
+    max-width: 680px;
+    padding: 40px 24px 110px;
+}
+
+#freelance-inquiry h2 {
+    color: hsl(330, 45%, 65%);
+    margin-bottom: 4px;
+}
+
+.inquiryIntro {
+    color: hsl(216, 47%, 70%);
+    font-style: italic;
+    text-indent: 0 !important;
+    margin: 6px 0 28px !important;
+}
+
+.inquiryForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formRow {
+    display: flex;
+    gap: 20px;
+}
+
+.formRow .formGroup {
+    flex: 1;
+}
+
+.formGroup label {
+    color: hsl(240, 7%, 84%);
+    font-weight: 600;
+    font-size: max(14px, min(3.5vmin, 16px));
+}
+
+.required {
+    color: hsl(330, 45%, 65%);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    background-color: hsl(222, 10%, 17%);
+    border: 1.5px solid hsl(222, 10%, 28%);
+    border-radius: 6px;
+    color: hsl(240, 7%, 84%);
+    padding: 10px 14px;
+    font-size: max(14px, min(3.5vmin, 16px));
+    font-family: inherit;
+    transition: border-color 0.3s;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: hsl(222, 10%, 45%);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: hsl(330, 45%, 65%);
+}
+
+.formGroup select {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c47b96' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 38px;
+}
+
+.formGroup select option {
+    background-color: hsl(222, 10%, 17%);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.inquirySubmitBtn {
+    align-self: center;
+    /* Override main section button's fixed sizing and offset */
+    width: auto;
+    height: auto;
+    bottom: auto;
+    margin-bottom: 24px;
+    margin-top: 8px;
+    padding: 12px 28px;
+    background-color: hsl(330, 45%, 65%);
+    border: 3px dashed transparent;
+    border-radius: 7px;
+    color: hsl(222, 10%, 12%);
+    font-family: 'Metal', serif;
+    font-weight: 600;
+    font-size: max(15px, min(3.5vmin, 18px));
+    cursor: pointer;
+    position: relative;
+    line-height: 1.4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inquirySubmitBtn img {
+    position: absolute;
+    width: 116%;
+    bottom: -12px;
+    left: -8%;
+    height: 71px;
+    pointer-events: none;
+}
+
+.inquirySubmitBtn:hover {
+    background-color: hsl(222, 10%, 12%);
+    color: hsl(330, 45%, 65%);
+}
+
+/* Back link inside the freelance inquiry section */
+#freelance-inquiry .demoBackLink {
+    align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: max(13px, min(3vmin, 15px));
+}
+
+/* Freelance inquiry section border image (like About section) */
+.inquiryBorderImg {
+    position: absolute;
+    width: 101.5%;
+    height: 101%;
+    top: -5px;
+    left: -0.75%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Flower decals at bottom corners of inquiry section */
+.inquiryDecals {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.inquiryFlowerLeft {
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    width: 135px;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.inquiryFlowerRight {
+    position: absolute;
+    bottom: -14px;
+    right: 0;
+    width: 135px;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 611px) {
+    .inquiryDecals {
+        display: none;
+    }
+}
+
+/* Formspree manages visibility of [data-fs-success] — hidden until submission succeeds */
+.formSuccessMsg {
+    display: none;
+    color: hsl(216, 47%, 70%);
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: max(14px, min(3.5vmin, 16px));
+    text-indent: 0 !important;
+    text-align: left !important;
+}
+
+/* Form-level Formspree error (network issues, etc.) */
+.formErrorMsg {
+    color: hsl(330, 45%, 65%);
+    font-style: italic;
+    margin-bottom: 12px;
+    font-size: max(14px, min(3.5vmin, 16px));
+    text-indent: 0 !important;
+    text-align: left !important;
+}
+
+/* Field-level validation error messages */
+.fieldError {
+    color: hsl(330, 45%, 65%);
+    font-size: max(12px, min(2.8vmin, 13px));
+    text-indent: 0 !important;
+    text-align: left !important;
+    margin: 0 !important;
+    min-height: 0;
+}
+
+/* Pink border on invalid fields (set by Formspree via aria-invalid) */
+.formGroup input[aria-invalid="true"],
+.formGroup select[aria-invalid="true"],
+.formGroup textarea[aria-invalid="true"] {
+    border-color: hsl(330, 45%, 65%);
+}
+
+/* Disabled state during form submission */
+.inquirySubmitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 540px) {
+    .formRow {
+        flex-direction: column;
+    }
+
+    #freelance-inquiry {
+        padding: 30px 18px 60px;
     }
 }

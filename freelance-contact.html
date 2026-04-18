@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get in touch with Toula Elwell about freelance web design and development services.">
+        <title>Freelance Inquiry | Toula Elwell</title>
+        <link rel="stylesheet" href="Resources/styles.css">
+        <script src="Functionality/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="headerImg">
+                        <a href="index.html" class="headerImgLink">
+                            <img src="Resources/Images/face.jpg" alt="Picture of Toula" height="60" width="56">
+                        </a>
+                    </li>
+                    <li class="name">
+                        <a href="index.html">Toula Elwell</a>
+                    </li>
+                </ul>
+                <ul class="sectionLinks">
+                    <li class="navigation about">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="navigation designs">
+                        <a href="index.html#designs">Designs</a>
+                    </li>
+                    <li class="navigation projects">
+                        <a href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="navigation skills">
+                        <a href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="navigation services">
+                        <a href="index.html#services">Services</a>
+                    </li>
+                    <li class="navigation contact">
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="navigation resume">
+                        <a href="Resources/Elwell_Toula_Resume.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- For mobile screens -->
+            <section onclick="toggleMobileMenu(this)" onmouseover="turnPink()" onmouseleave="resetColor()">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+                <ul>
+                    <li class="navigation about">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="navigation designs">
+                        <a href="index.html#designs">Designs</a>
+                    </li>
+                    <li class="navigation projects">
+                        <a href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="navigation skills">
+                        <a href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="navigation services">
+                        <a href="index.html#services">Services</a>
+                    </li>
+                    <li class="navigation contact">
+                        <a href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="navigation resume">
+                        <a href="Resources/Elwell_Toula_Resume.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </section>
+            <!-- Just for the border to match Figma Design -->
+            <img class="fancyDesktopHeaderBorder" src="Resources/Images/desktopFooterBorder.png" alt="Header Border">
+        </header>
+
+        <main>
+            <section id="freelance-inquiry">
+                <!-- Decorative border image (same style as About section) -->
+                <img class="inquiryBorderImg" src="./Resources/Images/AboutMeSectionBorder.png" alt="">
+
+                <h2>Freelance Inquiry</h2>
+                <p class="inquiryIntro">Fill out the form below and I'll get back to you within 1–2 business days with a custom quote.</p>
+
+                <!-- Success message shown by Formspree after submission -->
+                <div data-fs-success class="formSuccessMsg">
+                    Thanks for reaching out! I'll be in touch within 1 to 2 business days.
+                </div>
+                <!-- Global error message shown by Formspree on network/server errors -->
+                <div data-fs-error class="formErrorMsg"></div>
+
+                <form id="freelanceForm" action="https://formspree.io/f/xkokrdnv" method="POST" class="inquiryForm">
+                    <!-- Honeypot anti-spam field -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <div class="formGroup">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" data-fs-field>
+                        <span data-fs-error="name" class="fieldError"></span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email" data-fs-field>
+                        <span data-fs-error="email" class="fieldError"></span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="service">Service of Interest <span class="required">*</span></label>
+                        <select id="service" name="service" required data-fs-field>
+                            <option value="" disabled>Select a service...</option>
+                            <option value="Logo &amp; Brand Identity">Logo &amp; Brand Identity</option>
+                            <option value="Website Design">Website Design</option>
+                            <option value="WordPress Development">WordPress Development</option>
+                            <option value="Webflow Development">Webflow Development</option>
+                            <option value="Brand Refresh">Brand Refresh</option>
+                            <option value="Website Maintenance">Website Maintenance</option>
+                            <option value="Other / Not Sure">Other / Not Sure</option>
+                        </select>
+                        <span data-fs-error="service" class="fieldError"></span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="details">Project Details <span class="required">*</span></label>
+                        <textarea id="details" name="details" required rows="5" placeholder="Tell me about your project — what you need, what you're envisioning, any examples you like..." data-fs-field></textarea>
+                        <span data-fs-error="details" class="fieldError"></span>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="formGroup">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget" data-fs-field>
+                                <option value="" disabled selected>Select a range...</option>
+                                <option value="Under $200">Under $200</option>
+                                <option value="$200–$500">$200–$500</option>
+                                <option value="$500–$1,000">$500–$1,000</option>
+                                <option value="$1,000–$2,500">$1,000–$2,500</option>
+                                <option value="$2,500+">$2,500+</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
+                        <div class="formGroup">
+                            <label for="timeline">Timeline</label>
+                            <select id="timeline" name="timeline" data-fs-field>
+                                <option value="" disabled selected>Select a timeline...</option>
+                                <option value="ASAP">ASAP</option>
+                                <option value="1–2 weeks">1 to 2 weeks</option>
+                                <option value="1 month">1 month</option>
+                                <option value="1–3 months">1 to 3 months</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="inquirySubmitBtn" data-fs-submit-btn>
+                        <img src="./Resources/Images/AboutMeButtonBorder.png" alt="">
+                        Send Inquiry
+                    </button>
+                </form>
+
+                <!-- Bottom corner flower decals -->
+                <div class="inquiryDecals">
+                    <img class="inquiryFlowerLeft" src="./Resources/Images/contactflower2.png" alt="">
+                    <img class="inquiryFlowerRight" src="./Resources/Images/contactflower1.png" alt="">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Just for the border to match Figma Design -->
+            <section>
+                <img class="fancyDesktopFooterBorder" src="Resources/Images/desktopFooterBorder.png" alt="Footer Border">
+            </section>
+            <ul>
+                <li>
+                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img class="footerImg" src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img class="footerImg" src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
+                </li>
+                <li>
+                    <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"><img class="footerImg" src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
+                </li>
+                <li>
+                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img class="footerImg" src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
+                </li>
+            </ul>
+        </footer>
+
+        <script>
+            // Pre-fill service dropdown from URL parameter (e.g. ?service=Website+Design)
+            (function () {
+                const params = new URLSearchParams(window.location.search);
+                const service = params.get('service');
+                if (service) {
+                    const select = document.getElementById('service');
+                    for (const opt of select.options) {
+                        if (opt.value === service) {
+                            opt.selected = true;
+                            break;
+                        }
+                    }
+                }
+            })();
+
+            // Initialize Formspree Ajax
+            window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+            formspree('initForm', { formElement: '#freelanceForm', formId: 'xkokrdnv' });
+        </script>
+        <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    </body>
+</html>
