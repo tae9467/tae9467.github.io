@@ -17,7 +17,7 @@
         <meta name="twitter:description" content="Browse Toula Elwell's web development portfolio, design work, and contact details.">
         <meta name="twitter:image" content="https://tae9467.github.io/Resources/Images/portfolioProjectPhoto.jpg">
         <title>Toula Elwell | Front-End Developer & UI/UX Designer</title>
-        <link rel="stylesheet" href="Resources/styles.css">
+        <link rel="stylesheet" href="Resources/styles-redesign.css">
         <script src="Functionality/script.js" defer></script>
         <script type="application/ld+json">
             {
@@ -32,363 +32,375 @@
                     "@type": "CollegeOrUniversity",
                     "name": "Rochester Institute of Technology"
                 },
-                "knowsAbout": [
-                    "Front-End Development",
-                    "UI/UX Design",
-                    "WordPress",
-                    "Figma"
-                ],
-                "sameAs": [
-                    "https://github.com/tae9467",
-                    "https://www.linkedin.com/in/toula-elwell/"
-                ]
+                "knowsAbout": ["Front-End Development","UI/UX Design","WordPress","Figma"],
+                "sameAs": ["https://github.com/tae9467","https://www.linkedin.com/in/toula-elwell/"]
             }
         </script>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li class="headerImg">
-                        <a href="#" class="headerImgLink">
-                            <img src="Resources/Images/face.jpg" alt="Picture of Toula" height="60" width="56">
-                        </a>
-                    </li>
-                    <li class="name">
-                        <a href="#">Toula Elwell</a>
-                    </li>
-                </ul>
-                <ul class="sectionLinks">
-                    <li class="navigation about">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="navigation designs">
-                        <a href="#designs">Designs</a>
-                    </li>
-                    <li class="navigation projects">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li class="navigation skills">
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li class="navigation services">
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="navigation contact">
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <li class="navigation resume">
-                        <a href="Resources/Elwell_Toula_Resume.pdf" target="_blank">Resume</a>
-                    </li>
+
+        <!-- ===== DECORATIVE INK BORDERS ===== -->
+        <div class="ink-layer" aria-hidden="true">
+            <div class="ink ink-top-r"><svg viewBox="0 0 300 300"><path d="M70,4 C150,-6 250,8 286,72 C312,120 268,150 246,186 C300,206 312,300 250,300 L300,300 L300,0 L70,0 Z"/></svg></div>
+            <div class="ink ink-top-l"><svg viewBox="0 0 300 300"><path d="M60,0 C150,-8 240,10 280,70 C300,104 262,140 232,168 C290,190 320,300 252,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-mid-r1"><svg viewBox="0 0 300 300"><path d="M120,2 C220,-8 300,40 280,120 C266,176 196,196 168,242 C150,272 130,300 96,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-mid-l1"><svg viewBox="0 0 300 300"><path d="M90,4 C200,-6 296,46 276,128 C260,196 188,214 176,268 C170,300 150,300 130,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-mid-r2"><svg viewBox="0 0 300 300"><path d="M110,0 C214,-6 300,52 282,134 C268,200 200,212 188,262 C182,300 160,300 140,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-mid-l2"><svg viewBox="0 0 300 300"><path d="M96,2 C206,-8 300,48 280,128 C264,194 192,210 180,266 C176,300 154,300 132,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-mid-r3"><svg viewBox="0 0 300 300"><path d="M118,0 C224,-8 300,50 284,138 C270,210 198,220 190,270 C186,300 162,300 142,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-low-l"><svg viewBox="0 0 300 300"><path d="M92,4 C202,-6 298,50 278,130 C262,198 190,212 178,268 C174,300 152,300 130,300 L300,300 L300,0 Z"/></svg></div>
+            <div class="ink ink-low-r"><svg viewBox="0 0 300 300"><path d="M114,0 C220,-8 300,52 282,136 C268,206 196,218 186,268 C182,300 158,300 138,300 L300,300 L300,0 Z"/></svg></div>
+        </div>
+
+        <!-- ===== ANIMATED BUTTERFLIES ===== -->
+        <div class="butterflies" aria-hidden="true">
+            <div class="butterfly butterfly-1"><img src="Resources/Images/fig/butterfly.png" alt=""></div>
+            <div class="butterfly butterfly-2"><img src="Resources/Images/fig/butterfly.png" alt=""></div>
+            <div class="butterfly butterfly-3"><img src="Resources/Images/fig/butterfly.png" alt=""></div>
+        </div>
+
+        <!-- ===== HEADER / NAV ===== -->
+        <header id="nav">
+            <nav class="nav">
+                <!-- Desktop logo -->
+                <a class="nav-logo" href="#">Toula <span class="rose">✿</span> Elwell</a>
+
+                <!-- Desktop nav links -->
+                <ul class="sectionLinks" id="navlinks-desktop">
+                    <li class="navigation about"><a href="#about">About</a></li>
+                    <li class="navigation designs"><a href="#designs">Designs</a></li>
+                    <li class="navigation projects"><a href="#projects">Projects</a></li>
+                    <li class="navigation skills"><a href="#skills">Skills</a></li>
+                    <li class="navigation services"><a href="#services">Services</a></li>
+                    <li class="navigation contact"><a href="#contact">Contact</a></li>
+                    <li class="navigation resume"><a href="Resources/Elwell_Toula_Resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </nav>
-            <!-- For mobile screens -->
+
+            <!-- Mobile hamburger (existing — kept exactly as-is) -->
             <section onclick="toggleMobileMenu(this)" onmouseover="turnPink()" onmouseleave="resetColor()">
                 <div class="bar1 bar"></div>
                 <div class="bar2 bar"></div>
                 <div class="bar3 bar"></div>
                 <ul>
-                    <li class="navigation about">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="navigation designs">
-                        <a href="#designs">Designs</a>
-                    </li>
-                    <li class="navigation projects">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li class="navigation skills">
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li class="navigation services">
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="navigation contact">
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <li class="navigation resume">
-                        <a href="Resources/Elwell_Toula_Resume.pdf" target="_blank">Resume</a>
-                    </li>
+                    <li class="navigation about"><a href="#about">About</a></li>
+                    <li class="navigation designs"><a href="#designs">Designs</a></li>
+                    <li class="navigation projects"><a href="#projects">Projects</a></li>
+                    <li class="navigation skills"><a href="#skills">Skills</a></li>
+                    <li class="navigation services"><a href="#services">Services</a></li>
+                    <li class="navigation contact"><a href="#contact">Contact</a></li>
+                    <li class="navigation resume"><a href="Resources/Elwell_Toula_Resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </section>
-            <!-- Just for the border to match Figma Design -->
-            <img class="fancyDesktopHeaderBorder" src="Resources/Images/desktopFooterBorder.png" alt="Header Border">
         </header>
 
-        <main>
-            <!-- <h1 class="pageTitle">Toula Elwell | Front-End Developer &amp; UI/UX Designer Portfolio</h1> -->
-            <section id="about">
-                <img class="borderSectionImg" src="./Resources/Images/AboutMeSectionBorder.png" alt="section border">
-                <img class="borderSectionImgLong" src="./Resources/Images/AboutMeSectionBorderLong.png" alt="section border">
-                <h2>About Me</h2>
-                <p>
-                        Hi, I'm Toula, a passionate Web Developer & UI Designer who loves bringing ideas to life through creative, user-centered design and clean, functional code. After interning with Springfield Commonwealth Academy, I transitioned into a full-time role where I design, develop, and maintain the school's website and digital platforms.
-                </p>
-                <button type="button" class="readMoreButton" onclick="showContent(this)"><img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">Read More</button>
-                <div class="content">
-                    <p>
-                        I enjoy blending front-end web development, UI/UX design, and AI-driven tools to create engaging, accessible, and intuitive online experiences. I'm also expanding my expertise through UI/UX certification courses to deepen my understanding of user research, wireframing, and interaction design.
-                    </p>
-                    <p>
-                        What excites me most about web development and design is how it combines art and logic — crafting digital experiences that look beautiful and work seamlessly. Web design and frontend development are like painting on a canvas for me, and I love being able to make content and websites that are visually appealing that others can use. My long-term goal is to continue building and designing innovative, human-centered websites that inspire, inform, and connect people.
-                    </p>                
-                    <p>
-                        <span class="highlight">What am I open to?</span>&ensp;I'm available for full-time, part-time, and freelance opportunities in front-end web development, web design, and UI/UX design. I'm skilled in HTML, CSS, JavaScript, React, Webflow, Figma, and content design, and experienced in collaborating with startups and small businesses to translate briefs into polished, live work.
-                    </p>                 
-                    <button type="button" class="readLessButton" onclick="hideContent(this)"><img src="./Resources/Images/AboutMeButtonBorder.png" alt="button border with texture">Read Less</button> 
+        <main id="top">
+
+            <!-- ===== MASTHEAD / HERO ===== -->
+            <section class="masthead">
+                <div class="portrait" data-rise>
+                    <img src="Resources/Images/face.jpg" alt="Toula Elwell">
                 </div>
-                <div class="desktopAboutMeDecals">
-                    <img  alt=" " src="./Resources/Images/desktopAboutMeFlowerDecalLeft.png">
-                    <img  alt=" " src="./Resources/Images/desktopAboutMeFlowerDecalRight.png">
+                <div class="title-block">
+                    <div class="title-line1" data-rise>Toula's Design</div>
+                    <div class="title-line2" data-rise>Portfolio</div>
                 </div>
-                <div class="tabletAboutMeDecals">
-                    <img  alt=" " src="./Resources/Images/tabletAboutMeFlowerDecalLeft.png">
-                    <img  alt=" " src="./Resources/Images/tabletAboutMeFlowerDecalRight.png">
-                </div>                   
             </section>
 
-            <section id="designs">
-                <img class="figmaSectionBorder" src="./Resources/Images/figmaBorder.png" alt="blue figma section border">
-                <h2>Figma UI/UX Designs</h2>
-                <div class="figmaDesignsContainer">
-                    <!-- Portfolio -->
-                    <div class="positioningForDesign active">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/portfolioDesign.jpg">
-                            <img alt=" "  src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <div class="designButtonsContainer">
-                            <button type="button" onclick="window.location.href='case-studies.html?study=portfolio'"><img src="./Resources/Images/designButtonBorder.png">Case Study</button>
-                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                        </div>
+            <!-- ===== ABOUT / LEAD STORY ===== -->
+            <section class="wrap lead" id="about">
+                <div data-rise>
+                    <span class="pink-tag">
+                        <img class="spark" src="Resources/Images/fig/spark.png" alt="">
+                        LEAD STORY <span class="dot">·</span> ABOUT THE AUTHOR
+                    </span>
+                </div>
+
+                <div class="lead-top">
+                    <h1 class="headline" data-rise>
+                        Recent grad designs <em>interfaces</em> people actually <span class="pk">love</span> to use.
+                    </h1>
+
+                    <div class="polaroid" data-rise>
+                        <span class="tape">
+                            <img src="Resources/Images/fig/tape-star.png" alt=""> NEW
+                        </span>
+                        <div class="shot" style="background-image: url('Resources/Images/face.jpg'); background-position: center 32%;"></div>
+                        <div class="cap">Toula, <b>May '26</b></div>
                     </div>
-                    <!-- Springfield Commonwealth Academy -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/SCA Main Website Figma.png">
-                            <img alt=" "  src="./Resources/Images/designBorderforImg.png">
+                </div>
+
+                <div class="byline" data-rise>
+                    <span>By Toula Elwell</span>
+                    <span class="sep"></span>
+                    <span>Hallandale Beach, FL</span>
+                    <span class="read">4 min read</span>
+                </div>
+
+                <div class="story" data-rise>
+                    <p>Hi, I'm Toula, a passionate Web Developer &amp; UI Designer who loves bringing ideas to life through creative, user-centered design and clean, functional code. After interning with Springfield Commonwealth Academy, I transitioned into a full-time role where I design, develop, and maintain the school's website and digital platforms.</p>
+                    <p>I enjoy blending front-end web development, UI/UX design, and AI-driven tools to create engaging, accessible, and intuitive online experiences. I'm also expanding my expertise through UI/UX certification courses to deepen my understanding of user research, wireframing, and interaction design.</p>
+                    <p>What excites me most about web development and design is how it combines art and logic — crafting digital experiences that look beautiful and work seamlessly. Web design and frontend development are like painting on a canvas for me, and I love being able to make content and websites that are visually appealing that others can use.</p>
+                    <p>My long-term goal is to continue building and designing innovative, human-centered websites that inspire, inform, and connect people. I'm available for full-time, part-time, and freelance opportunities in front-end web development, web design, and UI/UX design — skilled in HTML, CSS, JavaScript, React, Webflow, Figma, and content design.</p>
+                </div>
+            </section>
+
+            <!-- ===== MARQUEE STRIP 1 ===== -->
+            <div class="strip" aria-hidden="true">
+                <div class="track" id="t1"></div>
+            </div>
+
+            <!-- ===== FIGMA UI/UX DESIGNS ===== -->
+            <section class="wrap sec" id="designs">
+                <h2 class="sec-title" data-rise>Figma <span class="pk">UI/UX</span></h2>
+                <p class="sec-sub" data-rise>— case studies in wireframing, prototyping, and visual systems —</p>
+
+                <div class="figma-carousel-wrap" data-rise>
+                    <div class="figmaDesignsContainer">
+                        <!-- Portfolio -->
+                        <div class="positioningForDesign active" data-label="NO 01">
+                            <div class="figmaBorderContainer">
+                                <img alt="Portfolio Figma Design" class="designImg" src="Resources/Images/portfolioDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.location.href='case-studies.html?study=portfolio'">Case Study</button>
+                                <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')">View Design</button>
+                            </div>
                         </div>
-                        <div class="designButtonsContainer">
-                            <button type="button" onclick="window.location.href='case-studies.html?study=sca'"><img src="./Resources/Images/designButtonBorder.png">Case Study</button>
-                            <button type="button" onclick="window.open('https://www.figma.com/design/EMpnyNgMNjdiz2XKXkCQeu/Springfield-Commonwealth-Academy-Main-Webpage?node-id=3144-2&t=z3HfJ2ANRieOg1Fz-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
+                        <!-- Springfield Commonwealth Academy -->
+                        <div class="positioningForDesign" data-label="NO 02">
+                            <div class="figmaBorderContainer">
+                                <img alt="SCA Figma Design" class="designImg" src="Resources/Images/SCA Main Website Figma.png">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.location.href='case-studies.html?study=sca'">Case Study</button>
+                                <button type="button" onclick="window.open('https://www.figma.com/design/EMpnyNgMNjdiz2XKXkCQeu/Springfield-Commonwealth-Academy-Main-Webpage?node-id=3144-2&t=z3HfJ2ANRieOg1Fz-1', '_blank')">View Design</button>
+                            </div>
                         </div>
+                        <!-- Teddy Bear Finder -->
+                        <div class="positioningForDesign" data-label="NO 03">
+                            <div class="figmaBorderContainer">
+                                <img alt="Teddy Bear Finder Figma Design" class="designImg" src="Resources/Images/teddyFigma.png">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.location.href='case-studies.html?study=teddy-bear'">Case Study</button>
+                                <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2249-63&t=Zrs5WslKInBCCVx8-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Plumbing Design -->
+                        <div class="positioningForDesign" data-label="NO 04">
+                            <div class="figmaBorderContainer">
+                                <img alt="Plumbing Figma Design" class="designImg" src="Resources/Images/plumbingdesign.png">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/ARis08daaV6d75V480q4dp/Toula-s-Design-Manski-Submission?node-id=3144-2&t=idK46BaG2atPQFi1-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- LangPal Mobile App -->
+                        <div class="positioningForDesign" data-label="NO 05">
+                            <div class="figmaBorderContainer">
+                                <img alt="LangPal Figma Design" class="designImg" src="Resources/Images/langpalDesign.png">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/KeZuyBWZOjSYw12IVM5PXq/LangPal_MobileApp_Prototype_ToulaElwell?node-id=17-1559&t=NZWtrWvlZSvoyyt9-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Saunders Stock Market -->
+                        <div class="positioningForDesign" data-label="NO 06">
+                            <div class="figmaBorderContainer">
+                                <img alt="Saunders Stock Market Figma Design" class="designImg" src="Resources/Images/saundersDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=0-1&t=zp1v0KQubQTUr5yb-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Camera Store -->
+                        <div class="positioningForDesign" data-label="NO 07">
+                            <div class="figmaBorderContainer">
+                                <img alt="Camera Store Figma Design" class="designImg" src="Resources/Images/CameraStoreFigmaPic.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/Kssh8OQOStH7DoJOnrLEFt/Web-Design-for-Interview?node-id=0-1&t=Ll8ZSMDa8otc1RO1-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Saunders Labs -->
+                        <div class="positioningForDesign" data-label="NO 08">
+                            <div class="figmaBorderContainer">
+                                <img alt="Saunders Labs Figma Design" class="designImg" src="Resources/Images/labsDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-214&t=8OaqDOe7HwNz41Ut-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Components Made for Tech Guides Blog -->
+                        <div class="positioningForDesign" data-label="NO 09">
+                            <div class="figmaBorderContainer">
+                                <img alt="Tech Guides Components Figma Design" class="designImg" src="Resources/Images/ComponentsDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/Kssh8OQOStH7DoJOnrLEFt/Web-Design-for-Interview?node-id=292-79&t=Ll8ZSMDa8otc1RO1-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Where's Waldo -->
+                        <div class="positioningForDesign" data-label="NO 10">
+                            <div class="figmaBorderContainer">
+                                <img alt="Where's Waldo Figma Design" class="designImg" src="Resources/Images/WheresWaldoDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4191-26&t=4tFaIRunekZhKGRT-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Toula's Boutique -->
+                        <div class="positioningForDesign" data-label="NO 11">
+                            <div class="figmaBorderContainer">
+                                <img alt="Toula's Boutique Figma Design" class="designImg" src="Resources/Images/myBoutiqueDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4105-11&t=4tFaIRunekZhKGRT-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Polio Design -->
+                        <div class="positioningForDesign" data-label="NO 12">
+                            <div class="figmaBorderContainer">
+                                <img alt="Polio Figma Design" class="designImg" src="Resources/Images/PolioDesign.png">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/ginTS2QoIv7RJZUDJQer6Y/Design-Course-Project?node-id=3189-844&t=br67gjIgOrbfBlVc-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                        <!-- Mindfulness App -->
+                        <div class="positioningForDesign" data-label="NO 13">
+                            <div class="figmaBorderContainer">
+                                <img alt="Mindfulness App Figma Design" class="designImg" src="Resources/Images/mindfullnessDesign.jpg">
+                            </div>
+                            <div class="designButtonsContainer">
+                                <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4087-385&t=4tFaIRunekZhKGRT-1', '_blank')">View Design</button>
+                            </div>
+                        </div>
+                    </div><!-- end figmaDesignsContainer -->
+
+                    <div class="carouselArrows">
+                        <img alt="Previous design" id="prevDesign" src="Resources/Images/portfolioDesignArrowLeft.png">
+                        <img alt="Next design" id="nextDesign" src="Resources/Images/portfolioDesignArrowRight.png">
                     </div>
-                    <!-- Teddy Bear Finder -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/teddyFigma.png">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
+                </div><!-- end figma-carousel-wrap -->
+            </section>
+
+            <!-- ===== PROJECTS ===== -->
+            <section class="wrap sec" id="projects">
+                <h2 class="sec-title" data-rise>My <span class="pk">Projects</span></h2>
+                <p class="sec-sub" data-rise>— things I've coded, designed, or shipped —</p>
+
+                <div class="card-grid grid-2">
+                    <!-- Portfolio Website -->
+                    <article class="pcard" data-rise>
+                        <span class="tape"><img src="Resources/Images/fig/tape-star.png" alt=""> NO 01</span>
+                        <div class="shot" style="background-image: url('Resources/Images/portfolioProjectPhoto.jpg');"></div>
+                        <div class="kicker">Web Design · HTML/CSS/JS</div>
+                        <h3>Portfolio <span class="pk">Website</span></h3>
+                        <p class="desc">This very portfolio — designed in Figma, hand-built front to back with HTML, CSS, and JavaScript.</p>
+                        <div class="btns">
+                            <button class="btn btn-dark" type="button" onclick="openModal(0)">View Details</button>
+                            <button class="btn btn-pink" type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')">View Design</button>
                         </div>
-                        <div class="designButtonsContainer">
-                            <button type="button" onclick="window.location.href='case-studies.html?study=teddy-bear'"><img src="./Resources/Images/designButtonBorder.png">Case Study</button>
-                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2249-63&t=Zrs5WslKInBCCVx8-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
+                    </article>
+
+                    <!-- SCA Website -->
+                    <article class="pcard" data-rise>
+                        <span class="tape"><img src="Resources/Images/fig/tape-star.png" alt=""> NO 02</span>
+                        <div class="shot" style="background-image: url('Resources/Images/SCAMAINWEBSITE.png');"></div>
+                        <div class="kicker">Front-end · Full-time · Webflow</div>
+                        <h3>SCA <span class="pk">Website</span></h3>
+                        <p class="desc">Full redesign and build of Springfield Commonwealth Academy's 17-page site in a 3-week timeline.</p>
+                        <div class="btns">
+                            <button class="btn btn-dark" type="button" onclick="openModal(1)">View Details</button>
+                            <button class="btn btn-pink" type="button" onclick="window.open('https://www.springfieldcommonwealthacademy.org/', '_blank')">Visit Site</button>
                         </div>
-                    </div>
-                    <!-- Plumbing Design -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/plumbingdesign.png">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/ARis08daaV6d75V480q4dp/Toula-s-Design-Manski-Submission?node-id=3144-2&t=idK46BaG2atPQFi1-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- LangPal Mobile App -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/langpalDesign.png">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/KeZuyBWZOjSYw12IVM5PXq/LangPal_MobileApp_Prototype_ToulaElwell?node-id=17-1559&t=NZWtrWvlZSvoyyt9-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Saunders Stock Market -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/saundersDesign.jpg">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=0-1&t=zp1v0KQubQTUr5yb-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Camera Store -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/CameraStoreFigmaPic.jpg">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/Kssh8OQOStH7DoJOnrLEFt/Web-Design-for-Interview?node-id=0-1&t=Ll8ZSMDa8otc1RO1-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
+                    </article>
+
                     <!-- Saunders Labs -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/labsDesign.jpg">
-                            <img alt=" "  src="./Resources/Images/designBorderforImg.png">
+                    <article class="pcard" data-rise>
+                        <span class="tape"><img src="Resources/Images/fig/tape-star.png" alt=""> NO 03</span>
+                        <div class="shot" style="background-image: url('Resources/Images/saundersProjectPhoto.jpg');"></div>
+                        <div class="kicker">Web · PHP · Bootstrap</div>
+                        <h3>Saunders <span class="pk">Labs</span></h3>
+                        <p class="desc">A research-lab web build with responsive design using RIT branding. My second solo website design.</p>
+                        <div class="btns">
+                            <button class="btn btn-dark" type="button" onclick="openModal(2)">View Details</button>
+                            <button class="btn btn-pink" type="button" onclick="window.open('https://touladesigns.com/Labs/', '_blank')">Visit Site</button>
                         </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-214&t=8OaqDOe7HwNz41Ut-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Components Made for Tech Guides Blog -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img alt=" "  class="designImg" src="./Resources/Images/ComponentsDesign.jpg">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/Kssh8OQOStH7DoJOnrLEFt/Web-Design-for-Interview?node-id=292-79&t=Ll8ZSMDa8otc1RO1-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Where's Waldo -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img alt=" "  class="designImg" src="./Resources/Images/WheresWaldoDesign.jpg">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4191-26&t=4tFaIRunekZhKGRT-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Toulas Boutique -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img alt=" "  class="designImg" src="./Resources/Images/myBoutiqueDesign.jpg">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4105-11&t=4tFaIRunekZhKGRT-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Polio Design -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img alt=" "  class="designImg" src="./Resources/Images/PolioDesign.png">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/ginTS2QoIv7RJZUDJQer6Y/Design-Course-Project?node-id=3189-844&t=br67gjIgOrbfBlVc-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                    <!-- Mindfullness App -->
-                    <div class="positioningForDesign">
-                        <div class="figmaBorderContainer">
-                            <img  alt=" " class="designImg" src="./Resources/Images/mindfullnessDesign.jpg">
-                            <img  alt=" " src="./Resources/Images/designBorderforImg.png">
-                        </div>
-                        <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4087-385&t=4tFaIRunekZhKGRT-1', '_blank')"><img src="./Resources/Images/designButtonBorder.png">View Design</button>
-                    </div>
-                </div>
-                <div class="carouselArrows">
-                    <img alt=" " id="prevDesign" src="./Resources/Images/portfolioDesignArrowLeft.png">
-                    <img  alt=" " id="nextDesign" src="./Resources/Images/portfolioDesignArrowRight.png">
-                </div>
-            </section>
+                    </article>
 
-            <section id="projects">
-                <h2>My Projects</h2>
-                <div class="projectGridContainer">
-                    <div class="projectgridSquare">
-                        <h3>Portfolio Website</h3>
-                        <div class="projectBorderAndImg">
-                            
-                            <img alt=" " class="projectPortfolioImg" src="./Resources/Images/projectIMGBorder.png">
+                    <!-- SCISS Website -->
+                    <article class="pcard" data-rise>
+                        <span class="tape"><img src="Resources/Images/fig/tape-star.png" alt=""> NO 04</span>
+                        <div class="shot" style="background-image: url('Resources/Images/sciss.png');"></div>
+                        <div class="kicker">React · PHP · Hostinger</div>
+                        <h3>SCISS <span class="pk">Initiative</span></h3>
+                        <p class="desc">Complete redesign of all 16 pages of SCA's summer school site in 3 weeks, built solo.</p>
+                        <div class="btns">
+                            <button class="btn btn-dark" type="button" onclick="openModal(3)">View Details</button>
+                            <button class="btn btn-pink" type="button" onclick="window.open('https://sciss.org/', '_blank')">Visit Site</button>
                         </div>
-                        <button type="button" onclick="openModal(0)"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Details</button>
-                    </div>
-                    <div class="projectgridSquare">
-                        <h3>SCA Website</h3>
-                        <div class="projectBorderAndImg">
-                            
-                            <img alt=" " class="projectSCAImg" src="./Resources/Images/projectIMGBorder.png">
+                    </article>
+
+                    <!-- Bear Finder -->
+                    <article class="pcard" data-rise>
+                        <span class="tape"><img src="Resources/Images/fig/tape-star.png" alt=""> NO 05</span>
+                        <div class="shot" style="background-color: var(--pink-soft);"></div>
+                        <div class="kicker">In Progress · Figma · Webflow</div>
+                        <h3>Bear <span class="pk">Finder</span></h3>
+                        <p class="desc">A side project — a community platform for finding lost teddy bears. Currently in Figma design phase.</p>
+                        <div class="btns">
+                            <button class="btn btn-dark" type="button" onclick="openModal(4)">View Details</button>
+                            <button class="btn btn-pink" type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2249-63&t=Zrs5WslKInBCCVx8-1', '_blank')">View Design</button>
                         </div>
-                        <button type="button" onclick="openModal(1)"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Details</button>
-                    </div>
-                    <div class="projectgridSquare">
-                        <h3>Saunders Labs Website</h3>
-                        <div class="projectBorderAndImg">
-                            
-                            <img alt=" " class="projectSaundersImg" src="./Resources/Images/projectIMGBorder.png">
+                    </article>
+
+                    <!-- My Boutique -->
+                    <article class="pcard" data-rise>
+                        <span class="tape"><img src="Resources/Images/fig/tape-star.png" alt=""> NO 06</span>
+                        <div class="shot" style="background-image: url('Resources/Images/myBoutiqueDesign.jpg');"></div>
+                        <div class="kicker">Webflow · E-comm · Figma</div>
+                        <h3>My <span class="pk">Boutique</span></h3>
+                        <p class="desc">A small e-commerce concept — full visual system, product pages, and a Webflow-ready design.</p>
+                        <div class="btns">
+                            <button class="btn btn-dark" type="button" onclick="openModal(5)">View Details</button>
+                            <button class="btn btn-pink" type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4105-11&t=4tFaIRunekZhKGRT-1', '_blank')">View Design</button>
                         </div>
-                        <button type="button" onclick="openModal(2)"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Details</button>
-                    </div>
-                    <div class="projectgridSquare">
-                        <h3>SCISS Website</h3>
-                        <div class="projectBorderAndImg">
-                            <img alt=" " class="projectScissImg" src="./Resources/Images/projectIMGBorder.png">
-                        </div>
-                        <button type="button" onclick="openModal(3)"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Details</button>
-                    </div>
-                    <div class="projectgridSquare">
-                        <h3>Bear Finder Website</h3>
-                        <div class="projectBorderAndImg">
-                            <img  alt=" " class="projectImg" src="./Resources/Images/projectIMGBorder.png">
-                        </div>
-                        <button type="button" onclick="openModal(4)"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Details</button>
-                    </div>
-                    <div class="projectgridSquare">
-                        <h3>My Boutique Website</h3>
-                        <div class="projectBorderAndImg">
-                            
-                            <img alt=" " class="projectImg" src="./Resources/Images/projectIMGBorder.png">
-                        </div>
-                        <button type="button" onclick="openModal(5)"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Details</button>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- ===== PROJECT MODALS (functionality unchanged) ===== -->
                 <div class="projectModal hideModal">
                     <div class="projectModalOverlay"></div>
                     <div class="projectModalBox">
-                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <img src="Resources/Images/projectsModal.png" alt="" class="modalImg">
                         <div class="projectsModalContent">
-                          <h3>Portfolio Website</h3>
-                          
-                          <div class="contentInModal">
-                                <p>
-                                    Welcome to my personal portfolio website! This project holds a special 
-                                    place as it not only showcases my skills and accomplishments but also 
-                                    serves as a testament to my passion for web development.
-                                </p>
-                                <!-- <hr> -->
-        
-                                <h4>Technologies Used:</h4>
-                                <hr>
+                            <h3>Portfolio Website</h3>
+                            <div class="contentInModal">
+                                <p>Welcome to my personal portfolio website! This project holds a special place as it not only showcases my skills and accomplishments but also serves as a testament to my passion for web development.</p>
+                                <h4>Technologies Used:</h4><hr>
+                                <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                                <h4>Tools Used:</h4><hr>
                                 <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
+                                    <li>Figma — <a class="projectLink" href="https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=XNsxRbOOwejs2dDY-1" target="_blank">View Design</a></li>
+                                    <li>VS Code</li><li>Github</li><li>Photoshop</li><li>Coolors</li>
                                 </ul>
-                                
-                                <!-- <hr> -->
-        
-                                <h4>Tools Used:</h4>
-                                <hr>
-                                <ul>
-                                    <li>Figma  - <a class="projectLink" href="https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=XNsxRbOOwejs2dDY-1" title="Click to view Toula's Portfolio Figma Design" target="_blank">View Design</a></li>
-                                    <li>VS Code</li>
-                                    <li>Github</li>
-                                    <li>Photoshop (for editing, recoloring, combining, and refining AI-assisted graphics)</li>
-                                    <li>AI Prompting (ChatGPT, for initial design ideas such as graphics [flowers and carousel arrows], and as an advanced google and debugging resource when troubleshooting CSS)</li>
-                                    <li>Coolors</li>
-                                    <li>HTML Validator Extension</li>
-                                </ul>
-
-                                <!-- <hr> -->
-        
-                                <h4>Key Features:</h4>
-                                <hr>
+                                <h4>Key Features:</h4><hr>
                                 <ul>
                                     <li>Interactive and user-friendly design.</li>
                                     <li>Responsive layout for seamless viewing across devices.</li>
                                     <li>Integration of skills and experiences to provide a holistic perspective.</li>
                                     <li>Smooth navigation and intuitive UI.</li>
                                 </ul>
-        
-                                <h4>Insights:</h4>
-                                <hr>
-                                <p>
-                                    Throughout the process of building this website, I deepened my understanding 
-                                    of front-end web technologies. By teaching myself HTML, CSS, and JavaScript, 
-                                    I was able to craft this platform to reflect both my personality and professional capabilities.
-                                </p>
-                                <p>
-                                    This portfolio not only showcases my projects but also highlights my 
-                                    relentless pursuit of knowledge and passion for coding. As a 
-                                    Software Engineering graduate from RIT (May 2025) and aspiring Web Developer, 
-                                    I strive to push the boundaries of my abilities while creating visually 
-                                    appealing, functional, and meaningful web experiences.
-                                </p>
+                                <h4>Insights:</h4><hr>
+                                <p>Throughout the process of building this website, I deepened my understanding of front-end web technologies. By teaching myself HTML, CSS, and JavaScript, I was able to craft this platform to reflect both my personality and professional capabilities.</p>
                             </div>
                         </div>
                         <div class="projectsModalButtons">
-                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Design</button>
-                            <button class="gradientButton" type="button" onclick="closeModal(0)"><img alt=" " src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-636&t=GxZLEXTuQHypMzb7-1', '_blank')">View Design</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(0)">Close Details</button>
                         </div>
                     </div>
                 </div>
@@ -396,71 +408,34 @@
                 <div class="projectModal hideModal">
                     <div class="projectModalOverlay"></div>
                     <div class="projectModalBox">
-                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <img src="Resources/Images/projectsModal.png" alt="" class="modalImg">
                         <div class="projectsModalContent">
                             <h3>SCA Website</h3>
-                          
                             <div class="contentInModal">
-                                <p>
-                                    This project involved redesigning and developing all 17 pages of Springfield Commonwealth Academy's main school website within a 3-week timeline. My manager wanted me to redesign the webpage with a focus on ensuring that parents and visitors understand that this is a private boarding school that combines traditional learning with AI.
-                                </p>
-                                <!-- <hr> -->
-            
-                                <h4>Technologies Used:</h4>
-                                <hr>
+                                <p>This project involved redesigning and developing all 17 pages of Springfield Commonwealth Academy's main school website within a 3-week timeline. My manager wanted me to redesign the webpage with a focus on ensuring that parents and visitors understand that this is a private boarding school that combines traditional learning with AI.</p>
+                                <h4>Technologies Used:</h4><hr>
+                                <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                                <h4>Tools Used:</h4><hr>
                                 <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
+                                    <li>Webflow — <a class="projectLink" href="https://www.springfieldcommonwealthacademy.org/" target="_blank">SCA Website</a></li>
+                                    <li>Figma — <a class="projectLink" href="https://www.figma.com/design/EMpnyNgMNjdiz2XKXkCQeu/Springfield-Commonwealth-Academy-Main-Webpage?node-id=3144-2&t=z3HfJ2ANRieOg1Fz-1" target="_blank">View Design</a></li>
                                 </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Tools Used:</h4>
-                                <hr>
+                                <h4>Key Requirements &amp; Features:</h4><hr>
                                 <ul>
-                                    <li>Webflow - <a class="projectLink" href="https://www.springfieldcommonwealthacademy.org/" title="SCA Website" target="_blank">SCA Website</a></li>
-                                    <li>Figma - <a class="projectLink" href="https://www.figma.com/design/EMpnyNgMNjdiz2XKXkCQeu/Springfield-Commonwealth-Academy-Main-Webpage?node-id=3144-2&t=z3HfJ2ANRieOg1Fz-1" title="Click to view SCA Website Figma Design" target="_blank">View Design</a></li>
+                                    <li>Main page included a video to showcase the school.</li>
+                                    <li>Comprehensive homepage design with sections linking to main navigation.</li>
+                                    <li>Created a new "School News" page with a news banner at the top.</li>
+                                    <li>Prestigious design using school colors as accents with star elements.</li>
+                                    <li>Focused on AI integration and private boarding school identity.</li>
+                                    <li>Responsive design utilizing existing mobile and tablet layouts from Webflow.</li>
                                 </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Key Requirements & Features:</h4>
-                                <hr>
-                                <ul>
-                                    <li>Main page included a video to showcase the school</li>
-                                    <li>Comprehensive homepage design where each section had a button linking to main navigation links, eliminating the need to click navigation links</li>
-                                    <li>Created a new "School News" page with a news banner at the top</li>
-                                    <li>Prestigious design using school colors as accents with star elements for visual impact</li>
-                                    <li>Focused on AI integration and private boarding school identity</li>
-                                    <li>Responsive design utilizing existing mobile and tablet layouts from Webflow</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Project Process:</h4>
-                                <hr>
-                                <p>
-                                    <strong>Week 1 - Research & Design:</strong> Started by meeting with my manager to understand pain points and requirements. Conducted research by looking at top schools and other AI-focused schools to see how they structured their websites. Completed the complete redesign in 3 days using Figma.
-                                </p>
-                                <p>
-                                    <strong>Week 2-3 - Implementation:</strong> I learned Webflow as I went and built the implementation of the redesign, completing 11 out of 17 pages in the first week. At the end of week 3, I finished building all 17 pages in Webflow, matching my redesign perfectly, and Beth, my manager, approved of it.
-                                </p>
-                                <p>
-                                    The redesign emphasized the school's prestigious nature through strategic use of their main colors as accents and incorporating star elements throughout the design. The website clearly communicates that Springfield Commonwealth Academy is a private boarding school that uniquely combines traditional learning with AI technology.
-                                </p>
-                                <!-- <hr> -->
-        
-                                <h4>Project Status:</h4>
-                                <hr>
-                                <p>
-                                    <strong>Completed:</strong> The website has been successfully launched and is now live at <a class="projectLink" href="https://www.springfieldcommonwealthacademy.org/" target="_blank">springfieldcommonwealthacademy.org</a>. All 17 pages were redesigned and implemented, providing Springfield Commonwealth Academy with a modern, professional online presence that effectively communicates their unique educational approach.
-                                </p>
-                                <p>
-                                    <strong>Ongoing Maintenance:</strong> My current role involves maintaining the website and keeping content up to date. This includes adding new news articles to the School News page, updating images when new ones become available, and ensuring all content remains current and relevant for parents and visitors.
-                                </p>
+                                <h4>Project Status:</h4><hr>
+                                <p>Completed and live at <a class="projectLink" href="https://www.springfieldcommonwealthacademy.org/" target="_blank">springfieldcommonwealthacademy.org</a>. Ongoing maintenance is my current role — adding news articles, updating images, and keeping content current.</p>
                             </div>
                         </div>
                         <div class="projectsModalButtons">
-                            <button type="button" onclick="window.open('https://www.springfieldcommonwealthacademy.org/', '_blank')"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Website</button>
-                            <button class="gradientButton" type="button" onclick="closeModal(1)"><img alt=" " src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                            <button type="button" onclick="window.open('https://www.springfieldcommonwealthacademy.org/', '_blank')">View Website</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(1)">Close Details</button>
                         </div>
                     </div>
                 </div>
@@ -468,149 +443,30 @@
                 <div class="projectModal hideModal">
                     <div class="projectModalOverlay"></div>
                     <div class="projectModalBox">
-                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <img src="Resources/Images/projectsModal.png" alt="" class="modalImg">
                         <div class="projectsModalContent">
                             <h3>Saunders Labs Website</h3>
-                          
                             <div class="contentInModal">
-                                <p>
-                                    This project is a redesign of the Saunders Labs website from the Saunders College of Business at RIT.
-                                    The original website lacked mobile responsiveness, so I took the initiative to redesign it using RIT's
-                                    colors, typography, and logo in Figma, ensuring a seamless experience across all devices. This project
-                                    also marks my second solo website design endeavor.
-                                </p>
-                                <!-- <hr> -->
-            
-                                <h4>Technologies Used:</h4>
-                                <hr>
+                                <p>This project is a redesign of the Saunders Labs website from the Saunders College of Business at RIT. The original website lacked mobile responsiveness, so I took the initiative to redesign it using RIT's colors, typography, and logo in Figma, ensuring a seamless experience across all devices.</p>
+                                <h4>Technologies Used:</h4><hr>
+                                <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>CodeIgniter</li><li>Bootstrap</li></ul>
+                                <h4>Tools Used:</h4><hr>
                                 <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>PHP</li>
-                                    <li>CodeIgniter</li>
-                                    <li>Bootstrap</li>
+                                    <li>Figma — <a class="projectLink" href="https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-214&t=XNsxRbOOwejs2dDY-1" target="_blank">View Design</a></li>
+                                    <li>PhpStorm 2023.1.2</li><li>Github Desktop</li><li>Gitlabs</li><li>Laragon</li>
                                 </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Tools Used:</h4>
-                                <hr>
-                                <ul>
-                                    <li>Figma - <a class="projectLink" href="https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2001-214&t=XNsxRbOOwejs2dDY-1" title="Click to view Toula's Saunders labs Figma Design" target="_blank">View Design</a></li>
-                                    <li>PhpStorm 2023.1.2</li>
-                                    <li>Github Desktop</li>
-                                    <li>Gitlabs</li>
-                                    <li>Laragon</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Key Features:</h4>
-                                <hr>
+                                <h4>Key Features:</h4><hr>
                                 <ul>
                                     <li>Mobile-responsive design with RIT's branding.</li>
                                     <li>Enhanced user experience through intuitive navigation.</li>
                                     <li>Improved accessibility for all users.</li>
                                     <li>Efficient codebase using modern web development practices.</li>
                                 </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Insights:</h4>
-                                <hr>
-                                <p>
-                                    Redesigning the Saunders Labs website provided me with valuable experience in implementing
-                                    responsive design principles and utilizing design tools like Figma. Throughout this project,
-                                    I've further honed my front-end development skills and gained insights into creating accessible
-                                    and visually appealing web experiences.
-                                </p>
-                                <p>
-                                    This website not only demonstrates my design and development capabilities but also reflects my
-                                    dedication to continuous learning and improvement. As a 
-                                    Software Engineering graduate from RIT (May 2025) and aspiring Web Developer, I'm
-                                    committed to pushing the boundaries of web development to create impactful and engaging digital solutions.
-                                </p>
                             </div>
                         </div>
                         <div class="projectsModalButtons">
-                            <button type="button" onclick="window.open('https://touladesigns.com/Labs/', '_blank')"><img alt=" " src="./Resources/Images/designButtonBorder.png">Visit Website</button>
-                            <button class="gradientButton" type="button" onclick="closeModal(2)"><img alt=" " src="./Resources/Images/designButtonBorder.png">Close Details</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="projectModal hideModal">
-                    <div class="projectModalOverlay"></div>
-                    <div class="projectModalBox">
-                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
-                        <div class="projectsModalContent">
-                            <h3>SCISS Website</h3>
-                          
-                            <div class="contentInModal">
-                                <p>
-                                    This project involved redesigning and coding all 16 pages of Springfield Commonwealth Academy's 
-                                    summer school website in just 3 weeks. As an individual work project, I took on the complete 
-                                    responsibility of transforming the existing website into a modern, responsive, and user-friendly platform.
-                                </p>
-                                <!-- <hr> -->
-            
-                                <h4>Technologies Used:</h4>
-                                <hr>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>React</li>
-                                    <li>JavaScript</li>
-                                    <li>PHP</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Tools Used:</h4>
-                                <hr>
-                                <ul>
-                                    <li>GitHub</li>
-                                    <li>PhpMyAdmin</li>
-                                    <li>Cursor AI</li>
-                                    <li>Hostinger</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Key Features:</h4>
-                                <hr>
-                                <ul>
-                                    <li>Complete redesign of all 16 pages for improved user experience.</li>
-                                    <li>Modern, responsive design that works seamlessly across all devices.</li>
-                                    <li>Efficient codebase using React for dynamic content rendering.</li>
-                                    <li>PHP integration for backend functionality and database management.</li>
-                                    <li>Professional deployment using Hostinger hosting platform.</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Project Scope:</h4>
-                                <hr>
-                                <p>
-                                    This project showcased my ability to work independently and deliver a complete website 
-                                    redesign within a tight 3-week deadline. I handled everything from initial design concepts 
-                                    to final deployment, demonstrating strong project management and technical execution skills.
-                                </p>
-                                <p>
-                                    The website now provides Springfield Commonwealth Academy with a modern, professional 
-                                    online presence that effectively communicates their summer school programs and information 
-                                    to prospective students and families.
-                                </p>
-                                <!-- <hr> -->
-        
-                                <h4>Insights:</h4>
-                                <hr>
-                                <p>
-                                    This project was an excellent opportunity to apply my full-stack development skills in a 
-                                    real-world setting. Working with React, PHP, and modern web technologies allowed me to 
-                                    create a robust and scalable solution. The experience reinforced my passion for creating 
-                                    meaningful digital experiences that serve educational institutions and their communities.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="projectsModalButtons">
-                            <button type="button" onclick="window.open('https://sciss.org/', '_blank')"><img alt=" " src="./Resources/Images/designButtonBorder.png">Visit Website</button>
-                            <button class="gradientButton" type="button" onclick="closeModal(3)"><img alt=" " src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                            <button type="button" onclick="window.open('https://touladesigns.com/Labs/', '_blank')">Visit Website</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(2)">Close Details</button>
                         </div>
                     </div>
                 </div>
@@ -618,285 +474,291 @@
                 <div class="projectModal hideModal">
                     <div class="projectModalOverlay"></div>
                     <div class="projectModalBox">
-                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <img src="Resources/Images/projectsModal.png" alt="" class="modalImg">
                         <div class="projectsModalContent">
-                            <h3>Teddy Bear Finder Website</h3>
-                          
+                            <h3>SCISS Website</h3>
                             <div class="contentInModal">
-                                <p>
-                                    Currently in the design and planning phase, the Teddy Bear Finder Website is a personal project 
-                                    aimed at helping users find and recover lost teddy bears. This heartwarming initiative combines 
-                                    my passion for web development with a meaningful cause that brings joy to families and children.
-                                </p>
-                                <p>
-                                    The inspiration for this project came from a deeply personal experience - I lost my beloved teddy bear 
-                                    that I had cherished for 22 years of my life. While searching for a replacement, I discovered that 
-                                    only Google image search was available, which didn't yield any helpful results. This gap in the market 
-                                    inspired me to create a dedicated platform where people can help each other find their lost stuffed animals.
-                                </p>
-                                <!-- <hr> -->
-            
-                                <h4>Technologies Planned:</h4>
-                                <hr>
+                                <p>This project involved redesigning and coding all 16 pages of Springfield Commonwealth Academy's summer school website in just 3 weeks. I took on complete responsibility for transforming the existing website into a modern, responsive, and user-friendly platform.</p>
+                                <h4>Technologies Used:</h4><hr>
+                                <ul><li>HTML</li><li>CSS</li><li>React</li><li>JavaScript</li><li>PHP</li></ul>
+                                <h4>Tools Used:</h4><hr>
+                                <ul><li>GitHub</li><li>PhpMyAdmin</li><li>Cursor AI</li><li>Hostinger</li></ul>
+                                <h4>Key Features:</h4><hr>
                                 <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
+                                    <li>Complete redesign of all 16 pages for improved user experience.</li>
+                                    <li>Modern, responsive design that works across all devices.</li>
+                                    <li>React for dynamic content rendering.</li>
+                                    <li>PHP integration for backend and database management.</li>
                                 </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Tools Used:</h4>
-                                <hr>
-                                <ul>
-                                    <li>Figma - Currently designing UI/UX mockups</li>
-                                    <li>Webflow - Planned for initial implementation</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Key Features (Planned):</h4>
-                                <hr>
-                                <ul>
-                                    <li>User-friendly interface for reporting lost teddy bears.</li>
-                                    <li>Search functionality to help locate found teddy bears.</li>
-                                    <li>Photo upload system for identification purposes.</li>
-                                    <li>Community-driven platform connecting people who have lost and found teddy bears.</li>
-                                    <li>Responsive design optimized for mobile and desktop use.</li>
-                                </ul>
-                                <!-- <hr> -->
-        
-                                <h4>Project Progress:</h4>
-                                <hr>
-                                <p>
-                                    Currently in the Figma design phase, I am focusing on creating intuitive user interfaces 
-                                    and user experience flows. The design process involves mapping out user journeys for both 
-                                    people who have lost teddy bears and those who have found them.
-                                </p>
-                                <p>
-                                    After completing the Figma designs, I plan to implement the site using Webflow as a starting 
-                                    point, with custom HTML, CSS, and JavaScript for advanced functionality and customization. 
-                                    This approach will allow for rapid prototyping while maintaining the flexibility to add 
-                                    sophisticated features.
-                                </p>
-                                <!-- <hr> -->
-        
-                                <h4>Insights:</h4>
-                                <hr>
-                                <p>
-                                    This project represents my commitment to using technology for positive social impact. 
-                                    The Teddy Bear Finder Website combines my technical skills with a meaningful mission 
-                                    to help families reunite with their beloved stuffed animals. It's a perfect example 
-                                    of how web development can create solutions that bring joy and comfort to people's lives.
-                                </p>
                             </div>
                         </div>
                         <div class="projectsModalButtons">
-                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2249-63&t=Zrs5WslKInBCCVx8-1', '_blank')"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Design</button>
-                            <button class="gradientButton" type="button" onclick="closeModal(4)"><img alt=" " src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                            <button type="button" onclick="window.open('https://sciss.org/', '_blank')">Visit Website</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(3)">Close Details</button>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="projectModal hideModal">
                     <div class="projectModalOverlay"></div>
                     <div class="projectModalBox">
-                        <img src="./Resources/Images/projectsModal.png" alt="Project Modal" class="modalImg">
+                        <img src="Resources/Images/projectsModal.png" alt="" class="modalImg">
+                        <div class="projectsModalContent">
+                            <h3>Teddy Bear Finder Website</h3>
+                            <div class="contentInModal">
+                                <p>Currently in the design and planning phase, the Teddy Bear Finder Website is a personal project aimed at helping users find and recover lost teddy bears. The inspiration came from losing my beloved teddy bear that I had cherished for 22 years — and discovering no dedicated platform existed to help people find lost stuffed animals.</p>
+                                <h4>Technologies Planned:</h4><hr>
+                                <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                                <h4>Tools Used:</h4><hr>
+                                <ul><li>Figma — Currently designing UI/UX mockups</li><li>Webflow — Planned for initial implementation</li></ul>
+                                <h4>Key Features (Planned):</h4><hr>
+                                <ul>
+                                    <li>User-friendly interface for reporting lost teddy bears.</li>
+                                    <li>Search functionality to help locate found bears.</li>
+                                    <li>Photo upload system for identification.</li>
+                                    <li>Community-driven platform connecting finders and seekers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="projectsModalButtons">
+                            <button type="button" onclick="window.open('https://www.figma.com/design/AMpobs9nwyX4Aa5rPadOW6/Figma-File-s--3?node-id=2249-63&t=Zrs5WslKInBCCVx8-1', '_blank')">View Design</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(4)">Close Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectModal hideModal">
+                    <div class="projectModalOverlay"></div>
+                    <div class="projectModalBox">
+                        <img src="Resources/Images/projectsModal.png" alt="" class="modalImg">
                         <div class="projectsModalContent">
                             <h3>My Boutique Website</h3>
-                          
                             <div class="contentInModal">
-                                <p>
-                                    As an aspiring Web Developer with a passion for design and entrepreneurship, 
-                                    I am currently working on an exciting personal project called "Toula's Boutique." 
-                                    This website will serve as an online shop where I will sell handmade products such as lip gloss, 
-                                    slime, art, stickers, and other creative items. I want to create an inviting, user-friendly 
-                                    experience for customers to browse, purchase, and engage with my unique creations.
-                                </p>
-                                <!-- <hr> -->
-                            
-                                <h4>Technologies Used:</h4>
-                                <hr>
+                                <p>As an aspiring Web Developer with a passion for design and entrepreneurship, I am currently working on an exciting personal project called "Toula's Boutique." This website will serve as an online shop where I will sell handmade products such as lip gloss, slime, art, stickers, and other creative items.</p>
+                                <h4>Technologies Used:</h4><hr>
+                                <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li></ul>
+                                <h4>Tools Used:</h4><hr>
                                 <ul>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>Bootstrap</li>
-                                    <li>HTML</li>
+                                    <li>Figma — <a class="projectLink" href="https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/SerenitySweep%3A-The-Mindfullness-App?node-id=4105-11&t=GaziQaHCLlgrp6oi-1" target="_blank">View Design</a></li>
+                                    <li>VS Code</li><li>Github</li>
                                 </ul>
-                                <!-- <hr> -->
-                        
-                                <h4>Tools Used:</h4>
-                                <hr>
-                                <ul>
-                                    <li>Figma - <a class="projectLink" href="https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/SerenitySweep%3A-The-Mindfullness-App?node-id=4105-11&t=GaziQaHCLlgrp6oi-1" title="Click to view Toula's Boutique Figma Design" target="_blank">View Design</a></li>
-                                    <li>VS Code</li>
-                                    <li>Github</li>
-                                    <li>AI Prompting (ChatGPT, for initial design ideas such as graphics [Logo and carousel arrows], and as an advanced google and debugging resource when troubleshooting CSS)</li>
-                                    <li>Coolors</li>
-                                    <li>HTML Validator Extension</li>
-                                </ul>
-                                <!-- <hr> -->
-                        
-                                <h4>Key Features (Planned):</h4>
-                                <hr>
+                                <h4>Key Features (Planned):</h4><hr>
                                 <ul>
                                     <li>User-friendly interface with a visually appealing aesthetic.</li>
                                     <li>Product galleries showcasing lip glosses, slime, art, and stickers.</li>
                                     <li>Responsive design for optimal viewing on various devices.</li>
-                                    <li>Simple and secure checkout process for seamless purchasing.</li>
-                                    <li>Engaging carousel highlighting new or featured products.</li>
+                                    <li>Simple and secure checkout process.</li>
                                 </ul>
-                                <!-- <hr> -->
-                        
-                                <h4>Project Progress:</h4>
-                                <hr>
-                                <p>
-                                    Currently, "Toula's Boutique" is in its design and development phase. I'm focusing on creating 
-                                    a responsive front-end interface that ensures smooth functionality across different devices. 
-                                    Starting with designing a Figma prototype to map out the visual elements and user experience for the website. 
-                                    Once the Figma design is finalized, I will move on to coding and building the front-end of the site. 
-                                </p>
-                                <p>
-                                    After the front-end is complete, I will shift focus to the back-end development, 
-                                    specifically integrating a shopping cart and checkout system to provide a seamless purchasing experience for users. 
-                                    I am considering using Loveable AI with Shopify integration as a starting base for the backend purchasing functionality, 
-                                    which will provide a robust e-commerce foundation while allowing for custom development and personalization.
-                                </p>
-        
-                                <!-- <hr> -->
-                        
-                                <h4>Insights:</h4>
-                                <hr>
-                                <p>
-                                    This project has allowed me to blend my passion for web development and creativity. From 
-                                    designing the visual layout to coding interactive features, it's been an incredible learning experience. 
-                                    I'm excited to bring this project to life and share my handmade creations with the world through a well-crafted 
-                                    online shop.
-                                </p>
                             </div>
                         </div>
                         <div class="projectsModalButtons">
-                            <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4105-11&t=4tFaIRunekZhKGRT-1', '_blank')"><img alt=" " src="./Resources/Images/designButtonBorder.png">View Design</button>
-                            <button class="gradientButton" type="button" onclick="closeModal(5)"><img alt=" " src="./Resources/Images/designButtonBorder.png">Close Details</button>
+                            <button type="button" onclick="window.open('https://www.figma.com/design/MSX5nUZWZp0YG7N6ECQBPC/Figma-File-s-?node-id=4105-11&t=4tFaIRunekZhKGRT-1', '_blank')">View Design</button>
+                            <button class="gradientButton" type="button" onclick="closeModal(5)">Close Details</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="skills">
-                <h2>My Skills</h2>
-                <div class="mySkills">
-                     <h3>Languages & Technologies</h3>
+            <!-- ===== MARQUEE STRIP 2 ===== -->
+            <div class="strip" aria-hidden="true">
+                <div class="track" id="t2"></div>
+            </div>
+
+            <!-- ===== SKILLS ===== -->
+            <section class="wrap sec skills" id="skills">
+                <h2 class="sec-title" data-rise>My <span class="pk">Skills</span></h2>
+                <p class="sec-sub" data-rise>— a directory of skills, tools, and small obsessions. inquire within. —</p>
+
+                <div class="skill-cloud" data-rise>
+                    <span class="chip hot">HTML5</span>
+                    <span class="chip hot">CSS3</span>
+                    <span class="chip hot">JavaScript</span>
+                    <span class="chip">React</span>
+                    <span class="chip">Bootstrap</span>
+                    <span class="chip">PHP</span>
+                    <span class="chip">Python</span>
+                    <span class="chip hot">Figma</span>
+                    <span class="chip hot">Webflow</span>
+                    <span class="chip">WordPress</span>
+                    <span class="chip">Photoshop</span>
+                    <span class="chip">Canva</span>
+                    <span class="chip">Wireframing</span>
+                    <span class="chip">Prototyping</span>
+                    <span class="chip">UX Research</span>
+                    <span class="chip">Responsive Design</span>
+                    <span class="chip">Content Design</span>
+                    <span class="chip hot">AI Tools</span>
+                    <span class="chip">Git / GitHub</span>
+                    <span class="chip">VS Code</span>
+                    <span class="chip">Jira</span>
+                </div>
+
+                <div class="skills-detail" data-rise>
+                    <h3>Languages &amp; <span class="pk">Technologies</span></h3>
                     <ul>
                         <li><h4>Front-End:</h4> HTML5, CSS3, JavaScript (ES6+), React, Bootstrap, jQuery</li>
                         <li><h4>Back-End:</h4> PHP, Python, SQL, NoSQL, CodeIgniter</li>
                     </ul>
-                    <hr>
 
-                    <h3>Design Tools & Skills</h3>
+                    <h3>Design Tools &amp; <span class="pk">Skills</span></h3>
                     <ul>
                         <li><h4>Design Software:</h4> Figma (prototyping, auto layout, components, dev handoff, Figma AI), Webflow, WordPress, Photoshop, Canva</li>
-                        <li><h4>Design Skills:</h4> Wireframing, Prototyping, UX Research & Surveys, Usability Testing, Responsive Design, Visual Design Principles, Content Design</li>
+                        <li><h4>Design Skills:</h4> Wireframing, Prototyping, UX Research &amp; Surveys, Usability Testing, Responsive Design, Visual Design Principles, Content Design</li>
                     </ul>
-                    <hr>
 
-                    <h3>Development & Testing Tools</h3>
+                    <h3>Dev &amp; <span class="pk">Testing</span> Tools</h3>
                     <ul>
-                        <li><h4>AI Development Tools:</h4> ChatGPT, Claude, Cursor, Copilot, Lovable AI, Figma AI</li>
-                        <li><h4>Version Control & Code Editors:</h4> Git/GitHub, VS Code, IntelliJ</li>
+                        <li><h4>AI Tools:</h4> ChatGPT, Claude, Cursor, Copilot, Lovable AI, Figma AI</li>
+                        <li><h4>Version Control:</h4> Git/GitHub, VS Code, IntelliJ</li>
                         <li><h4>Project Management:</h4> Jira, Confluence, Trello</li>
-                        <li><h4>Design Collaboration:</h4> Coolors, Lucidchart</li>
                         <li><h4>Testing:</h4> Mocha, HTML Tidy, HTML Validator Extension</li>
                     </ul>
-                    <hr>
 
-                    <h3>Soft Skills</h3>
+                    <h3>Soft <span class="pk">Skills</span></h3>
                     <ul>
                         <li><h4>Continuous Learning:</h4> Enthusiastic about staying updated with the latest frontend technologies and best practices.</li>
-                        <li><h4>Collaboration and Communication:</h4> Effective team player with strong communication skills in both technical and non-technical environments.</li>
+                        <li><h4>Collaboration:</h4> Effective team player with strong communication skills in both technical and non-technical environments.</li>
                     </ul>
                 </div>
             </section>
 
-            <section id="services">
-                <h2>Freelance Services</h2>
-                <p class="servicesIntro">Looking to hire for a project? Here's what I offer.</p>
-                <div class="servicesGrid">
-                    <a class="serviceCard" href="freelance-contact.html?service=Logo+%26+Brand+Identity">
-                        <h3>Logo &amp; Brand Identity</h3>
-                        <p>Custom logos, color palettes, and brand guidelines for small businesses and startups.</p>
-                        <span class="serviceRate">Starting at $150+</span>
-                    </a>
-                    <a class="serviceCard" href="freelance-contact.html?service=Website+Design">
-                        <h3>Website Design</h3>
-                        <p>High-fidelity Figma mockups and prototypes, ready for development or client sign-off.</p>
-                        <span class="serviceRate">Starting at $200+</span>
-                    </a>
-                    <a class="serviceCard" href="freelance-contact.html?service=WordPress+Development">
-                        <h3>WordPress Development</h3>
-                        <p>Custom WordPress sites built to your specs — responsive, clean, and easy for you to manage.</p>
-                        <span class="serviceRate">Starting at $500+</span>
-                    </a>
-                    <a class="serviceCard" href="freelance-contact.html?service=Webflow+Development">
-                        <h3>Webflow Development</h3>
-                        <p>Pixel-perfect Webflow builds from your designs or mine, fully responsive and launch-ready.</p>
-                        <span class="serviceRate">Starting at $500+</span>
-                    </a>
-                    <a class="serviceCard" href="freelance-contact.html?service=Brand+Refresh">
-                        <h3>Brand Refresh</h3>
-                        <p>Modernize an existing logo or visual identity without losing what already makes it yours.</p>
-                        <span class="serviceRate">Starting at $100+</span>
-                    </a>
-                    <a class="serviceCard" href="freelance-contact.html?service=Website+Maintenance">
-                        <h3>Website Maintenance</h3>
-                        <p>Ongoing content updates, bug fixes, and improvements for existing sites.</p>
-                        <span class="serviceRate">Contact for pricing</span>
-                    </a>
+            <!-- ===== SERVICES ===== -->
+            <section class="services-section sec" id="services">
+                <div class="wrap">
+                    <h2 class="sec-title" data-rise>Freelance <span class="pk">Services</span></h2>
+                    <p class="servicesIntro" data-rise>Looking to hire for a project? Here's what I offer.</p>
+
+                    <div class="servicesGrid" data-rise>
+                        <a class="serviceCard" href="freelance-contact.html?service=Logo+%26+Brand+Identity">
+                            <h3>Logo &amp; Brand Identity</h3>
+                            <p>Custom logos, color palettes, and brand guidelines for small businesses and startups.</p>
+                            <span class="serviceRate">Starting at $150+</span>
+                        </a>
+                        <a class="serviceCard" href="freelance-contact.html?service=Website+Design">
+                            <h3>Website Design</h3>
+                            <p>High-fidelity Figma mockups and prototypes, ready for development or client sign-off.</p>
+                            <span class="serviceRate">Starting at $200+</span>
+                        </a>
+                        <a class="serviceCard" href="freelance-contact.html?service=WordPress+Development">
+                            <h3>WordPress Development</h3>
+                            <p>Custom WordPress sites built to your specs — responsive, clean, and easy for you to manage.</p>
+                            <span class="serviceRate">Starting at $500+</span>
+                        </a>
+                        <a class="serviceCard" href="freelance-contact.html?service=Webflow+Development">
+                            <h3>Webflow Development</h3>
+                            <p>Pixel-perfect Webflow builds from your designs or mine, fully responsive and launch-ready.</p>
+                            <span class="serviceRate">Starting at $500+</span>
+                        </a>
+                        <a class="serviceCard" href="freelance-contact.html?service=Brand+Refresh">
+                            <h3>Brand Refresh</h3>
+                            <p>Modernize an existing logo or visual identity without losing what already makes it yours.</p>
+                            <span class="serviceRate">Starting at $100+</span>
+                        </a>
+                        <a class="serviceCard" href="freelance-contact.html?service=Website+Maintenance">
+                            <h3>Website Maintenance</h3>
+                            <p>Ongoing content updates, bug fixes, and improvements for existing sites.</p>
+                            <span class="serviceRate">Contact for pricing</span>
+                        </a>
+                    </div>
+                    <p class="servicesNote" data-rise>Every project is different — reach out with your details and I'll get back to you with a custom quote.</p>
                 </div>
-                <p class="servicesNote">Every project is different — reach out with your details and I'll get back to you with a custom quote.</p>
             </section>
 
-            <section id="contact">
-                <img class="contactBorder" src="./Resources/Images/ContactBorder.png" alt="Contact Section Border">
-                <h2>Contact Me</h2>
-                <div class="contactInfo">
-                    <p>
-                        Whether you're looking to hire for a <strong>full-time or part-time role</strong>, or want to bring me on for a <strong>freelance project</strong> in web development, web design, or UI/UX design — feel free to reach out through:
-                    </p>
-                    <ul>
-                        <li><h4>Email:</h4> 
-                            <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"> toula4242@gmail.com</a>
-                        </li>
-                        <li><h4>Or my LinkedIn:</h4> 
-                            <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit and contact Toula through her Linkedin!" target="_blank"> linkedin.com<span class="spacing">/</span>in<span class="spacing">/</span>toula-elwell<span class="spacing">/</span></a>
-                        </li>
-                    </ul>
+            <!-- ===== CONTACT ===== -->
+            <section class="wrap sec contact" id="contact">
+                <h2 class="sec-title" data-rise>Contact <span class="pk">Me</span></h2>
+                <p class="sec-sub" data-rise>— feel free to reach out. —</p>
+
+                <div class="note" data-rise>
+                    <span class="wt tl"></span>
+                    <span class="wt br"></span>
+                    <p>Whether you're looking to hire for a <strong>full-time or part-time role</strong>, or want to bring me on for a <strong>freelance project</strong> in web development, web design, or UI/UX design — feel free to reach out through:</p>
+                    <div class="contact-links">
+                        <div class="contact-link-item">
+                            <h4>Email</h4>
+                            <a href="mailto:toula4242@gmail.com" target="_blank">toula4242@gmail.com</a>
+                        </div>
+                        <div class="contact-link-item">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/toula-elwell/" target="_blank">linkedin.com/in/toula-elwell/</a>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a class="btn btn-dark" href="mailto:toula4242@gmail.com">Email Me</a>
+                        <a class="btn btn-pink" href="https://www.linkedin.com/in/toula-elwell/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
                 </div>
-                <div class="contactDecals">
-                    <img alt="Flower Decal for left side" class="contactFlowerTopLeft" src="./Resources/Images/contactflower2.png">
-                    <img alt="Flower decal on the right side" class="contactFlowerBottomRight" src="./Resources/Images/contactflower1.png">
-                </div> 
             </section>
+
         </main>
-        
-        
-        <footer>
-            <!-- Just for the border to match Figma Design -->
-            <section>
-                <img class="fancyDesktopFooterBorder" src="Resources/Images/desktopFooterBorder.png" alt="Footer Border">
-            </section>
-            <ul>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="foot">
+            <ul class="foot-links">
                 <li>
-                    <a href="https://github.com/tae9467" title="Click to visit Toula's Github!" target="_blank"><img class="footerImg" src="Resources/Images/githubIcon.jpeg" alt="Github Icon">Github</a>
+                    <a href="https://github.com/tae9467" title="Toula's Github" target="_blank">
+                        <img src="Resources/Images/githubIcon.jpeg" alt="Github Icon"> Github
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Click to visit Toula's Linkedin!" target="_blank"><img class="footerImg" src="Resources/Images/linkedinIcon.jpeg" alt="Linkedin Icon">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/toula-elwell/" title="Toula's LinkedIn" target="_blank">
+                        <img src="Resources/Images/linkedinIcon.jpeg" alt="LinkedIn Icon"> LinkedIn
+                    </a>
                 </li>
                 <li>
-                    <a href="mailto:toula4242@gmail.com" title="Click to Email Toula!" target="_blank"><img class="footerImg" src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon">Gmail</a>
+                    <a href="mailto:toula4242@gmail.com" title="Email Toula" target="_blank">
+                        <img src="Resources/Images/gmailIcon.jpeg" alt="Gmail Icon"> Gmail
+                    </a>
                 </li>
                 <li>
-                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Click to View and Download Toula's Resume!" target="_blank"><img class="footerImg" src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon">Resume</a>
+                    <a href="Resources/Elwell_Toula_Resume.pdf" title="Toula's Resume" target="_blank">
+                        <img src="Resources/Images/resumeIcon.jpeg" alt="Resume Icon"> Resume
+                    </a>
                 </li>
             </ul>
+            <div class="flogo">Toula <span class="rose">✿</span> Elwell</div>
         </footer>
+
+        <script>
+        /* ===== NAV scroll state ===== */
+        const navHeader = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            navHeader.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        /* ===== Active nav link on scroll ===== */
+        const sections = [...document.querySelectorAll('section[id], main#top')];
+        const desktopLinks = [...document.querySelectorAll('.sectionLinks .navigation a')];
+        const spy = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const id = e.target.id;
+                    desktopLinks.forEach(a => {
+                        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+                    });
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(s => spy.observe(s));
+
+        /* ===== Reveal on scroll ===== */
+        const rise = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('in'); rise.unobserve(e.target); }
+            });
+        }, { threshold: .12 });
+        document.querySelectorAll('[data-rise]').forEach(el => rise.observe(el));
+
+        /* ===== Marquee fill ===== */
+        function fillStrip(id, items) {
+            const track = document.getElementById(id);
+            if (!track) return;
+            const one = items.map(x => `<span>${x}</span>`).join('');
+            track.innerHTML = one + one;
+        }
+        fillStrip('t1', ['ABOUT THE AUTHOR', 'DESIGN & CODE', 'CLASS OF 2026', 'USER-CENTERED', 'HALLANDALE BEACH']);
+        fillStrip('t2', ['SELECTED WORK', 'FIGMA · REACT · WEBFLOW', 'MADE WITH HANDS & A LITTLE CHAOS', 'OPEN TO WORK']);
+        </script>
+
     </body>
 </html>

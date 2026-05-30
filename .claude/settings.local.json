@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\toula\\\\Downloads\" && ls \"better-handoff \\(2\\).zip\")",
+      "Bash(Expand-Archive -Path \"C:\\\\Users\\\\toula\\\\Downloads\\\\better-handoff \\(2\\).zip\" -DestinationPath \"C:\\\\Users\\\\toula\\\\Downloads\\\\better-handoff-extracted\" -Force)",
+      "Bash(Get-ChildItem -Recurse \"C:\\\\Users\\\\toula\\\\Downloads\\\\better-handoff-extracted\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(npx --yes serve -p 5500 .)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5500/index.html)",
+      "Bash(curl -s http://localhost:5500/index.html)",
+      "Bash(curl -s \"http://localhost:5500/index.html\")",
+      "Bash(curl -s \"http://localhost:5500/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5500/Resources/styles-redesign.css\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5500/Resources/Images/fig/butterfly.png\")"
+    ]
+  }
+}
